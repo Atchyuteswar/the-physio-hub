@@ -68,7 +68,7 @@ export default function HeroSection() {
             </div>
 
             {/* Floating Card 1 */}
-            <div className="absolute top-12 -left-8 md:-left-12 bg-white p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-4 animate-bounce-slow">
+            <div className="hidden sm:flex absolute top-4 sm:top-12 -left-2 sm:-left-8 md:-left-12 bg-white p-4 rounded-xl shadow-xl border border-slate-100 items-center gap-4 animate-bounce-slow">
               <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center shrink-0">
                 <Users className="w-6 h-6 text-green-600" />
               </div>
@@ -79,7 +79,7 @@ export default function HeroSection() {
             </div>
 
             {/* Floating Card 2 */}
-            <div className="absolute bottom-24 -right-4 md:-right-8 bg-white p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-4 animate-bounce-slow delay-500">
+            <div className="hidden sm:flex absolute bottom-8 sm:bottom-24 -right-2 sm:-right-4 md:-right-8 bg-white p-4 rounded-xl shadow-xl border border-slate-100 items-center gap-4 animate-bounce-slow delay-500">
               <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center shrink-0">
                 <Activity className="w-6 h-6 text-slate-700" />
               </div>
