@@ -1,0 +1,93 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONTACTED
+  COMPLETED
+  CANCELLED
+}
+
+enum ContactLeadStatus {
+  NEW
+  REPLIED
+  ARCHIVED
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+}
+
+model Setting {
+  id           String   @id @default(cuid())
+  address      String?
+  phone        String?
+  email        String?
+  facebookUrl  String?
+  instagramUrl String?
+  updatedAt    DateTime @updatedAt
+}
+
+model Video {
+  id          String   @id @default(cuid())
+
+  title       String
+  description String?
+
+  youtubeUrl  String
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Gallery {
+  id        String   @id @default(cuid())
+  imageUrl  String
+  caption   String?
+  createdAt DateTime @default(now())
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String
+  content   String
+  rating    Int
+  createdAt DateTime @default(now())
+}
+
+model Appointment {
+  id        String   @id @default(cuid())
+
+  name      String
+  phone     String
+  email     String?
+
+  service   String?
+  message   String?
+
+  status AppointmentStatus @default(PENDING)
+
+  createdAt DateTime @default(now())
+}
+
+model ContactLead {
+  id        String   @id @default(cuid())
+
+  name      String
+  email     String
+  phone     String?
+  message   String
+
+  status    ContactLeadStatus @default(NEW)
+
+  createdAt DateTime @default(now())
+}
