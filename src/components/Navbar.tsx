@@ -3,7 +3,23 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { 
+  Menu, X, ChevronRight, ChevronDown,
+  Activity, HeartPulse, Stethoscope, Zap, RotateCcw, Footprints, Bone, GraduationCap, Video 
+} from "lucide-react";
+import { services } from "@/data/services";
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Activity,
+  HeartPulse,
+  Stethoscope,
+  Zap,
+  RotateCcw,
+  Footprints,
+  Bone,
+  GraduationCap,
+  Video,
+};
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -70,6 +86,55 @@ export default function Navbar() {
                   item.href === "/"
                     ? pathname === "/"
                     : pathname.startsWith(item.href);
+
+                if (item.label === "Services") {
+                  return (
+                    <div key={item.href} className="group relative">
+                      <Link
+                        href={item.href}
+                        className={`
+                          flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200
+                          ${
+                            isActive
+                              ? "text-green-700 bg-green-50"
+                              : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                          }
+                        `}
+                      >
+                        {item.label}
+                        <ChevronDown className="w-4 h-4 opacity-50 group-hover:rotate-180 transition-transform duration-200" />
+                      </Link>
+
+                      {/* Dropdown Menu */}
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 w-[600px] z-50">
+                        <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-4 grid grid-cols-2 gap-2 relative before:absolute before:-top-2 before:left-1/2 before:-translate-x-1/2 before:border-8 before:border-transparent before:border-b-white">
+                          {services.map((service) => {
+                            const Icon = iconMap[service.icon] || Activity;
+                            return (
+                              <Link
+                                key={service.slug}
+                                href={`/services/${service.slug}`}
+                                className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/link"
+                              >
+                                <div className="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center shrink-0 group-hover/link:bg-green-100 transition-colors">
+                                  <Icon className="w-5 h-5 text-green-600" />
+                                </div>
+                                <div>
+                                  <div className="text-sm font-semibold text-slate-900 group-hover/link:text-green-700 transition-colors">
+                                    {service.title}
+                                  </div>
+                                  <div className="text-xs text-slate-500 line-clamp-1 mt-0.5">
+                                    {service.description}
+                                  </div>
+                                </div>
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
 
                 return (
                   <Link
