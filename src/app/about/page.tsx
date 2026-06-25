@@ -63,7 +63,7 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* SECTION 1: Hero Section */}
-      <section className="relative pt-32 pb-32 lg:pt-48 lg:pb-48 overflow-hidden flex items-center min-h-[70vh]">
+      <section className="relative pt-20 pb-20 sm:pt-32 sm:pb-32 lg:pt-48 lg:pb-48 overflow-hidden flex items-center min-h-[50vh] sm:min-h-[70vh]">
         {/* Background Image Placeholder */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 flex items-center justify-center bg-slate-200">
@@ -93,7 +93,7 @@ export default function AboutPage() {
                 About Our Clinic
               </span>
             </div>
-            <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] mb-6 tracking-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] mb-6 tracking-tight">
               Helping People <span className="text-transparent bg-clip-text bg-linear-to-r from-green-600 to-emerald-500">Move Better</span>, Recover Stronger, and Live Pain-Free.
             </h1>
             <p className="text-xl text-slate-700 leading-relaxed max-w-2xl font-medium">
@@ -156,7 +156,7 @@ export default function AboutPage() {
           <div className="bg-white rounded-4xl shadow-xl border border-slate-200 overflow-hidden">
             <div className="grid lg:grid-cols-12 max-w-none">
               {/* Photo Side */}
-              <div className="lg:col-span-5 relative bg-slate-100 min-h-[500px]">
+              <div className="lg:col-span-5 relative bg-slate-100 min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
                     <Users className="w-16 h-16 text-slate-300 mx-auto mb-4" />
@@ -316,14 +316,14 @@ export default function AboutPage() {
       {/* SECTION 8: Statistics Section */}
       <section className="py-20 bg-white border-t border-slate-100">
         <div className="container">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 divide-x divide-slate-200">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
             {[
               { value: "9+", label: "Years Experience" },
               { value: "Hundreds", label: "of Patients Supported" },
               { value: "100%", label: "Evidence-Based Care" },
               { value: "15+", label: "Specialized Programs" },
             ].map((stat, i) => (
-              <div key={i} className={`text-center ${i !== 0 ? 'pl-4 md:pl-8' : ''} ${i === 2 ? 'col-span-2 lg:col-span-1 border-l-0 lg:border-l lg:pl-12 pt-8 lg:pt-0' : ''} ${i === 3 ? 'col-span-2 lg:col-span-1 pt-8 lg:pt-0' : ''}`}>
+              <div key={i} className={`text-center ${i > 0 ? 'lg:border-l lg:border-slate-200 lg:pl-8' : ''}`}>
                 <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">{stat.value}</div>
                 <div className="text-slate-600 font-medium">{stat.label}</div>
               </div>

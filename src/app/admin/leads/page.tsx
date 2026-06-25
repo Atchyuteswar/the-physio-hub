@@ -133,7 +133,7 @@ export default async function LeadsPage({ searchParams }: Props) {
           </div>
         ) : (
           <div className="overflow-x-auto">
-            <table className="admin-table">
+            <table className="admin-table admin-table-responsive">
               <thead>
                 <tr>
                   <th>Sender</th>
@@ -147,8 +147,8 @@ export default async function LeadsPage({ searchParams }: Props) {
               <tbody>
                 {leads.map((lead: any) => (
                   <tr key={lead.id}>
-                    <td className="font-semibold text-slate-900">{lead.name}</td>
-                    <td>
+                    <td data-label="Sender" className="font-semibold text-slate-900">{lead.name}</td>
+                    <td data-label="Contact">
                       <div className="space-y-1">
                         <a href={`mailto:${lead.email}`} className="text-sm font-medium text-blue-600 hover:underline block">
                           {lead.email}
@@ -158,12 +158,12 @@ export default async function LeadsPage({ searchParams }: Props) {
                         )}
                       </div>
                     </td>
-                    <td className="max-w-xs">
+                    <td data-label="Message" className="max-w-xs">
                       <p className="text-sm text-slate-600 line-clamp-2" title={lead.message}>
                         {lead.message}
                       </p>
                     </td>
-                    <td className="text-slate-500 text-sm">
+                    <td data-label="Date" className="text-slate-500 text-sm">
                       {new Date(lead.createdAt).toLocaleDateString(undefined, {
                         year: 'numeric',
                         month: 'short',
@@ -173,10 +173,10 @@ export default async function LeadsPage({ searchParams }: Props) {
                         {new Date(lead.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
                       </span>
                     </td>
-                    <td>
+                    <td data-label="Status">
                       <StatusSelect id={lead.id} currentStatus={lead.status} />
                     </td>
-                    <td className="text-right">
+                    <td data-label="Actions" className="text-right">
                       <DeleteLeadButton id={lead.id} />
                     </td>
                   </tr>
@@ -189,7 +189,7 @@ export default async function LeadsPage({ searchParams }: Props) {
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-between pt-2">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
           <p className="text-sm text-slate-500">
             Showing {skip + 1} to {Math.min(skip + take, total)} of {total} results
           </p>

@@ -132,7 +132,7 @@ export default async function AppointmentsPage({ searchParams }: Props) {
           </div>
         ) : (
           <div className="overflow-x-auto">
-            <table className="admin-table">
+            <table className="admin-table admin-table-responsive">
               <thead>
                 <tr>
                   <th>Patient Details</th>
@@ -145,7 +145,7 @@ export default async function AppointmentsPage({ searchParams }: Props) {
               <tbody>
                 {appointments.map((apt) => (
                   <tr key={apt.id}>
-                    <td>
+                    <td data-label="Patient">
                       <div>
                         <p className="font-semibold text-slate-900">{apt.name}</p>
                         {apt.message && (
@@ -155,18 +155,18 @@ export default async function AppointmentsPage({ searchParams }: Props) {
                         )}
                       </div>
                     </td>
-                    <td>
+                    <td data-label="Contact">
                       <div className="space-y-1">
                         <p className="text-sm font-medium text-slate-700">{apt.phone}</p>
                         <p className="text-xs text-slate-500">{apt.email || "No email"}</p>
                       </div>
                     </td>
-                    <td>
+                    <td data-label="Service">
                       <span className="text-sm text-slate-700 font-medium bg-slate-100 px-2 py-1 rounded">
                         {apt.service || "General"}
                       </span>
                     </td>
-                    <td className="text-slate-500 text-sm">
+                    <td data-label="Date" className="text-slate-500 text-sm">
                       {new Date(apt.createdAt).toLocaleDateString(undefined, {
                         year: 'numeric',
                         month: 'short',
@@ -176,7 +176,7 @@ export default async function AppointmentsPage({ searchParams }: Props) {
                         {new Date(apt.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
                       </span>
                     </td>
-                    <td>
+                    <td data-label="Status">
                       <StatusSelect id={apt.id} currentStatus={apt.status} />
                     </td>
                   </tr>
@@ -189,7 +189,7 @@ export default async function AppointmentsPage({ searchParams }: Props) {
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-between pt-2">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
           <p className="text-sm text-slate-500">
             Showing {skip + 1} to {Math.min(skip + take, total)} of {total} results
           </p>

@@ -63,7 +63,7 @@ export default async function AdminTestimonialsPage({ searchParams }: Props) {
               className="card-static p-5 relative group flex flex-col"
             >
               {/* Action buttons overlay */}
-              <div className="absolute top-3 right-3 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition">
+              <div className="absolute top-3 right-3 flex items-center gap-1 opacity-0 group-hover:opacity-100 touch-visible transition">
                 <Link
                   href={`/admin/testimonials/${item.id}/edit`}
                   className="p-2 rounded-lg text-slate-400 hover:text-blue-600 hover:bg-blue-50 transition"
@@ -109,7 +109,7 @@ export default async function AdminTestimonialsPage({ searchParams }: Props) {
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-between pt-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4">
           <p className="text-sm text-slate-500">
             Showing {skip + 1} to {Math.min(skip + take, total)} of {total} testimonials
           </p>

@@ -85,7 +85,7 @@ export default async function ServicePage({ params }: Props) {
             </span>
           </nav>
 
-          <div className="flex items-start gap-5">
+          <div className="flex items-start gap-4 sm:gap-5">
             <div className="w-16 h-16 rounded-2xl bg-green-50 flex items-center justify-center shrink-0">
               <Icon className="w-8 h-8 text-green-600" />
             </div>

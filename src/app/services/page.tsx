@@ -216,7 +216,7 @@ export default function ServicesPage() {
       />
 
       {/* SECTION 1: Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50 border-b border-slate-100">
+      <section className="relative pt-20 pb-16 sm:pt-32 sm:pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50 border-b border-slate-100">
         <div className="absolute inset-0 z-0 opacity-50">
           {/* Abstract light background pattern */}
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-green-100/60 rounded-full blur-[120px] pointer-events-none" />
@@ -227,11 +227,11 @@ export default function ServicesPage() {
           <span className="inline-block py-1.5 px-3 rounded-full bg-green-100/80 text-green-700 font-semibold text-sm tracking-wider uppercase mb-6 border border-green-200">
             Clinical Excellence
           </span>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6 text-slate-900">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6 text-slate-900">
             Comprehensive Physiotherapy &{" "}
             <span className="text-green-600">Rehabilitation Services</span>
           </h1>
-          <p className="text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed font-medium">
+          <p className="text-lg sm:text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed font-medium">
             Personalized treatment programs designed to help you recover, move
             better, and perform at your best.
           </p>

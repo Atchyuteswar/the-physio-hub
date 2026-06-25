@@ -56,7 +56,7 @@ export default async function AdminGalleryPage({ searchParams }: Props) {
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {images.map((image) => (
             <div
               key={image.id}
@@ -72,7 +72,7 @@ export default async function AdminGalleryPage({ searchParams }: Props) {
               </div>
 
               {/* Action Overlays */}
-              <div className="absolute top-2 right-2 flex gap-2 opacity-0 group-hover:opacity-100 transition">
+              <div className="absolute top-2 right-2 flex gap-2 opacity-0 group-hover:opacity-100 touch-visible transition">
                 <Link
                   href={`/admin/gallery/${image.id}/edit`}
                   className="p-2 rounded-lg bg-white/90 text-slate-700 hover:text-blue-600 hover:bg-white transition shadow-lg"
@@ -97,7 +97,7 @@ export default async function AdminGalleryPage({ searchParams }: Props) {
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-between pt-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4">
           <p className="text-sm text-slate-500">
             Showing {skip + 1} to {Math.min(skip + take, total)} of {total} images
           </p>

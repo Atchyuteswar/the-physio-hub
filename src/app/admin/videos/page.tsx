@@ -77,7 +77,7 @@ export default async function VideosPage({ searchParams }: Props) {
           </div>
         ) : (
           <div className="overflow-x-auto">
-            <table className="admin-table">
+            <table className="admin-table admin-table-responsive">
               <thead>
                 <tr>
                   <th>Title</th>
@@ -89,10 +89,10 @@ export default async function VideosPage({ searchParams }: Props) {
               <tbody>
                 {videos.map((video) => (
                   <tr key={video.id}>
-                    <td className="font-medium text-slate-900">
+                    <td data-label="Title" className="font-medium text-slate-900">
                       {video.title}
                     </td>
-                    <td>
+                    <td data-label="URL">
                       <a
                         href={video.youtubeUrl}
                         target="_blank"
@@ -103,10 +103,10 @@ export default async function VideosPage({ searchParams }: Props) {
                         Open
                       </a>
                     </td>
-                    <td className="text-slate-500">
+                    <td data-label="Date" className="text-slate-500">
                       {new Date(video.createdAt).toLocaleDateString()}
                     </td>
-                    <td className="text-right">
+                    <td data-label="Actions" className="text-right">
                       <div className="flex items-center justify-end gap-2">
                         <Link
                           href={`/admin/videos/${video.id}/edit`}
@@ -128,7 +128,7 @@ export default async function VideosPage({ searchParams }: Props) {
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-sm text-slate-500">
             Showing {skip + 1} to {Math.min(skip + take, total)} of {total} videos
           </p>

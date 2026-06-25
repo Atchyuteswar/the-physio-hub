@@ -96,7 +96,7 @@ export default function WhyChooseUsSection() {
                 )}
                 
                 {reason.stats && (
-                  <div className="mt-auto pt-6 flex gap-8">
+                  <div className="mt-auto pt-6 flex flex-wrap gap-4 sm:gap-8">
                     {reason.stats.map((stat, i) => (
                       <div key={i}>
                         <div className="text-2xl font-bold text-green-600">{stat.value}</div>

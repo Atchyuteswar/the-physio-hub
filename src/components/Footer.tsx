@@ -163,7 +163,7 @@ export default function Footer() {
           <p className="text-slate-500 text-sm font-medium">
             © {new Date().getFullYear()} The Physio Hub. All Rights Reserved.
           </p>
-          <div className="flex items-center gap-8">
+          <div className="flex items-center flex-wrap justify-center gap-4 sm:gap-8">
             <Link
               href="/privacy-policy"
               className="text-slate-500 hover:text-white text-sm font-medium transition-colors"

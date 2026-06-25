@@ -21,7 +21,7 @@ export default function HeroSection() {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-[4rem] font-bold text-slate-900 leading-[1.1] tracking-tight animate-fade-in-up">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold text-slate-900 leading-[1.1] tracking-tight animate-fade-in-up">
               Restore Movement.
               <br />
               <span className="text-green-600">Reduce Pain.</span>
@@ -59,7 +59,7 @@ export default function HeroSection() {
 
           {/* Right Image / Graphics */}
           <div className="relative animate-fade-in lg:ml-auto">
-            <div className="relative w-full max-w-lg mx-auto aspect-5/4 min-h-[500px] rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center">
+            <div className="relative w-full max-w-lg mx-auto aspect-5/4 min-h-[320px] sm:min-h-[400px] lg:min-h-[500px] rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center">
               <img 
                 src="/images/home-ill.jpg"
                 alt="Physiotherapy Treatment"
