@@ -57,7 +57,7 @@ export default function NewTestimonialPage() {
         Back to Testimonials
       </Link>
 
-      <div className="card-static p-8">
+      <div className="card-static p-5 sm:p-8">
         <h1 className="text-2xl font-bold text-slate-900 mb-1">Add Testimonial</h1>
         <p className="text-sm text-slate-500 mb-8">
           Add a new patient review to be displayed on the public website.

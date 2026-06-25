@@ -57,7 +57,7 @@ const jsonLd = {
 
 export default function AboutPage() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -226,8 +226,8 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-slate-50 p-10 md:p-14 rounded-3xl border border-slate-100 relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-64 h-64 bg-green-50 rounded-full blur-3xl group-hover:bg-green-100/50 transition-colors duration-500" />
-              <Target className="w-12 h-12 text-green-600 mb-8" />
-              <h3 className="text-3xl font-bold text-slate-900 mb-6">Our Mission</h3>
+              <Target className="w-12 h-12 text-green-600 mb-8 relative z-10" />
+              <h3 className="text-3xl font-bold text-slate-900 mb-6 relative z-10">Our Mission</h3>
               <p className="text-lg text-slate-600 leading-relaxed relative z-10">
                 To provide personalized physiotherapy and rehabilitation programs that help people recover faster, move better, and improve their long-term quality of life. We are dedicated to clinical excellence and genuine patient care.
               </p>
@@ -235,8 +235,8 @@ export default function AboutPage() {
 
             <div className="bg-slate-50 p-10 md:p-14 rounded-3xl border border-slate-100 relative overflow-hidden group">
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-50 rounded-full blur-3xl group-hover:bg-green-100/50 transition-colors duration-500" />
-              <SparklesIcon className="w-12 h-12 text-green-600 mb-8" />
-              <h3 className="text-3xl font-bold text-slate-900 mb-6">Our Vision</h3>
+              <SparklesIcon className="w-12 h-12 text-green-600 mb-8 relative z-10" />
+              <h3 className="text-3xl font-bold text-slate-900 mb-6 relative z-10">Our Vision</h3>
               <p className="text-lg text-slate-600 leading-relaxed mb-8 relative z-10">
                 To become a trusted physiotherapy hub recognized globally for clinical excellence, ethical practice, and superior long-term recovery outcomes.
               </p>

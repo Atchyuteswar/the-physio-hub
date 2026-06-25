@@ -58,7 +58,7 @@ export default function EditTestimonialForm({ testimonial }: { testimonial: Test
         Back to Testimonials
       </Link>
 
-      <div className="card-static p-8">
+      <div className="card-static p-5 sm:p-8">
         <h1 className="text-2xl font-bold text-slate-900 mb-1">Edit Testimonial</h1>
         <p className="text-sm text-slate-500 mb-8">
           Update the patient&apos;s review details.

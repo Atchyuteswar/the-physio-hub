@@ -70,7 +70,7 @@ export default async function AdminDashboard() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Link
           href="/admin/appointments"
-          className="card-static p-6 hover:border-green-300 transition group"
+          className="card-static block p-6 hover:border-green-300 transition group"
         >
           <div className="flex items-center justify-between mb-4">
             <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center">
@@ -91,7 +91,7 @@ export default async function AdminDashboard() {
 
         <Link
           href="/admin/leads"
-          className="card-static p-6 hover:border-blue-300 transition group"
+          className="card-static block p-6 hover:border-blue-300 transition group"
         >
           <div className="flex items-center justify-between mb-4">
             <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center">

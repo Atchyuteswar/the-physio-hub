@@ -58,7 +58,7 @@ export default function AddVideoPage() {
         Back to Videos
       </Link>
 
-      <div className="card-static p-8">
+      <div className="card-static p-5 sm:p-8">
         <h1 className="text-2xl font-bold text-slate-900 mb-1">Add Video</h1>
         <p className="text-sm text-slate-500 mb-8">
           Add a new YouTube video to the educational content library

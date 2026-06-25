@@ -50,7 +50,7 @@ export default function EditGalleryForm({ image }: { image: Gallery }) {
         Back to Gallery
       </Link>
 
-      <div className="card-static p-8">
+      <div className="card-static p-5 sm:p-8">
         <h1 className="text-2xl font-bold text-slate-900 mb-1">Edit Image Caption</h1>
         <p className="text-sm text-slate-500 mb-8">
           Update the caption for this gallery image. The image file itself cannot be changed.

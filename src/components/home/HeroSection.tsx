@@ -33,12 +33,12 @@ export default function HeroSection() {
               Personalized physiotherapy and rehabilitation programs designed to help you recover faster, move better, and live pain-free.
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-200">
-              <Link href="/appointment" className="btn-primary py-3.5 px-8 text-base shadow-lg shadow-green-600/20 hover:shadow-green-600/30">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-200 w-full sm:w-auto">
+              <Link href="/appointment" className="btn-primary py-3.5 px-5 sm:px-8 text-base shadow-lg shadow-green-600/20 hover:shadow-green-600/30 w-full sm:w-auto">
                 Book Appointment
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-5 h-5 shrink-0" />
               </Link>
-              <Link href="/services" className="btn-outline py-3.5 px-8 text-base bg-white border-slate-300 hover:bg-slate-50">
+              <Link href="/services" className="btn-outline py-3.5 px-5 sm:px-8 text-base bg-white border-slate-300 hover:bg-slate-50 w-full sm:w-auto">
                 Explore Services
               </Link>
             </div>
@@ -58,8 +58,8 @@ export default function HeroSection() {
           </div>
 
           {/* Right Image / Graphics */}
-          <div className="relative animate-fade-in lg:ml-auto">
-            <div className="relative w-full max-w-lg mx-auto aspect-5/4 min-h-[320px] sm:min-h-[400px] lg:min-h-[500px] rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center">
+          <div className="relative animate-fade-in lg:ml-auto mt-12 lg:mt-0">
+            <div className="relative w-full max-w-lg lg:max-w-xl mx-auto aspect-[5/4] rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center">
               <img 
                 src="/images/home-ill.jpg"
                 alt="Physiotherapy Treatment"

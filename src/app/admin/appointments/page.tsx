@@ -131,59 +131,99 @@ export default async function AppointmentsPage({ searchParams }: Props) {
             {q || status ? "No appointments match your filters." : "No appointment requests yet."}
           </div>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="admin-table admin-table-responsive">
-              <thead>
-                <tr>
-                  <th>Patient Details</th>
-                  <th>Contact Info</th>
-                  <th>Service</th>
-                  <th>Date Requested</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {appointments.map((apt) => (
-                  <tr key={apt.id}>
-                    <td data-label="Patient">
-                      <div>
-                        <p className="font-semibold text-slate-900">{apt.name}</p>
-                        {apt.message && (
-                          <p className="text-xs text-slate-500 mt-1 line-clamp-1 max-w-[200px]" title={apt.message}>
-                            &ldquo;{apt.message}&rdquo;
-                          </p>
-                        )}
-                      </div>
-                    </td>
-                    <td data-label="Contact">
-                      <div className="space-y-1">
-                        <p className="text-sm font-medium text-slate-700">{apt.phone}</p>
-                        <p className="text-xs text-slate-500">{apt.email || "No email"}</p>
-                      </div>
-                    </td>
-                    <td data-label="Service">
-                      <span className="text-sm text-slate-700 font-medium bg-slate-100 px-2 py-1 rounded">
-                        {apt.service || "General"}
-                      </span>
-                    </td>
-                    <td data-label="Date" className="text-slate-500 text-sm">
-                      {new Date(apt.createdAt).toLocaleDateString(undefined, {
-                        year: 'numeric',
-                        month: 'short',
-                        day: 'numeric'
-                      })}
-                      <span className="block text-xs mt-0.5">
-                        {new Date(apt.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
-                      </span>
-                    </td>
-                    <td data-label="Status">
-                      <StatusSelect id={apt.id} currentStatus={apt.status} />
-                    </td>
+          <>
+            {/* Desktop Table */}
+            <div className="hidden md:block overflow-x-auto">
+              <table className="admin-table">
+                <thead>
+                  <tr>
+                    <th>Patient Details</th>
+                    <th>Contact Info</th>
+                    <th>Service</th>
+                    <th>Date Requested</th>
+                    <th>Status</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody>
+                  {appointments.map((apt) => (
+                    <tr key={apt.id}>
+                      <td>
+                        <div>
+                          <p className="font-semibold text-slate-900">{apt.name}</p>
+                          {apt.message && (
+                            <p className="text-xs text-slate-500 mt-1 line-clamp-1 max-w-[200px]" title={apt.message}>
+                              &ldquo;{apt.message}&rdquo;
+                            </p>
+                          )}
+                        </div>
+                      </td>
+                      <td>
+                        <div className="space-y-1">
+                          <p className="text-sm font-medium text-slate-700">{apt.phone}</p>
+                          <p className="text-xs text-slate-500">{apt.email || "No email"}</p>
+                        </div>
+                      </td>
+                      <td>
+                        <span className="text-sm text-slate-700 font-medium bg-slate-100 px-2 py-1 rounded">
+                          {apt.service || "General"}
+                        </span>
+                      </td>
+                      <td className="text-slate-500 text-sm">
+                        {new Date(apt.createdAt).toLocaleDateString(undefined, {
+                          year: 'numeric',
+                          month: 'short',
+                          day: 'numeric'
+                        })}
+                        <span className="block text-xs mt-0.5">
+                          {new Date(apt.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+                        </span>
+                      </td>
+                      <td>
+                        <StatusSelect id={apt.id} currentStatus={apt.status} />
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Mobile Cards View */}
+            <div className="md:hidden flex flex-col divide-y divide-slate-100">
+              {appointments.map((apt) => (
+                <div key={apt.id} className="p-4 space-y-3 hover:bg-slate-50 transition">
+                  <div className="flex justify-between items-start gap-3">
+                    <div className="min-w-0 flex-1">
+                      <p className="font-bold text-slate-900 text-base truncate">{apt.name}</p>
+                      <p className="text-sm font-medium text-slate-700 mt-0.5">{apt.phone}</p>
+                      {apt.email && (
+                        <p className="text-xs text-slate-500 truncate mt-0.5">{apt.email}</p>
+                      )}
+                    </div>
+                    <div className="shrink-0">
+                      <StatusSelect id={apt.id} currentStatus={apt.status} />
+                    </div>
+                  </div>
+
+                  {apt.message && (
+                    <div className="text-sm text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100">
+                      <p className="line-clamp-3 italic">&ldquo;{apt.message}&rdquo;</p>
+                    </div>
+                  )}
+
+                  <div className="flex items-center justify-between gap-2 pt-1">
+                    <span className="text-xs font-semibold text-slate-700 bg-slate-100 px-2 py-1 rounded-md">
+                      {apt.service || "General"}
+                    </span>
+                    <span className="text-xs font-medium text-slate-400">
+                      {new Date(apt.createdAt).toLocaleDateString(undefined, {
+                        month: 'short', day: 'numeric', year: 'numeric'
+                      })}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
         )}
       </div>
 
