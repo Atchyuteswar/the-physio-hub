@@ -163,7 +163,9 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-slate-500 text-sm font-medium">
             <p>© {new Date().getFullYear()} The Physio Hub. All Rights Reserved.</p>
             <p className="hidden md:block text-slate-700">•</p>
-            <p>Powered by <span className="text-white font-bold tracking-wide">sklogo</span></p>
+            <p className="flex items-center gap-2">
+              Powered by <img src="/images/sklogo.png" alt="sklogo" className="h-6 w-auto" />
+            </p>
           </div>
           <div className="flex items-center flex-wrap justify-center gap-4 sm:gap-8">
             <Link
