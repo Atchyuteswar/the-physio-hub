@@ -59,7 +59,7 @@ export default function HeroSection() {
 
           {/* Right Image / Graphics */}
           <div className="relative animate-fade-in lg:ml-auto mt-12 lg:mt-0">
-            <div className="relative w-full max-w-lg lg:max-w-xl mx-auto aspect-[5/4] rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center">
+            <div className="relative w-full max-w-lg lg:max-w-xl mx-auto aspect-5/4 rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center">
               <img 
                 src="/images/home-ill.jpg"
                 alt="Physiotherapy Treatment"

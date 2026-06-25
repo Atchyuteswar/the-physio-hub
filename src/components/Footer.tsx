@@ -164,7 +164,7 @@ export default function Footer() {
             <p>© {new Date().getFullYear()} The Physio Hub. All Rights Reserved.</p>
             <p className="hidden md:block text-slate-700">•</p>
             <p className="flex items-center gap-2">
-              Powered by <img src="/images/sklogo.png" alt="sklogo" className="h-8 w-auto" />
+              Powered by<Link href="https://www.srikalpavriksha.com/" target="_blank">SKCW</Link> <img src="/images/sklogo.png" alt="sklogo" className="h-8 w-auto" />
             </p>
           </div>
           <div className="flex items-center flex-wrap justify-center gap-4 sm:gap-8">
