@@ -160,9 +160,11 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-slate-800/60 relative z-10">
         <div className="container py-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-slate-500 text-sm font-medium">
-            © {new Date().getFullYear()} The Physio Hub. All Rights Reserved.
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-slate-500 text-sm font-medium">
+            <p>© {new Date().getFullYear()} The Physio Hub. All Rights Reserved.</p>
+            <p className="hidden md:block text-slate-700">•</p>
+            <p>Powered by <span className="text-white font-bold tracking-wide">sklogo</span></p>
+          </div>
           <div className="flex items-center flex-wrap justify-center gap-4 sm:gap-8">
             <Link
               href="/privacy-policy"
