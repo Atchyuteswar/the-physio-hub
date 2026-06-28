@@ -45,10 +45,10 @@ export default function LoginPage() {
         <div className="relative z-10 flex flex-col justify-center px-16">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
-              <span className="text-white font-bold text-2xl">P</span>
+              <span className="text-white font-bold text-2xl">A</span>
             </div>
             <span className="text-2xl font-bold text-white tracking-tight">
-              The Physio Hub
+              Aatral360
             </span>
           </div>
 
@@ -71,10 +71,10 @@ export default function LoginPage() {
           {/* Mobile Logo */}
           <div className="flex items-center gap-2.5 mb-8 lg:hidden">
             <div className="w-10 h-10 rounded-lg bg-green-600 flex items-center justify-center">
-              <span className="text-white font-bold text-lg">P</span>
+              <span className="text-white font-bold text-lg">A</span>
             </div>
             <span className="text-xl font-bold text-slate-900 tracking-tight">
-              The Physio Hub
+              Aatral360
             </span>
           </div>
 

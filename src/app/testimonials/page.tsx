@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Testimonials",
   description:
-    "Read what our patients say about their recovery experience at The Physio Hub.",
+    "Read what our patients say about their recovery experience at Aatral360.",
 };
 
 interface Props {

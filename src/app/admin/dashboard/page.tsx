@@ -62,7 +62,7 @@ export default async function AdminDashboard() {
       <div>
         <h1 className="text-2xl font-bold text-slate-900">Dashboard Overview</h1>
         <p className="text-sm text-slate-500 mt-1">
-          Welcome back! Here&apos;s what&apos;s happening at The Physio Hub today.
+          Welcome back! Here&apos;s what&apos;s happening at Aatral360 today.
         </p>
       </div>
 

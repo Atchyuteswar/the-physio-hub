@@ -3,7 +3,7 @@ import { services } from "@/data/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Base URL from environment variable or fallback for local development
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://thephysiohub.com";
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://aatral360.com";
 
   // Core static routes
   const staticRoutes = [

@@ -7,7 +7,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "Browse our clinic gallery — photos of The Physio Hub facility, treatments, and patient recovery journeys.",
+    "Browse our clinic gallery — photos of the Aatral360 facility, treatments, and patient recovery journeys.",
 };
 
 interface Props {

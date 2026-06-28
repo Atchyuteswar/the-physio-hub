@@ -12,6 +12,9 @@ import {
   Bone,
   GraduationCap,
   Video,
+  HeartHandshake,
+  Dumbbell,
+  Building2,
 } from "lucide-react";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -24,6 +27,9 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Bone,
   GraduationCap,
   Video,
+  HeartHandshake,
+  Dumbbell,
+  Building2,
 };
 
 const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
@@ -61,8 +67,8 @@ export default function ServicesSection() {
       <div className="container">
         <SectionHeading
           badge="Our Specializations"
-          title="Premium Physiotherapy Services"
-          subtitle="Comprehensive, evidence-based treatments tailored to your specific recovery goals."
+          title="Complete Movement Health & Performance Solutions"
+          subtitle="Evidence-based treatments tailored to your lifestyle, goals, and performance needs."
         />
 
         <div className="relative mt-16 pb-8 group flex w-full">

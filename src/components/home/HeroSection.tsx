@@ -22,15 +22,19 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold text-slate-900 leading-[1.1] tracking-tight animate-fade-in-up">
-              Restore Movement.
+              Reduce Pain.
               <br />
-              <span className="text-green-600">Reduce Pain.</span>
+              <span className="text-green-600">Rebuild Confidence.</span>
               <br />
-              Rebuild Confidence.
+              Restore Performance.
             </h1>
 
+            <p className="mt-4 text-base md:text-lg text-slate-500 font-medium tracking-wide animate-fade-in-up delay-50">
+              Movement freedom through active recovery.
+            </p>
+
             <p className="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed animate-fade-in-up delay-100 max-w-xl">
-              Personalized physiotherapy and rehabilitation programs designed to help you recover faster, move better, and live pain-free.
+              <strong>Personalized evidence-based care that restores movement, builds resilience, and empowers you to perform at your best</strong>.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-200 w-full sm:w-auto">
@@ -47,7 +51,7 @@ export default function HeroSection() {
               {[
                 "Personalized Care",
                 "Evidence-Based Treatment",
-                "Recovery Focused"
+                "Performance Focused"
               ].map((text, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" />

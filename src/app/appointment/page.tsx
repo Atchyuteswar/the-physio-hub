@@ -264,7 +264,7 @@ export default function AppointmentPage() {
                         Location
                       </p>
                       <p className="text-sm text-slate-500">
-                        The Physio Hub Clinic
+                        Aatral360 Clinic
                       </p>
                     </div>
                   </div>

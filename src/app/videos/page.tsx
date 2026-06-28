@@ -7,7 +7,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Videos",
   description:
-    "Watch educational videos on physiotherapy, rehabilitation, recovery, and movement from The Physio Hub.",
+    "Watch educational videos on physiotherapy, rehabilitation, recovery, and movement from Aatral360.",
 };
 
 function getYoutubeId(url: string) {

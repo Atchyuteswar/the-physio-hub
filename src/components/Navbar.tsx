@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { 
   Menu, X, ChevronRight, ChevronDown,
-  Activity, HeartPulse, Stethoscope, Zap, RotateCcw, Footprints, Bone, GraduationCap, Video 
+  Activity, HeartPulse, Stethoscope, Zap, RotateCcw, Footprints, Bone, GraduationCap, Video,
+  HeartHandshake, Dumbbell, Building2
 } from "lucide-react";
 import { services } from "@/data/services";
 
@@ -19,6 +20,9 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Bone,
   GraduationCap,
   Video,
+  HeartHandshake,
+  Dumbbell,
+  Building2,
 };
 
 const navItems = [
@@ -69,13 +73,13 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group shrink-0">
               <div className="w-9 h-9 rounded-lg bg-green-600 flex items-center justify-center shrink-0">
-                <span className="text-white font-bold text-lg">P</span>
+                <span className="text-white font-bold text-lg">A</span>
               </div>
               <span className="text-xl font-bold text-slate-900 tracking-tight hidden sm:block">
-                The Physio Hub
+                Aatral360
               </span>
               <span className="text-lg font-bold text-slate-900 tracking-tight sm:hidden">
-                Physio Hub
+                Aatral360
               </span>
             </Link>
 

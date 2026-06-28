@@ -5,6 +5,7 @@ import {
   Award,
   Brain,
   BookOpen,
+  Building2,
   Calendar,
   ClipboardCheck,
   Dna,
@@ -15,6 +16,7 @@ import {
   LineChart,
   MessageCircleQuestion,
   PhoneCall,
+  RotateCcw,
   Shield,
   Stethoscope,
   Target,
@@ -22,18 +24,19 @@ import {
   Users,
   Trophy,
   ClipboardList,
+  Zap,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Premium Physiotherapy & Rehabilitation Services | The Physio Hub",
+  title: "Complete Movement Health & Performance Solutions | Aatral360",
   description:
-    "Comprehensive evidence-based physiotherapy, sports rehabilitation, and chronic pain management. Book your personalized treatment program at The Physio Hub today.",
+    "Comprehensive evidence-based physiotherapy, sports rehabilitation, neurological rehabilitation, and chronic pain management. Book your personalized treatment program at Aatral360 today.",
   openGraph: {
-    title: "Premium Physiotherapy & Rehabilitation Services | The Physio Hub",
+    title: "Complete Movement Health & Performance Solutions | Aatral360",
     description:
       "Comprehensive evidence-based physiotherapy, sports rehabilitation, and chronic pain management.",
-    url: "https://thephysiohub.com/services",
-    siteName: "The Physio Hub",
+    url: "https://aatral360.com/services",
+    siteName: "Aatral360",
     locale: "en_US",
     type: "website",
   },
@@ -45,115 +48,107 @@ const jsonLd = {
   name: "Physiotherapy Services",
   provider: {
     "@type": "MedicalOrganization",
-    name: "The Physio Hub",
-    url: "https://thephysiohub.com",
+    name: "Aatral360",
+    url: "https://aatral360.com",
   },
   description:
-    "Evidence-based physiotherapy, sports injury conditioning, post-surgical rehabilitation, and movement retraining.",
+    "Evidence-based physiotherapy, sports injury rehabilitation, post-operative rehabilitation, neurological rehabilitation, and movement retraining.",
 };
 
 const services = [
   {
-    id: "musculoskeletal-conditioning",
-    title: "Musculoskeletal Conditioning",
+    id: "musculoskeletal-rehabilitation",
+    title: "Musculoskeletal Rehabilitation",
     description:
-      "Assessment and treatment of muscle, joint, tendon, ligament, and movement-related disorders. Focus on pain reduction, improved mobility, and functional recovery.",
-    benefits: ["Pain Reduction", "Restored Mobility", "Joint Stability"],
+      "Assessment and treatment of muscles, joints, tendons, ligaments, and connective tissues through personalized, evidence-based rehabilitation.",
+    benefits: ["Pain Reduction", "Restored Mobility", "Functional Recovery"],
     icon: Dna,
   },
   {
-    id: "sports-injury-conditioning",
-    title: "Sports Injury Conditioning",
+    id: "chronic-pain-rehabilitation",
+    title: "Chronic Pain Rehabilitation",
     description:
-      "Specialized rehabilitation programs for athletes and active individuals recovering from sports-related injuries.",
+      "Evidence-based care for persistent pain using comprehensive assessment, clinical reasoning, rehabilitation, and patient education.",
+    benefits: [
+      "Pain Modulation",
+      "Capacity Building",
+      "Movement Confidence",
+    ],
+    icon: HeartPulse,
+  },
+  {
+    id: "sports-injury-rehabilitation",
+    title: "Sports Injury Rehabilitation",
+    description:
+      "Specialized rehabilitation for athletes — restoring physical qualities, minimizing re-injury risk, and returning to sport with confidence.",
     benefits: [
       "Performance Recovery",
       "Injury Prevention",
       "Sport-Specific Training",
     ],
-    icon: Activity,
+    icon: Zap,
   },
   {
-    id: "post-surgical-re-conditioning",
-    title: "Post-Surgical Reconditioning",
+    id: "post-operative-rehabilitation",
+    title: "Post-Operative Rehabilitation",
     description:
-      "Structured recovery programs after orthopedic and surgical procedures to restore strength, movement, and confidence.",
+      "Structured post-surgical recovery programs designed to protect healing, restore movement, rebuild strength, and return to daily life.",
     benefits: ["Safe Mobilization", "Tissue Healing", "Strength Restoration"],
     icon: Stethoscope,
   },
   {
-    id: "chronic-pain-management",
-    title: "Chronic Pain Management",
+    id: "neurological-rehabilitation",
+    title: "Neurological Rehabilitation",
     description:
-      "Evidence-based strategies to manage long-standing pain conditions and improve quality of life.",
+      "Personalized rehabilitation for neurological conditions — maximizing functional abilities, improving mobility, and regaining independence.",
     benefits: [
-      "Pain Modulation",
-      "Lifestyle Adaptation",
-      "Nervous System Desensitization",
+      "Functional Recovery",
+      "Independence",
+      "Balance & Coordination",
     ],
-    icon: HeartPulse,
+    icon: RotateCcw,
   },
   {
-    id: "movement-retraining-motor-control",
-    title: "Movement Retraining & Motor Control",
+    id: "womens-health-physiotherapy",
+    title: "Women's Health Physiotherapy",
     description:
-      "Corrective movement programs designed to improve body mechanics, coordination, stability, and efficiency.",
-    benefits: [
-      "Biomechanical Correction",
-      "Enhanced Coordination",
-      "Postural Alignment",
-    ],
-    icon: LineChart,
+      "Safe, evidence-based rehabilitation supporting women during pregnancy, after childbirth, and in managing pelvic health conditions.",
+    benefits: ["Pelvic Health", "Core Recovery", "Pregnancy Support"],
+    icon: HeartHandshake,
   },
   {
-    id: "return-to-activity",
-    title: "Return To Activity Rehabilitation",
+    id: "strength-performance-training",
+    title: "Strength & Performance Training",
     description:
-      "Progressive rehabilitation designed to safely return patients to work, sports, fitness, and daily activities.",
-    benefits: ["Functional Capacity", "Work Conditioning", "Safe Progression"],
+      "Scientifically designed training programs to improve strength, movement quality, resilience, and physical performance.",
+    benefits: [
+      "Strength Development",
+      "Performance Enhancement",
+      "Injury Prevention",
+    ],
     icon: Dumbbell,
   },
   {
-    id: "spine-care-functional-rehabilitation",
-    title: "Spine Care & Functional Rehabilitation",
+    id: "corporate-health-wellness",
+    title: "Corporate Health & Wellness",
     description:
-      "Assessment and rehabilitation of neck, back, and spine-related conditions using evidence-based treatment methods.",
-    benefits: ["Core Stability", "Spinal Mobility", "Postural Endurance"],
-    icon: Shield,
-  },
-  {
-    id: "clinical-workshops",
-    title: "Clinical Workshops",
-    description:
-      "Educational workshops focused on injury prevention, movement health, rehabilitation awareness, and wellness.",
-    benefits: [
-      "Hands-On Learning",
-      "Preventative Strategies",
-      "Group Education",
-    ],
-    icon: Users,
-  },
-  {
-    id: "professional-webinars",
-    title: "Professional Webinars",
-    description:
-      "Online educational sessions covering rehabilitation, physiotherapy, recovery strategies, and injury prevention.",
-    benefits: ["Remote Access", "Expert Insights", "Interactive Q&A"],
-    icon: Laptop,
+      "Evidence-based workplace wellness programs combining ergonomics, movement strategies, and preventive health for healthier workplaces.",
+    benefits: ["Ergonomics", "Employee Wellbeing", "Preventive Health"],
+    icon: Building2,
   },
 ];
 
 const conditions = [
-  "Neck Pain",
-  "Back Pain",
+  "Neck & Back Pain",
   "Sports Injuries",
-  "Joint Pain",
+  "Joint & Muscle Pain",
   "Post-Surgical Recovery",
-  "Mobility Issues",
   "Chronic Pain",
-  "Muscle Injuries",
+  "Neurological Conditions",
   "Shoulder Conditions",
   "Knee Conditions",
+  "Women's Health",
+  "Workplace Injuries",
 ];
 
 const steps = [
@@ -199,7 +194,7 @@ const faqs = [
   },
   {
     q: "Can I return to sports after rehabilitation?",
-    a: "Yes. Our sports injury conditioning and return-to-activity programs are specifically designed to bridge the gap between initial recovery and high-level athletic performance safely.",
+    a: "Yes. Our sports injury rehabilitation and return-to-sport programs are specifically designed to bridge the gap between initial recovery and high-level athletic performance safely.",
   },
   {
     q: "What happens during the first consultation?",
@@ -228,12 +223,12 @@ export default function ServicesPage() {
             Clinical Excellence
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6 text-slate-900">
-            Comprehensive Physiotherapy &{" "}
-            <span className="text-green-600">Rehabilitation Services</span>
+            Complete Movement Health &{" "}
+            <span className="text-green-600">Performance Solutions</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed font-medium">
-            Personalized treatment programs designed to help you recover, move
-            better, and perform at your best.
+            Evidence-based treatments tailored to your lifestyle, goals, and
+            performance needs.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
@@ -255,7 +250,7 @@ export default function ServicesPage() {
               Raising the Standard of Care
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-12">
-              At The Physio Hub, we don&apos;t just treat symptoms; we address
+              At Aatral360, we don&apos;t just treat symptoms; we address
               the root cause. Our approach combines{" "}
               <strong>Evidence-Based Care</strong> with{" "}
               <strong>Personalized Programs</strong> to ensure{" "}
@@ -428,12 +423,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* SECTION 6: Why Choose The Physio Hub */}
+      {/* SECTION 6: Why Choose Aatral360 */}
       <section className="py-24 bg-white border-b border-slate-100">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-              Why Choose The Physio Hub
+              Why Choose Aatral360
             </h2>
           </div>
 

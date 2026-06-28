@@ -19,28 +19,28 @@ const quickLinks = [
 
 const serviceLinks = [
   {
-    label: "Musculoskeletal Conditioning",
-    href: "/services/musculoskeletal-conditioning",
+    label: "Musculoskeletal Rehabilitation",
+    href: "/services/musculoskeletal-rehabilitation",
   },
   {
-    label: "Chronic Pain Management",
-    href: "/services/chronic-pain-management",
+    label: "Chronic Pain Rehabilitation",
+    href: "/services/chronic-pain-rehabilitation",
   },
   {
-    label: "Post-Surgical Reconditioning",
-    href: "/services/post-surgical-re-conditioning",
+    label: "Sports Injury Rehabilitation",
+    href: "/services/sports-injury-rehabilitation",
   },
   {
-    label: "Sports Injury Conditioning",
-    href: "/services/sports-injury-conditioning",
+    label: "Post-Operative Rehabilitation",
+    href: "/services/post-operative-rehabilitation",
   },
   {
-    label: "Movement Retraining",
-    href: "/services/movement-retraining-motor-control",
+    label: "Neurological Rehabilitation",
+    href: "/services/neurological-rehabilitation",
   },
   {
-    label: "Spine Care",
-    href: "/services/spine-care-functional-rehabilitation",
+    label: "Women's Health Physiotherapy",
+    href: "/services/womens-health-physiotherapy",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function Footer() {
                 <Activity className="w-6 h-6 text-white" />
               </div>
               <span className="text-2xl font-bold text-white tracking-tight">
-                The Physio Hub
+                Aatral360
               </span>
             </Link>
 
@@ -214,7 +214,7 @@ export default function Footer() {
         <div className="container py-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-slate-500 text-sm font-medium">
             <p>
-              © {new Date().getFullYear()} The Physio Hub. All Rights Reserved.
+              © {new Date().getFullYear()} Aatral360. All Rights Reserved.
             </p>
             <p className="hidden md:block text-slate-700">•</p>
             <p className="flex items-center gap-2">

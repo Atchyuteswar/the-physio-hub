@@ -19,15 +19,15 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About The Physio Hub | Dr. Sarath Kumar N, PT",
+  title: "About Aatral360 | Dr. Sarath Kumar N, PT",
   description:
-    "Learn about The Physio Hub, founded by Dr. Sarath Kumar N, PT. We offer premium, evidence-based physiotherapy specializing in sports injuries and musculoskeletal pain.",
+    "Learn about Aatral360, founded by Dr. Sarath Kumar N, PT. We offer premium, evidence-based physiotherapy specializing in sports injuries and musculoskeletal pain.",
   openGraph: {
-    title: "About The Physio Hub | Dr. Sarath Kumar N, PT",
+    title: "About Aatral360 | Dr. Sarath Kumar N, PT",
     description:
       "Premium, evidence-based physiotherapy clinic specializing in sports injuries, musculoskeletal pain, and long-term functional recovery.",
-    url: "https://thephysiohub.com/about",
-    siteName: "The Physio Hub",
+    url: "https://aatral360.com/about",
+    siteName: "Aatral360",
     locale: "en_US",
     type: "website",
   },
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MedicalOrganization",
-  "name": "The Physio Hub",
-  "url": "https://thephysiohub.com",
-  "logo": "https://thephysiohub.com/logo.png",
+  "name": "Aatral360",
+  "url": "https://aatral360.com",
+  "logo": "https://aatral360.com/logo.png",
   "founder": {
     "@type": "Person",
     "name": "Dr. Sarath Kumar N",
@@ -76,7 +76,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-white/80 md:bg-linear-to-r md:from-white/95 md:to-white/30" />
           <Image 
             src="/images/about-ill.jpg"
-            alt="The Physio Hub Clinic and Founder"
+            alt="Aatral360 Clinic and Founder"
             fill
             className="object-cover"
             priority
@@ -113,13 +113,13 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
                 <p>
-                  The Physio Hub was established with a singular, driving purpose: to elevate the standard of physiotherapy by shifting the focus from temporary symptom management to sustainable, long-term recovery. 
+                  Aatral360 was established with a singular, driving purpose: to elevate the standard of physiotherapy by shifting the focus from temporary symptom management to sustainable, long-term recovery. 
                 </p>
                 <p>
                   We recognized a profound need in the community for clinical care that addresses the <strong>root causes</strong> of movement dysfunction and pain. Too often, patients are rushed through treatments that only offer fleeting relief. We wanted to create a sanctuary of healing where every patient is heard, rigorously assessed, and comprehensively treated.
                 </p>
                 <p>
-                  Today, The Physio Hub stands as a modern rehabilitation center where evidence-based science meets compassionate human connection. We don&apos;t just treat injuries; we treat the individual, empowering you to reclaim your active lifestyle with confidence.
+                  Today, Aatral360 stands as a modern rehabilitation center where evidence-based science meets compassionate human connection. We don&apos;t just treat injuries; we treat the individual, empowering you to reclaim your active lifestyle with confidence.
                 </p>
               </div>
             </div>

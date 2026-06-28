@@ -8,9 +8,21 @@ export type FAQ = {
   answer: string;
 };
 
+export type RecoveryTimeline = {
+  condition: string;
+  duration: string;
+};
+
+export type ApproachSection = {
+  title: string;
+  items: string[];
+  description?: string;
+};
+
 export type Service = {
   slug: string;
   title: string;
+  subtitle?: string;
   description: string;
   icon: string;
   longDescription?: string[];
@@ -18,600 +30,884 @@ export type Service = {
   conditionsTreated?: string[];
   process?: ProcessStep[];
   faqs?: FAQ[];
+  recoveryTimeline?: RecoveryTimeline[];
+  approachSections?: ApproachSection[];
+  differenceText?: string;
+  timelineNote?: string;
 };
 
 export const services: Service[] = [
   {
-    slug: "musculoskeletal-conditioning",
-    title: "Musculoskeletal Conditioning",
+    slug: "musculoskeletal-rehabilitation",
+    title: "Musculoskeletal Rehabilitation",
+    subtitle: "Restore Movement. Rebuild Capacity. Return with Confidence.",
     description:
-      "Personalized programs for joint and muscle conditions, improving strength, movement, and function for acute and chronic pain.",
+      "Assessment and treatment of muscles, joints, tendons, ligaments, and connective tissues through personalized, evidence-based rehabilitation.",
     icon: "Activity",
     longDescription: [
-      "Musculoskeletal conditioning is a comprehensive approach to rehabilitation that goes beyond basic injury recovery. It focuses on optimizing the function of your muscles, bones, joints, and connective tissues to build resilience and prevent future injuries.",
-      "Whether you are recovering from a chronic condition, preparing for a demanding physical activity, or simply looking to improve your daily functional capacity, our tailored conditioning programs are designed to restore strength, flexibility, and endurance safely and effectively."
+      "Our musculoskeletal rehabilitation programs are designed to address conditions affecting the muscles, joints, tendons, ligaments, fascia, and connective tissues through a personalized, evidence-based approach.",
+      "Rather than treating imaging findings alone, we combine detailed history taking, movement analysis, pattern recognition, and clinical reasoning to understand how your condition is affecting movement, function, and daily life. This enables us to develop an individualized rehabilitation plan focused on restoring long-term function—not simply reducing symptoms."
     ],
-    targetAudience: [
-      "Individuals recovering from prolonged immobilization or injury.",
-      "Athletes looking to optimize biomechanics and prevent sports injuries.",
-      "Older adults seeking to maintain bone density and muscle mass.",
-      "Office workers dealing with postural imbalances and joint stiffness.",
-      "Anyone experiencing generalized weakness or chronic musculoskeletal fatigue."
+    approachSections: [
+      {
+        title: "Comprehensive Assessment",
+        items: [
+          "Detailed clinical history",
+          "Functional movement assessment",
+          "Joint, muscle and soft tissue evaluation",
+          "Strength, mobility and motor control assessment",
+          "Clinical reasoning and evidence-informed diagnosis"
+        ]
+      },
+      {
+        title: "Pain Modulation & Tissue Recovery",
+        description: "When clinically indicated, we utilize evidence-based manual therapy techniques to reduce pain, improve mobility, and prepare the body for active rehabilitation. These may include:",
+        items: [
+          "Joint Mobilization (Maitland & Mulligan Concepts)",
+          "Muscle Energy Techniques (MET)",
+          "Myofascial Release",
+          "Active Release Techniques (ART)",
+          "Trigger Point & Ischemic Compression",
+          "Deep Transverse Friction Massage",
+          "Soft Tissue Mobilization"
+        ]
+      },
+      {
+        title: "Restore Mobility & Motor Control",
+        description: "As symptoms improve, rehabilitation progresses toward restoring normal movement through:",
+        items: [
+          "Joint mobility exercises",
+          "Flexibility and mobility programs",
+          "Motor control retraining",
+          "Neuromuscular re-education",
+          "Balance and proprioceptive training"
+        ]
+      },
+      {
+        title: "Build Strength & Functional Capacity",
+        description: "Recovery continues by progressively improving:",
+        items: [
+          "Muscle strength",
+          "Muscular endurance",
+          "Functional movement patterns",
+          "Load tolerance",
+          "Daily activity performance",
+          "Sport-specific or occupation-specific function"
+        ]
+      }
     ],
     conditionsTreated: [
-      "Muscle Atrophy and Weakness",
-      "Osteoarthritis and Joint Degeneration",
-      "Tendinopathies (e.g., Achilles, Patellar, Tennis Elbow)",
-      "Postural Dysfunctions",
-      "Hypermobility Syndromes",
-      "General Deconditioning"
+      "Neck and back pain",
+      "Shoulder conditions (dislocation, labral tears, rotator cuff tear)",
+      "Hip, knee, ankle and foot disorders",
+      "Disc herniation",
+      "Tendon injuries (Tendinopathy)",
+      "Ligament injuries (ACL, Ankle sprains)",
+      "Muscle strains and tears",
+      "Joint stiffness",
+      "Arthritis and degenerative conditions",
+      "Temporomandibular joint issues",
+      "Work-related musculoskeletal disorders",
+      "Post-fracture rehabilitation"
     ],
+    recoveryTimeline: [
+      { condition: "Mild Muscle Strain", duration: "2–6 weeks" },
+      { condition: "Moderate Muscle Injury", duration: "4–8 weeks" },
+      { condition: "Severe Muscle Tear", duration: "8–12+ weeks" },
+      { condition: "Tendinopathy", duration: "8–16 weeks" },
+      { condition: "Ligament Sprain (Grade I–II)", duration: "4–12 weeks" },
+      { condition: "Ligament Reconstruction", duration: "6–12 months" },
+      { condition: "Joint Mobilization Deficits", duration: "4–8 weeks" },
+      { condition: "Cartilage Injury", duration: "3–9 months" },
+      { condition: "Fracture Rehabilitation", duration: "8–24 weeks" },
+      { condition: "Post-Operative Orthopaedic Rehabilitation", duration: "8–24+ weeks" }
+    ],
+    timelineNote: "Recovery timelines vary based on the individual's condition, medical history, surgical procedures, rehabilitation goals, and participation in the prescribed program.",
+    differenceText: "At Aatral360, rehabilitation is not limited to symptom relief. Our goal is to restore efficient movement, improve physical capacity, reduce the risk of recurrence, and empower every individual to return confidently to work, sport, and everyday life through personalized, evidence-based rehabilitation.",
     process: [
       {
-        title: "Comprehensive Biomechanical Assessment",
-        description: "We begin with a detailed analysis of your movement patterns, identifying muscular imbalances, joint restrictions, and areas of weakness."
+        title: "Comprehensive Assessment",
+        description: "We evaluate your clinical history, movement patterns, joint and soft tissue function, and strength to build a complete picture."
       },
       {
-        title: "Customized Programming",
-        description: "Based on your assessment, we develop a phased conditioning program that progressively loads your tissues to build strength without causing flare-ups."
+        title: "Pain Modulation & Active Rehabilitation",
+        description: "Evidence-based manual therapy and progressive exercises to reduce pain, restore mobility, and rebuild motor control."
       },
       {
-        title: "Supervised Progression",
-        description: "You'll work closely with our physiotherapists to ensure flawless technique, gradually increasing intensity as your body adapts and becomes stronger."
+        title: "Strength & Functional Restoration",
+        description: "Progressively building strength, endurance, and functional capacity for confident return to daily life, work, or sport."
       }
     ],
     faqs: [
       {
         question: "How is this different from standard physical therapy?",
-        answer: "While standard physical therapy often focuses on acute pain relief and basic mobility recovery, musculoskeletal conditioning is an advanced phase designed to build high-level tissue capacity and bulletproof your body against future injuries."
+        answer: "Our musculoskeletal rehabilitation goes beyond symptom relief. We focus on restoring movement quality, building physical capacity, and reducing recurrence risk through a comprehensive, evidence-based approach."
       },
       {
-        question: "Do I need a gym membership to complete the exercises?",
-        answer: "No. While we utilize clinical equipment during your in-clinic sessions, we always design your home exercise program around the equipment you have available, whether that's resistance bands, bodyweight, or a full gym."
+        question: "How long does rehabilitation typically take?",
+        answer: "Recovery timelines vary by condition — from 2–6 weeks for mild strains to 6–12 months for ligament reconstruction. Your physiotherapist will provide a personalized timeline after assessment."
       },
       {
-        question: "How long does a conditioning program typically last?",
-        answer: "Because tissues (especially tendons and ligaments) take time to adapt to load, most conditioning programs run between 8 to 12 weeks to see significant, lasting structural changes in the body."
+        question: "Do I need imaging before starting rehabilitation?",
+        answer: "Not always. We use clinical reasoning and movement assessment to guide treatment. Imaging is recommended only when clinically indicated."
       }
     ]
   },
   {
-    slug: "chronic-pain-management",
-    title: "Chronic Pain Management",
+    slug: "chronic-pain-rehabilitation",
+    title: "Chronic Pain Rehabilitation",
+    subtitle: "Understanding Pain. Restoring Function. Building Resilience.",
     description:
-      "Evidence-based care for chronic pain using education, graded exercise, load control, and functional movement therapy.",
+      "Evidence-based care for persistent pain using comprehensive assessment, clinical reasoning, rehabilitation, and patient education.",
     icon: "HeartPulse",
     longDescription: [
-      "Chronic pain management is a specialized physiotherapy approach for individuals suffering from persistent pain lasting more than three months.",
-      "Instead of only treating symptoms, this program focuses on understanding pain, improving movement, and restoring physical confidence. Our therapists use scientifically proven techniques to help you manage pain safely and return to an active lifestyle."
+      "Chronic pain is more than a symptom—it is often the result of complex interactions between tissue health, movement patterns, physical capacity, lifestyle, and the nervous system. At Aatral360, our approach goes beyond temporary pain relief by identifying the factors that contribute to persistent pain and developing a personalized rehabilitation strategy to address them.",
+      "Rather than relying solely on pain-relieving modalities, we combine comprehensive assessment, clinical reasoning, evidence-based rehabilitation, and patient education to help you regain confidence in movement and achieve lasting improvements."
     ],
-    targetAudience: [
-      "People with long-term back pain",
-      "Individuals with chronic neck pain",
-      "Patients with recurrent joint pain",
-      "Office workers with posture-related pain",
-      "People with long-standing muscle pain",
-      "People afraid of movement due to pain",
-      "Patients with arthritis-related discomfort",
-      "Patients with lifestyle-related pain conditions"
+    approachSections: [
+      {
+        title: "Comprehensive Assessment",
+        description: "Every rehabilitation journey begins with understanding the complete picture. We assess:",
+        items: [
+          "Pain characteristics and contributing factors",
+          "Movement quality and functional limitations",
+          "Tissue loading and physical capacity",
+          "Occupational and lifestyle demands",
+          "Ergonomic and activity-related factors",
+          "Psychosocial influences when relevant"
+        ]
+      },
+      {
+        title: "Pain Modulation",
+        description: "When clinically appropriate, evidence-based interventions may be used to reduce pain and improve tolerance to movement, including:",
+        items: [
+          "Manual Therapy",
+          "Joint Mobilization",
+          "Myofascial Release",
+          "Dry Needling",
+          "Therapeutic Exercise",
+          "Electrotherapy Modalities (TENS, IFT, Ultrasound, Laser Therapy, Shockwave Therapy, etc.)"
+        ]
+      },
+      {
+        title: "Load Management & Capacity Building",
+        description: "Long-term improvement depends on restoring the balance between what your body is asked to do and what it is capable of doing.",
+        items: [
+          "Activity modification",
+          "Ergonomic guidance",
+          "Progressive load management",
+          "Functional movement retraining",
+          "Motor control rehabilitation",
+          "Strength and endurance training",
+          "Gradual return to work, daily activities, or sport"
+        ]
+      },
+      {
+        title: "Individualized Exercise Prescription",
+        description: "Exercise is the foundation of successful chronic pain rehabilitation. Every exercise program is tailored according to:",
+        items: [
+          "Your diagnosis",
+          "Irritability and symptom severity",
+          "Functional limitations",
+          "Physical capacity",
+          "Personal goals",
+          "Stage of rehabilitation"
+        ]
+      }
     ],
     conditionsTreated: [
-      "Chronic Low Back Pain",
-      "Cervical Pain",
-      "Shoulder Pain",
-      "Knee Pain",
-      "Arthritis Pain",
-      "Postural Pain Syndromes",
-      "Recurrent Sports Injuries",
-      "Myofascial Pain",
-      "Work-Related Musculoskeletal Pain"
+      "Persistent neck or back pain",
+      "Chronic shoulder, hip, knee, or ankle pain",
+      "Tendinopathy",
+      "Arthritis-related pain",
+      "Recurrent musculoskeletal pain",
+      "Persistent pain following injury or surgery",
+      "Work-related pain conditions",
+      "Overuse injuries",
+      "Activity-related pain limiting daily life or sport"
     ],
+    recoveryTimeline: [
+      { condition: "Persistent Musculoskeletal Pain", duration: "6–12 weeks" },
+      { condition: "Chronic Tendinopathy", duration: "8–16 weeks" },
+      { condition: "Complex Chronic Pain Conditions", duration: "Individualized long-term rehabilitation" }
+    ],
+    differenceText: "We believe lasting pain relief is achieved by improving movement quality, increasing physical capacity, and helping people confidently return to the activities that matter most. Our goal is not simply to reduce pain for today, but to build the knowledge, resilience, and movement capacity needed for long-term health and independence.",
     process: [
       {
         title: "Comprehensive Pain Assessment",
-        description: "We evaluate your pain history, lifestyle, movement patterns, emotional factors, and physical limitations."
+        description: "We evaluate pain characteristics, movement quality, physical capacity, lifestyle demands, and contributing factors."
       },
       {
-        title: "Personalized Pain Management Program",
-        description: "We design a customized plan including pain education, graded exercises, and load management strategies."
+        title: "Pain Modulation & Load Management",
+        description: "Evidence-based interventions to reduce pain combined with progressive load management and capacity building."
       },
       {
-        title: "Functional Movement & Self-Management",
-        description: "We help you develop safe movement habits and self-management skills for long-term pain control."
+        title: "Individualized Exercise & Self-Management",
+        description: "Tailored exercise programs and education to build long-term resilience and movement confidence."
       }
     ],
     faqs: [
       {
-        question: "How long does the program last?",
-        answer: "Usually 4–8 weeks depending on your condition."
+        question: "How long does chronic pain rehabilitation take?",
+        answer: "Programs typically range from 6–16 weeks for persistent pain conditions. Complex cases may require individualized long-term rehabilitation."
       },
       {
-        question: "Is this suitable for chronic pain?",
-        answer: "Yes, our programs are specially designed for both acute and chronic conditions."
+        question: "Is exercise safe for chronic pain?",
+        answer: "Yes. Exercise is the foundation of chronic pain rehabilitation. Programs are carefully tailored to your irritability, capacity, and goals."
       },
       {
-        question: "Will exercises be customized?",
-        answer: "Yes, every program is personalized."
-      },
-      {
-        question: "Do I need a doctor’s referral?",
-        answer: "No, you can directly book an appointment."
-      },
-      {
-        question: "Is it safe for elderly patients?",
-        answer: "Yes, programs are adjusted based on age and health condition."
+        question: "Do I need a doctor's referral?",
+        answer: "No, you can directly book an appointment for assessment and rehabilitation."
       }
     ]
   },
   {
-    slug: "post-surgical-reconditioning",
-    title: "Post-Surgical Re-Conditioning",
+    slug: "sports-injury-rehabilitation",
+    title: "Sports Injury Rehabilitation",
+    subtitle: "Recover with Confidence. Return with Performance.",
     description:
-      "Structured rehab after surgery focusing on healing, strength, movement recovery, and safe return to daily and functional activities.",
-    icon: "Stethoscope",
-    longDescription: [
-      "Post-surgical rehabilitation is a specialized physiotherapy program designed to help patients recover after surgery. It focuses on restoring mobility, strength, flexibility, and function while respecting tissue healing timelines.",
-      "Our expert physiotherapists guide you through each stage of recovery to ensure safe and effective healing and prevent future complications."
-    ],
-    targetAudience: [
-      "Patients after orthopedic surgery",
-      "Individuals recovering from sports injuries",
-      "Ligament reconstruction patients (ACL, PCL, etc.)",
-      "Anyone advised rehabilitation after surgery",
-      "People with chronic musculoskeletal pain",
-      "Athletes needing conditioning support",
-      "Elderly individuals with mobility issues",
-      "Patients after surgery or long-term immobilization"
-    ],
-    conditionsTreated: [
-      "Knee Replacement Surgery",
-      "Hip Replacement Surgery",
-      "ACL / Ligament Reconstruction",
-      "Meniscus Surgery",
-      "Rotator Cuff Repair",
-      "Shoulder Surgery",
-      "Spine Surgery",
-      "Fracture Fixation",
-      "Ankle & Foot Surgery"
-    ],
-    process: [
-      {
-        title: "Post-Surgical Assessment",
-        description: "We evaluate your surgical report, pain level, swelling, range of motion, and mobility to design a safe recovery plan."
-      },
-      {
-        title: "Progressive Rehabilitation Program",
-        description: "We implement stage-wise exercises focusing on tissue healing, flexibility, muscle activation, and gradual strengthening."
-      },
-      {
-        title: "Functional Training & Return to Activity",
-        description: "We prepare you for daily activities, work, sports, and lifestyle demands with advanced functional training."
-      }
-    ],
-    faqs: [
-      {
-        question: "How long does the program last?",
-        answer: "Usually 4–8 weeks depending on your condition."
-      },
-      {
-        question: "Is this suitable for chronic pain?",
-        answer: "Yes, our programs are specially designed for both acute and chronic conditions."
-      },
-      {
-        question: "Will exercises be customized?",
-        answer: "Yes, every program is personalized."
-      },
-      {
-        question: "Do I need a doctor’s referral?",
-        answer: "No, you can directly book an appointment."
-      },
-      {
-        question: "Is it safe for elderly patients?",
-        answer: "Yes, programs are adjusted based on age and health condition."
-      }
-    ]
-  },
-  {
-    slug: "sports-injury-conditioning",
-    title: "Sports Injury Conditioning",
-    description:
-      "Targeted rehab for sports injuries focusing on biomechanics, safe loading, injury prevention, and gradual return to sport.",
+      "Specialized rehabilitation for athletes — restoring physical qualities, minimizing re-injury risk, and returning to sport with confidence.",
     icon: "Zap",
     longDescription: [
-      "Sports injury rehabilitation is a specialized physiotherapy program aimed at helping athletes recover from injuries and return to peak performance. It focuses on restoring strength, flexibility, coordination, and movement efficiency.",
-      "Our conditioning programs are designed to rebuild physical capacity, prevent re-injury, and enhance athletic performance."
+      "At Aatral360, sports rehabilitation goes beyond healing an injury. Our goal is to restore the physical qualities required for your sport, minimize the risk of re-injury, and help you return to competition with confidence and performance readiness.",
+      "Every athlete is different. That's why our rehabilitation programs are individually designed based on your injury, sport, playing position, training history, competition level, seasonal demands, and performance goals."
+    ],
+    approachSections: [
+      {
+        title: "Athlete-Centered Assessment",
+        description: "Every rehabilitation program begins with a comprehensive evaluation, including:",
+        items: [
+          "Injury and medical history",
+          "Sport-specific movement assessment",
+          "Training load and competition schedule",
+          "Playing position and performance demands",
+          "Strength, mobility, balance, and movement quality",
+          "Functional performance testing"
+        ]
+      },
+      {
+        title: "Progressive Sports Rehabilitation",
+        description: "Rehabilitation progresses through structured phases, ensuring each stage prepares you for the next:",
+        items: [
+          "Pain management and tissue healing",
+          "Mobility restoration",
+          "Strength and endurance development",
+          "Neuromuscular control and movement retraining",
+          "Load management and tissue capacity building",
+          "Sport-specific skill integration"
+        ]
+      },
+      {
+        title: "Performance Restoration",
+        description: "Our advanced rehabilitation programs may include:",
+        items: [
+          "Plyometric training",
+          "Speed development",
+          "Acceleration and deceleration training",
+          "Agility and change-of-direction drills",
+          "Landing mechanics",
+          "Balance and coordination training",
+          "Sport-specific conditioning",
+          "Return-to-performance progression"
+        ]
+      },
+      {
+        title: "Return-to-Sport Testing",
+        description: "Before returning to unrestricted training or competition, athletes undergo objective performance testing to evaluate readiness:",
+        items: [
+          "Strength assessment",
+          "Functional movement testing",
+          "Hop and jump tests",
+          "Balance assessment",
+          "Agility testing",
+          "Speed and power evaluation",
+          "Sport-specific performance tasks"
+        ]
+      }
+    ],
+    conditionsTreated: [
+      "Ligament injuries (ACL, PCL, MCL, LCL, ankle sprains)",
+      "Muscle strains and tears",
+      "Tendon injuries (Achilles, patellar, hamstring, rotator cuff)",
+      "Meniscus injuries",
+      "Shoulder instability and dislocations",
+      "Stress fractures",
+      "Running-related injuries",
+      "Throwing and overhead sports injuries",
+      "Overuse injuries",
+      "Post-operative sports rehabilitation"
     ],
     targetAudience: [
       "Recreational athletes",
-      "Gym enthusiasts",
-      "Professional sportspersons",
-      "Runners and cyclists",
-      "Football, cricket, badminton players",
-      "Fitness trainers",
-      "College-level athletes",
-      "Anyone with repeated sports injuries"
+      "Competitive athletes",
+      "Elite performers across all sports"
     ],
-    conditionsTreated: [
-      "Muscle Strains & Tears",
-      "Ligament Injuries (ACL, MCL, etc.)",
-      "Ankle Sprains",
-      "Tennis Elbow / Golfer’s Elbow",
-      "Rotator Cuff Injuries",
-      "Runner’s Knee",
-      "Achilles Tendon Injuries",
-      "Meniscus Injuries",
-      "Shin Splints"
+    recoveryTimeline: [
+      { condition: "Mild Muscle Strain", duration: "2–6 weeks" },
+      { condition: "Moderate Muscle Injury", duration: "4–8 weeks" },
+      { condition: "Tendinopathy", duration: "8–16 weeks" },
+      { condition: "Ankle Sprain", duration: "4–10 weeks" },
+      { condition: "Meniscus Injury", duration: "6–16 weeks" },
+      { condition: "Shoulder Instability", duration: "8–16 weeks" },
+      { condition: "Stress Fracture", duration: "8–16 weeks" },
+      { condition: "ACL Reconstruction", duration: "9–12 months" },
+      { condition: "Multi-Ligament Reconstruction", duration: "9–15 months" }
     ],
+    timelineNote: "Return-to-sport decisions are based on objective functional testing, physical readiness, and sport-specific demands—not simply the passage of time.",
+    differenceText: "At Aatral360, successful rehabilitation means more than returning to activity. We combine evidence-based physiotherapy, strength and conditioning, load management, and performance training to help athletes recover safely, restore physical capacity, reduce the risk of re-injury, and return to performing at their highest potential.",
     process: [
       {
-        title: "Biomechanical Assessment",
-        description: "We analyze your posture, movement patterns, sports technique, and injury history."
+        title: "Athlete-Centered Assessment",
+        description: "We evaluate your injury, sport-specific demands, training history, and performance goals."
       },
       {
-        title: "Progressive Loading & Conditioning",
-        description: "We implement controlled strengthening, mobility, and endurance training based on healing stages."
+        title: "Progressive Sports Rehabilitation",
+        description: "Structured phases from tissue healing through strength, neuromuscular control, and sport-specific skill integration."
       },
       {
-        title: "Return-to-Sport Training",
-        description: "We prepare you for real sports demands with agility, speed, balance, and sport-specific drills."
+        title: "Return-to-Sport Testing & Performance",
+        description: "Objective functional testing to ensure safe, confident return to competition at your highest level."
       }
     ],
     faqs: [
       {
-        question: "How long does the program last?",
-        answer: "Usually 4–8 weeks depending on your condition."
+        question: "When can I return to sport?",
+        answer: "Return-to-sport decisions are based on objective functional testing and physical readiness, not simply time elapsed since injury."
       },
       {
-        question: "Is this suitable for chronic pain?",
-        answer: "Yes, our programs are specially designed for both acute and chronic conditions."
+        question: "Is this suitable for recreational athletes?",
+        answer: "Yes, our programs are designed for recreational, competitive, and elite athletes across all sports."
       },
       {
-        question: "Will exercises be customized?",
-        answer: "Yes, every program is personalized."
-      },
-      {
-        question: "Do I need a doctor’s referral?",
-        answer: "No, you can directly book an appointment."
-      },
-      {
-        question: "Is it safe for elderly patients?",
-        answer: "Yes, programs are adjusted based on age and health condition."
+        question: "Will exercises be sport-specific?",
+        answer: "Yes, rehabilitation progresses to include sport-specific conditioning, agility, plyometrics, and performance tasks."
       }
     ]
   },
   {
-    slug: "movement-retraining-motor-control",
-    title: "Movement Retraining & Motor Control Programs",
+    slug: "post-operative-rehabilitation",
+    title: "Post-Operative Rehabilitation",
+    subtitle: "Guided Recovery. Progressive Rehabilitation. Confident Return to Life.",
     description:
-      "Movement-based rehab to improve balance, posture, coordination, and motor control for children and special needs patients.",
+      "Structured post-surgical recovery programs designed to protect healing, restore movement, rebuild strength, and return to daily life.",
+    icon: "Stethoscope",
+    longDescription: [
+      "Successful surgery is only the beginning of recovery. At Aatral360, our post-operative rehabilitation programs are designed to protect surgical healing, restore movement, rebuild strength, and help individuals safely return to their daily activities, work, or sport.",
+      "Our rehabilitation plans are developed in close collaboration with your orthopedic surgeon, ensuring that every stage of recovery respects surgical precautions, tissue-healing timelines, and your individual goals."
+    ],
+    approachSections: [
+      {
+        title: "Collaborative Post-Surgical Care",
+        description: "From the first rehabilitation session, our physiotherapists work alongside your surgeon's recommendations, considering:",
+        items: [
+          "Surgical procedure performed",
+          "Tissue-healing stage",
+          "Weight-bearing restrictions",
+          "Range of motion precautions",
+          "Graft or implant protection",
+          "Individual recovery goals"
+        ]
+      },
+      {
+        title: "Phase 1 – Protection & Pain Management",
+        items: [
+          "Protect healing tissues, control pain and swelling, maintain circulation, and preserve early mobility while respecting surgical precautions."
+        ]
+      },
+      {
+        title: "Phase 2 – Movement Restoration & Motor Control",
+        items: [
+          "Restore joint mobility, improve movement quality, reactivate stabilizing muscles, and regain neuromuscular control."
+        ]
+      },
+      {
+        title: "Phase 3 – Strength & Functional Recovery",
+        items: [
+          "Progressively rebuild muscle strength, endurance, balance, and functional movement required for everyday activities."
+        ]
+      },
+      {
+        title: "Phase 4 – Advanced Strength & Capacity Building",
+        items: [
+          "Improve physical capacity, movement efficiency, dynamic stability, and tolerance for higher functional demands."
+        ]
+      },
+      {
+        title: "Phase 5 – Return to Activity or Sport",
+        items: [
+          "Prepare individuals for safe return to work, recreational activities, or sport through functional rehabilitation and goal-specific progression."
+        ]
+      }
+    ],
+    conditionsTreated: [
+      "ACL and PCL reconstruction",
+      "Meniscus repair or meniscectomy",
+      "Rotator cuff repair",
+      "Shoulder stabilization surgery",
+      "Joint replacement (Hip & Knee)",
+      "Fracture fixation (plates, screws, or nails)",
+      "Tendon repair surgeries",
+      "Cartilage restoration procedures",
+      "Spinal surgery",
+      "Foot and ankle surgery",
+      "Hand and wrist surgery",
+      "Other orthopedic procedures"
+    ],
+    recoveryTimeline: [
+      { condition: "Arthroscopic Procedures", duration: "4–8 weeks" },
+      { condition: "Fracture Fixation", duration: "8–16 weeks" },
+      { condition: "Tendon Repair", duration: "12–24 weeks" },
+      { condition: "Rotator Cuff Repair", duration: "4–6 months" },
+      { condition: "Joint Replacement", duration: "8–20 weeks" },
+      { condition: "Meniscus Repair", duration: "3–6 months" },
+      { condition: "ACL Reconstruction", duration: "9–12 months" },
+      { condition: "Multi-Ligament Reconstruction", duration: "9–15 months" }
+    ],
+    timelineNote: "Rehabilitation timelines are individualized and may vary based on healing, surgical findings, overall health, and functional goals.",
+    differenceText: "At Aatral360, post-operative rehabilitation is more than following a protocol. We combine surgeon-guided precautions with evidence-based physiotherapy, progressive exercise, movement restoration, and functional training to help every individual recover safely, regain independence, and confidently return to the activities that matter most.",
+    process: [
+      {
+        title: "Post-Surgical Assessment",
+        description: "We evaluate your surgical report, healing stage, restrictions, and recovery goals to design a safe rehabilitation plan."
+      },
+      {
+        title: "Five-Phase Progressive Rehabilitation",
+        description: "Structured phases from protection and pain management through strength, capacity building, and return to activity."
+      },
+      {
+        title: "Functional Training & Return to Life",
+        description: "Preparing you for daily activities, work, and sport with advanced functional training and goal-specific progression."
+      }
+    ],
+    faqs: [
+      {
+        question: "When should I start rehabilitation after surgery?",
+        answer: "Post-operative rehabilitation typically begins as soon as your surgeon clears you, often within the first week after surgery."
+      },
+      {
+        question: "Do you coordinate with my surgeon?",
+        answer: "Yes, our rehabilitation plans are developed in close collaboration with your surgeon's recommendations and precautions."
+      },
+      {
+        question: "How long does post-operative rehabilitation take?",
+        answer: "Timelines vary from 4–8 weeks for arthroscopic procedures to 9–15 months for complex ligament reconstructions."
+      }
+    ]
+  },
+  {
+    slug: "neurological-rehabilitation",
+    title: "Neurological Rehabilitation",
+    subtitle: "Restoring Function. Maximizing Independence. Improving Quality of Life.",
+    description:
+      "Personalized rehabilitation for neurological conditions — maximizing functional abilities, improving mobility, and regaining independence.",
     icon: "RotateCcw",
     longDescription: [
-      "Movement retraining is a specialized physiotherapy approach that helps individuals improve how their body moves and responds. It focuses on retraining the brain and muscles to work together efficiently.",
-      "These programs are especially helpful for patients who experience difficulty with balance, posture, coordination, or controlled movements. Our therapists create personalized programs to improve functional independence and quality of life."
+      "Neurological conditions can significantly affect movement, balance, coordination, strength, and independence. At Aatral360, our adult neurological rehabilitation programs are designed to help individuals maximize their functional abilities, improve mobility, and regain confidence in everyday life through personalized, evidence-based rehabilitation.",
+      "Recovery following neurological injury is unique for every individual. While the rate and extent of recovery may vary, our goal is to help every patient achieve their highest level of function through structured rehabilitation, continuous reassessment, and goal-oriented care."
     ],
-    targetAudience: [
-      "Individuals with postural problems",
-      "Special needs individuals",
-      "Stroke recovery patients",
-      "Elderly patients with fall risk"
+    approachSections: [
+      {
+        title: "Comprehensive Neurological Assessment",
+        description: "Every rehabilitation program begins with a detailed evaluation of:",
+        items: [
+          "Functional mobility",
+          "Muscle strength",
+          "Balance and postural control",
+          "Coordination",
+          "Walking ability (Gait)",
+          "Range of motion",
+          "Functional independence",
+          "Activities of daily living (ADLs)"
+        ]
+      },
+      {
+        title: "Evidence-Based Rehabilitation",
+        description: "Our programs may include:",
+        items: [
+          "Motor control retraining",
+          "Motor learning strategies",
+          "Functional task-specific training",
+          "Balance and coordination exercises",
+          "Gait training",
+          "Progressive strengthening",
+          "Mobility and flexibility exercises",
+          "Transfer and bed mobility training",
+          "Walking aid training",
+          "Functional independence training",
+          "Caregiver education and home exercise programs"
+        ]
+      },
+      {
+        title: "Our Goals",
+        description: "Our neurological rehabilitation programs focus on helping individuals:",
+        items: [
+          "Improve movement and mobility",
+          "Enhance balance and coordination",
+          "Increase strength and physical capacity",
+          "Improve walking ability",
+          "Regain independence in daily activities",
+          "Reduce the risk of falls",
+          "Maximize long-term functional recovery and participation"
+        ]
+      }
     ],
     conditionsTreated: [
-      "Cerebral Palsy",
-      "Stroke Rehabilitation",
-      "Parkinson’s Disease",
-      "Developmental Coordination Disorder",
-      "Balance Disorders",
-      "Postural Instability",
-      "Neuromuscular Conditions",
-      "Delayed Motor Milestones",
-      "Vestibular Disorders"
+      "Stroke (CVA)",
+      "Parkinson's Disease",
+      "Spinal Cord Injury",
+      "Traumatic Brain Injury",
+      "Multiple Sclerosis",
+      "Peripheral Nerve Injuries",
+      "Guillain-Barré Syndrome",
+      "Bell's Palsy",
+      "Vestibular Disorders affecting balance",
+      "Other adult neurological movement disorders"
     ],
+    recoveryTimeline: [
+      { condition: "Stroke Rehabilitation", duration: "3–12+ months" },
+      { condition: "Parkinson's Disease", duration: "Ongoing rehabilitation" },
+      { condition: "Spinal Cord Injury", duration: "6–24+ months" },
+      { condition: "Traumatic Brain Injury", duration: "6–18+ months" },
+      { condition: "Multiple Sclerosis", duration: "Individualized long-term rehabilitation" },
+      { condition: "Peripheral Nerve Injury", duration: "3–12 months" }
+    ],
+    timelineNote: "Neurological rehabilitation is individualized, and progress varies between individuals. Rehabilitation focuses on maximizing functional independence and long-term quality of life.",
+    differenceText: "At Aatral360, neurological rehabilitation is centered on helping people regain meaningful function, improve independence, and participate confidently in everyday life. Through evidence-based physiotherapy, functional training, and individualized rehabilitation, we support each person's journey toward achieving their highest possible level of recovery and independence.",
     process: [
       {
-        title: "Movement & Functional Assessment",
-        description: "We assess posture, balance, coordination, gait, and motor responses."
+        title: "Comprehensive Neurological Assessment",
+        description: "We evaluate mobility, strength, balance, coordination, gait, and functional independence."
       },
       {
-        title: "Personalized Motor Training Program",
-        description: "We design customized exercises focusing on balance, coordination, posture correction, and controlled movements."
+        title: "Evidence-Based Rehabilitation Program",
+        description: "Motor control retraining, functional task training, balance exercises, and progressive strengthening."
       },
       {
-        title: "Functional Integration & Skill Development",
-        description: "We integrate learned movements into daily activities, school, work, and lifestyle tasks."
+        title: "Functional Independence & Goal Achievement",
+        description: "Building independence in daily activities, reducing fall risk, and maximizing long-term recovery."
       }
     ],
     faqs: [
       {
-        question: "How long does the program last?",
-        answer: "Usually 4–8 weeks depending on your condition."
+        question: "Is neurological rehabilitation ongoing?",
+        answer: "Some conditions like Parkinson's Disease and Multiple Sclerosis benefit from ongoing rehabilitation. Others, like stroke recovery, may have defined phases with measurable goals."
       },
       {
-        question: "Is this suitable for chronic pain?",
-        answer: "Yes, our programs are specially designed for both acute and chronic conditions."
+        question: "Can physiotherapy help after a stroke?",
+        answer: "Yes. Post-stroke rehabilitation can significantly improve movement, balance, walking ability, and functional independence."
       },
       {
-        question: "Will exercises be customized?",
-        answer: "Yes, every program is personalized."
-      },
-      {
-        question: "Do I need a doctor’s referral?",
-        answer: "No, you can directly book an appointment."
-      },
-      {
-        question: "Is it safe for elderly patients?",
-        answer: "Yes, programs are adjusted based on age and health condition."
+        question: "Do you provide caregiver education?",
+        answer: "Yes, we include caregiver education and home exercise programs as part of our rehabilitation approach."
       }
     ]
   },
   {
-    slug: "return-to-activity",
-    title: "Return-to-Activity / Functional Reintegration Programs",
+    slug: "womens-health-physiotherapy",
+    title: "Women's Health Physiotherapy",
+    subtitle: "Supporting Women Through Every Stage of Life.",
     description:
-      "Progressive programs to safely return patients to daily life, work, or sport using guided functional recovery stages.",
-    icon: "Footprints",
+      "Safe, evidence-based rehabilitation supporting women during pregnancy, after childbirth, and in managing pelvic health conditions.",
+    icon: "HeartHandshake",
     longDescription: [
-      "Conditioning-based progression programs designed to safely transition individuals back to daily activities, work, or sports. Guided by objective functional benchmarks for each phase of recovery and reintegration.",
-      "Functional reintegration is a structured rehabilitation approach that helps individuals return safely to normal life after injury, illness, or surgery. It focuses on rebuilding physical capacity, confidence, and performance for real-life activities. Our programs ensure that patients meet specific recovery benchmarks before progressing to higher activity levels."
+      "Women's bodies undergo significant physical changes throughout different stages of life. At Aatral360, our Women's Health Physiotherapy programs are designed to support women during pregnancy, after childbirth, and in managing musculoskeletal and pelvic health conditions through safe, evidence-based rehabilitation.",
+      "Every rehabilitation program is personalized according to your physical condition, functional limitations, lifestyle, and recovery goals, helping you regain strength, confidence, and independence."
     ],
-    targetAudience: [
-      "Patients recovering from injury or surgery",
-      "Individuals returning to work after long absence",
-      "Athletes preparing to return to sports",
-      "People with reduced physical endurance",
-      "Workers with physically demanding jobs",
-      "Individuals with fear of re-injury",
-      "Elderly individuals regaining independence",
-      "Anyone resuming an active lifestyle"
+    approachSections: [
+      {
+        title: "Comprehensive Assessment",
+        description: "Every program begins with a detailed evaluation of:",
+        items: [
+          "Posture and movement patterns",
+          "Core muscle function",
+          "Pelvic floor muscle function",
+          "Abdominal muscle integrity",
+          "Functional strength",
+          "Mobility and flexibility",
+          "Pain and physical limitations",
+          "Daily activity demands"
+        ]
+      },
+      {
+        title: "Evidence-Based Rehabilitation",
+        description: "Our programs may include:",
+        items: [
+          "Pregnancy-safe exercise programs",
+          "Postnatal rehabilitation",
+          "Diastasis Recti rehabilitation",
+          "Pelvic floor muscle training",
+          "Core strengthening",
+          "Breathing and pressure management",
+          "Functional movement retraining",
+          "Manual therapy (when clinically appropriate)",
+          "Mobility and flexibility exercises",
+          "Progressive strengthening",
+          "Education on posture, lifting, and childcare ergonomics",
+          "Home exercise programs"
+        ]
+      }
     ],
     conditionsTreated: [
-      "Daily household activities",
-      "Office and desk work",
-      "Manual labor and industrial work",
-      "Sports and fitness activities",
-      "Lifting and carrying tasks",
-      "Walking, running, and climbing",
-      "Driving and commuting",
-      "Post-surgical functional recovery",
-      "Post-injury mobility restoration"
+      "Pregnancy-related back or pelvic pain",
+      "Postnatal recovery",
+      "Diastasis Recti (Abdominal Separation)",
+      "Urinary Incontinence",
+      "Pelvic Floor Muscle Weakness",
+      "Pelvic Girdle Pain",
+      "Pregnancy-related musculoskeletal conditions",
+      "Postural dysfunction after childbirth",
+      "Core muscle weakness",
+      "Return to exercise after pregnancy"
     ],
+    recoveryTimeline: [
+      { condition: "Pregnancy Exercise Program", duration: "Throughout pregnancy" },
+      { condition: "Postnatal Recovery", duration: "6–16 weeks" },
+      { condition: "Diastasis Recti Rehabilitation", duration: "8–16 weeks" },
+      { condition: "Pelvic Floor Rehabilitation", duration: "8–16 weeks" },
+      { condition: "Pregnancy-Related Back or Pelvic Pain", duration: "4–12 weeks" }
+    ],
+    timelineNote: "Recovery timelines are individualized and depend on assessment findings, symptom severity, and participation in the rehabilitation program.",
+    differenceText: "At Aatral360, Women's Health Physiotherapy focuses on restoring movement, improving core and pelvic floor function, reducing pain, and supporting women through every stage of pregnancy, postpartum recovery, and beyond. Our goal is to help every woman move with confidence, regain physical strength, and return safely to the activities that matter most.",
     process: [
       {
-        title: "Functional Capacity Evaluation",
-        description: "We assess strength, endurance, balance, mobility, and task-specific abilities."
+        title: "Comprehensive Assessment",
+        description: "We evaluate posture, core and pelvic floor function, strength, mobility, and daily activity demands."
       },
       {
-        title: "Progressive Conditioning Program",
-        description: "We design graded training programs that gradually increase physical demands based on recovery benchmarks."
+        title: "Personalized Rehabilitation Program",
+        description: "Safe, stage-appropriate exercises including pelvic floor training, core strengthening, and functional movement."
       },
       {
-        title: "Real-Life Activity Simulation",
-        description: "We simulate work, sport, and daily activity tasks to ensure safe and confident return."
+        title: "Recovery & Return to Activity",
+        description: "Progressive strengthening and education to regain confidence and safely return to exercise and daily activities."
       }
     ],
     faqs: [
       {
-        question: "How long does the program last?",
-        answer: "Usually 4–8 weeks depending on your condition."
+        question: "When can I start physiotherapy after delivery?",
+        answer: "Postnatal rehabilitation can typically begin 6 weeks after vaginal delivery or as advised by your obstetrician after a cesarean section."
       },
       {
-        question: "Is this suitable for chronic pain?",
-        answer: "Yes, our programs are specially designed for both acute and chronic conditions."
+        question: "Is it safe to exercise during pregnancy?",
+        answer: "Yes. We design pregnancy-safe exercise programs tailored to your stage of pregnancy and physical condition."
       },
       {
-        question: "Will exercises be customized?",
-        answer: "Yes, every program is personalized."
-      },
-      {
-        question: "Do I need a doctor’s referral?",
-        answer: "No, you can directly book an appointment."
-      },
-      {
-        question: "Is it safe for elderly patients?",
-        answer: "Yes, programs are adjusted based on age and health condition."
+        question: "Can physiotherapy help with urinary incontinence?",
+        answer: "Yes. Pelvic floor rehabilitation is an effective, evidence-based approach for managing urinary incontinence."
       }
     ]
   },
   {
-    slug: "spine-care-functional-rehabilitation",
-    title: "Spine Care & Functional Rehabilitation",
+    slug: "strength-performance-training",
+    title: "Strength & Performance Training",
+    subtitle: "Build Strength. Enhance Performance. Reduce Injury Risk.",
     description:
-      "Specialized spine rehab focusing on stability, posture, load tolerance, and functional movement for neck and back conditions.",
-    icon: "Bone",
+      "Scientifically designed training programs to improve strength, movement quality, resilience, and physical performance.",
+    icon: "Dumbbell",
     longDescription: [
-      "Spine care and functional rehabilitation is a specialized physiotherapy approach designed to treat neck, upper back, and lower back conditions. Instead of temporary pain relief, this program focuses on strengthening spinal support muscles, improving posture, and restoring healthy movement patterns.",
-      "Our goal is to help patients achieve long-term spine health and prevent recurring problems."
+      "At Aatral360, Strength & Conditioning is more than lifting weights—it's a scientifically designed training system that improves strength, movement quality, resilience, and physical performance.",
+      "Our programs are tailored for athletes, recreational sports participants, and active individuals who want to perform better, reduce injury risk, and build long-term physical capacity. Whether you're preparing for competition, returning after an injury, or simply looking to move and perform better in everyday life, every program is designed around your goals and physical demands."
+    ],
+    approachSections: [
+      {
+        title: "Comprehensive Performance Assessment",
+        description: "Every program begins with a detailed assessment of:",
+        items: [
+          "Movement quality",
+          "Mobility and flexibility",
+          "Strength and muscular endurance",
+          "Balance and coordination",
+          "Power and explosiveness",
+          "Speed and agility",
+          "Sport-specific movement demands",
+          "Previous injury history",
+          "Training experience and goals"
+        ]
+      },
+      {
+        title: "Evidence-Based Performance Training",
+        description: "Our programs may include:",
+        items: [
+          "Strength Training",
+          "Power Development",
+          "Plyometric Training",
+          "Speed Development",
+          "Acceleration & Deceleration Training",
+          "Agility & Change-of-Direction Training",
+          "Balance & Coordination Training",
+          "Mobility & Flexibility Programs",
+          "Core Stability Training",
+          "Injury Prevention Programs",
+          "Return-to-Sport Conditioning",
+          "Sport-Specific Performance Training"
+        ]
+      }
     ],
     targetAudience: [
-      "People with chronic neck or back pain",
-      "Patients diagnosed with IVDP (Disc Problems)",
-      "Individuals with nerve-related pain",
-      "Office workers with posture issues",
-      "People with prolonged sitting habits",
-      "Manual workers with spinal strain",
-      "Post-surgical spine patients",
-      "Individuals with stiffness and mobility issues"
+      "Competitive athletes",
+      "Recreational athletes",
+      "School and college athletes",
+      "Runners and endurance athletes",
+      "Racquet sport players (Badminton, Tennis, Pickleball)",
+      "Cricket players",
+      "Football players",
+      "Volleyball and Basketball players",
+      "Fitness enthusiasts",
+      "Working professionals with active lifestyles",
+      "Individuals returning to sport after injury"
     ],
     conditionsTreated: [
-      "Cervical Spondylosis",
-      "Lumbar Spondylosis",
-      "IVDP (Slip Disc)",
-      "Sciatica",
-      "Radiculopathy",
-      "Myelopathy",
-      "Disc Bulge / Herniation",
-      "Postural Kyphosis",
-      "Facet Joint Syndrome"
+      "General strength development",
+      "Injury prevention",
+      "Performance enhancement",
+      "Return-to-sport conditioning",
+      "Elite performance development"
     ],
+    recoveryTimeline: [
+      { condition: "General Strength Development", duration: "8–12 weeks" },
+      { condition: "Injury Prevention", duration: "Ongoing" },
+      { condition: "Performance Enhancement", duration: "12–24 weeks" },
+      { condition: "Return-to-Sport Conditioning", duration: "8–16 weeks" },
+      { condition: "Elite Performance Development", duration: "Individualized Long-Term Program" }
+    ],
+    timelineNote: "Performance is developed progressively through structured training rather than quick fixes.",
+    differenceText: "At Aatral360, Strength & Conditioning is fully integrated with physiotherapy and rehabilitation. Our programs combine movement science, evidence-based exercise prescription, progressive overload, and sport-specific training to improve performance while minimizing injury risk. Whether your goal is returning to competition, excelling in your sport, or maintaining an active lifestyle, we help you build the strength, capacity, and confidence to perform at your best.",
     process: [
       {
-        title: "Detailed Spine Assessment",
-        description: "We evaluate posture, spinal alignment, movement patterns, nerve symptoms, and lifestyle factors."
+        title: "Comprehensive Performance Assessment",
+        description: "We assess movement quality, strength, mobility, balance, power, speed, and sport-specific demands."
       },
       {
-        title: "Stability & Load Management Training",
-        description: "We design exercises to improve spinal stability, strengthen core muscles, and increase load tolerance safely."
+        title: "Individualized Training Program",
+        description: "Evidence-based strength, power, speed, and conditioning programs tailored to your goals and capacity."
       },
       {
-        title: "Functional Movement & Posture Correction",
-        description: "We train you in correct sitting, standing, lifting, and daily movement techniques to protect your spine."
+        title: "Progressive Development & Monitoring",
+        description: "Training loads are progressively adjusted according to your goals, recovery, and performance demands."
       }
     ],
     faqs: [
       {
-        question: "How long does the program last?",
-        answer: "Usually 4–8 weeks depending on your condition."
+        question: "Is this suitable for non-athletes?",
+        answer: "Yes. Our programs are designed for everyone from competitive athletes to working professionals and fitness enthusiasts."
       },
       {
-        question: "Is this suitable for chronic pain?",
-        answer: "Yes, our programs are specially designed for both acute and chronic conditions."
+        question: "How is this different from gym training?",
+        answer: "Our programs are fully integrated with physiotherapy and rehabilitation, combining movement science with evidence-based exercise prescription."
       },
       {
-        question: "Will exercises be customized?",
-        answer: "Yes, every program is personalized."
-      },
-      {
-        question: "Do I need a doctor’s referral?",
-        answer: "No, you can directly book an appointment."
-      },
-      {
-        question: "Is it safe for elderly patients?",
-        answer: "Yes, programs are adjusted based on age and health condition."
+        question: "How long does a performance program last?",
+        answer: "Programs range from 8–12 weeks for general strength to individualized long-term programs for elite performance development."
       }
     ]
   },
   {
-    slug: "clinical-workshops",
-    title: "Clinical Workshops & Skill-Building Programs",
+    slug: "corporate-health-wellness",
+    title: "Corporate Health & Wellness Programs",
+    subtitle: "Healthier Employees. Better Performance. Stronger Workplaces.",
     description:
-      "Interactive workshops for injury prevention, movement awareness, self-care skills, and long-term musculoskeletal health.",
-    icon: "GraduationCap",
+      "Evidence-based workplace wellness programs combining ergonomics, movement strategies, and preventive health for healthier workplaces.",
+    icon: "Building2",
     longDescription: [
-      "Clinical workshops are interactive learning programs that combine theory and practical training. They help participants understand their body, improve movement habits, and prevent injuries through evidence-based techniques.",
-      "These programs empower individuals with skills to manage their own health and performance safely. Educational and hands-on workshops are designed for patients, athletes, and fitness enthusiasts."
+      "Modern workplaces have become increasingly sedentary, with many employees spending prolonged hours sitting, working on computers, and performing repetitive tasks. Over time, these work demands can contribute to musculoskeletal pain, reduced mobility, physical deconditioning, stress, fatigue, and decreased workplace productivity.",
+      "At Aatral360, our Corporate Health & Wellness Programs are designed to create healthier, more resilient workplaces through evidence-based education, movement strategies, ergonomic interventions, and preventive health programs."
+    ],
+    approachSections: [
+      {
+        title: "Workplace Health Assessment",
+        description: "Every corporate program begins with understanding the physical demands of your workplace. Our assessments may include:",
+        items: [
+          "Workplace ergonomic evaluation",
+          "Individual movement screening",
+          "Postural assessment",
+          "Functional mobility assessment",
+          "Musculoskeletal risk assessment",
+          "Physical activity and lifestyle evaluation"
+        ]
+      },
+      {
+        title: "Evidence-Based Workplace Solutions",
+        description: "Our programs may include:",
+        items: [
+          "Workplace Ergonomics Education",
+          "Desk Setup & Posture Optimization",
+          "Movement Break Strategies",
+          "Exercise Break Sessions",
+          "Mobility & Flexibility Programs",
+          "Strength & Conditioning for Office Workers",
+          "Stress Management Techniques",
+          "Breathing & Relaxation Exercises",
+          "Functional Fitness Programs",
+          "Injury Prevention Workshops",
+          "Lifestyle & Physical Activity Education"
+        ]
+      },
+      {
+        title: "Health Monitoring & Employee Wellbeing",
+        description: "Where appropriate, our wellness programs may include periodic assessment of:",
+        items: [
+          "Physical activity levels",
+          "Mobility and flexibility",
+          "Strength and functional capacity",
+          "Balance and movement quality",
+          "Musculoskeletal health",
+          "Stress and wellbeing questionnaires",
+          "Progress tracking and health education"
+        ]
+      }
     ],
     targetAudience: [
-      "Patients recovering from injury",
-      "Athletes and sportspersons",
-      "Gym and fitness enthusiasts",
-      "Coaches and trainers",
-      "Office workers",
-      "Students",
-      "Corporate wellness groups",
-      "Anyone interested in physical health"
+      "IT & Software Companies",
+      "Corporate Offices",
+      "Manufacturing Industries",
+      "Educational Institutions",
+      "Healthcare Organizations",
+      "Banks & Financial Services",
+      "Government Organizations",
+      "Small and Medium Enterprises (SMEs)"
     ],
     conditionsTreated: [
-      "Injury Prevention Techniques",
-      "Correct Exercise Form",
-      "Ergonomics at Work",
-      "Stretching & Mobility",
-      "Self-Management of Pain",
-      "Warm-Up & Cool-Down Methods",
-      "Load Management",
-      "Recovery Strategies",
-      "Lifestyle Modification"
+      "Work-related musculoskeletal pain",
+      "Postural dysfunction",
+      "Repetitive strain injuries",
+      "Workplace ergonomic issues",
+      "Physical deconditioning",
+      "Stress-related physical symptoms"
     ],
+    recoveryTimeline: [
+      { condition: "Ergonomics Awareness Session", duration: "60–90 minutes" },
+      { condition: "Workplace Health Workshop", duration: "Half Day / Full Day" },
+      { condition: "Group Exercise Sessions", duration: "Weekly or Monthly" },
+      { condition: "Corporate Wellness Program", duration: "6–12 weeks" },
+      { condition: "Annual Workplace Wellness Partnership", duration: "Ongoing" }
+    ],
+    differenceText: "At Aatral360, we believe workplace wellness extends beyond correcting posture. Our programs integrate ergonomics, movement science, exercise prescription, stress management, and preventive healthcare to help employees move better, work comfortably, improve physical resilience, and maintain long-term health. By creating healthier individuals, we help organizations build more productive, engaged, and sustainable workplaces.",
     process: [
       {
-        title: "Needs Assessment",
-        description: "We understand the goals, background, and physical demands of participants."
+        title: "Workplace Health Assessment",
+        description: "We evaluate ergonomics, movement patterns, postural habits, and musculoskeletal risk factors in your workplace."
       },
       {
-        title: "Interactive Learning & Practice",
-        description: "We conduct hands-on sessions with live demonstrations and supervised practice."
+        title: "Customized Wellness Program",
+        description: "Evidence-based programs including ergonomics education, exercise sessions, stress management, and injury prevention."
       },
       {
-        title: "Skill Application & Follow-Up",
-        description: "We provide guidance on applying learned skills in daily life and sports."
+        title: "Monitoring & Long-Term Partnership",
+        description: "Periodic health assessments, progress tracking, and ongoing wellness support for sustained workplace health."
       }
     ],
     faqs: [
       {
-        question: "How long does the program last?",
-        answer: "Usually 4–8 weeks depending on your condition."
+        question: "Can programs be delivered on-site?",
+        answer: "Yes. Programs can be delivered on-site, at our rehabilitation center, or in hybrid formats depending on organizational requirements."
       },
       {
-        question: "Is this suitable for chronic pain?",
-        answer: "Yes, our programs are specially designed for both acute and chronic conditions."
+        question: "Is this suitable for small businesses?",
+        answer: "Yes. Our programs are suitable for organizations of all sizes, from small enterprises to large corporations."
       },
       {
-        question: "Will exercises be customized?",
-        answer: "Yes, every program is personalized."
-      },
-      {
-        question: "Do I need a doctor’s referral?",
-        answer: "No, you can directly book an appointment."
-      },
-      {
-        question: "Is it safe for elderly patients?",
-        answer: "Yes, programs are adjusted based on age and health condition."
-      }
-    ]
-  },
-  {
-    slug: "professional-webinars",
-    title: "Professional Webinars & Clinical Education",
-    description:
-      "Online educational sessions covering the latest in physiotherapy research, techniques, and clinical practice.",
-    icon: "Video",
-    longDescription: [
-      "Our professional education programs are designed to help physiotherapists enhance their clinical knowledge, practical skills, and decision-making abilities. Through structured webinars and interactive sessions, participants gain exposure to modern assessment and rehabilitation approaches.",
-      "These programs bridge the gap between academic learning and real-world clinical practice."
-    ],
-    targetAudience: [
-      "Practicing physiotherapists",
-      "Fresh graduates",
-      "Interns and trainees",
-      "Clinic owners",
-      "Sports physiotherapists",
-      "Orthopedic physiotherapists",
-      "Neuro physiotherapists",
-      "Rehabilitation professionals"
-    ],
-    conditionsTreated: [
-      "Advanced Assessment Techniques",
-      "Biomechanics & Movement Analysis",
-      "Clinical Reasoning Models",
-      "Evidence-Based Practice",
-      "Pain Science",
-      "Load Management",
-      "Return-to-Function Protocols",
-      "Injury Prevention Strategies",
-      "Case Study Discussions"
-    ],
-    process: [
-      {
-        title: "Knowledge Foundation",
-        description: "We cover essential theory and current research-based practices."
-      },
-      {
-        title: "Clinical Application",
-        description: "We demonstrate real-life case handling and treatment planning."
-      },
-      {
-        title: "Skill Integration & Mentorship",
-        description: "We support participants in implementing learned strategies into their daily practice."
-      }
-    ],
-    faqs: [
-      {
-        question: "How long does the program last?",
-        answer: "Usually 4–8 weeks depending on your condition."
-      },
-      {
-        question: "Is this suitable for chronic pain?",
-        answer: "Yes, our programs are specially designed for both acute and chronic conditions."
-      },
-      {
-        question: "Will exercises be customized?",
-        answer: "Yes, every program is personalized."
-      },
-      {
-        question: "Do I need a doctor’s referral?",
-        answer: "No, you can directly book an appointment."
-      },
-      {
-        question: "Is it safe for elderly patients?",
-        answer: "Yes, programs are adjusted based on age and health condition."
+        question: "How long is a typical corporate wellness program?",
+        answer: "Programs range from single awareness sessions (60–90 minutes) to comprehensive 6–12 week programs or ongoing annual partnerships."
       }
     ]
   },

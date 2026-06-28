@@ -3,10 +3,10 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function AboutSection() {
   const benefits = [
-    "Comprehensive Assessment & Accurate Diagnosis",
-    "Evidence-Based Treatment Protocols",
-    "State-of-the-art Rehabilitation Facilities",
-    "Focus on Long-Term Wellness & Prevention",
+    "Movement-based Assessment & Clinical Reasoning",
+    "Personalized, Evidence-Based Rehabilitation",
+    "Integrated Strength, Rehabilitation & Performance Care",
+    "Building Resilience for Lifelong Movement",
   ];
 
   return (
@@ -61,15 +61,15 @@ export default function AboutSection() {
             
             <h2 className="mt-6 text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
               Why Patients Choose <br/>
-              <span className="text-green-600">The Physio Hub</span>
+              <span className="text-green-600">The Aatral360 Difference</span>
             </h2>
 
             <div className="mt-8 space-y-6 text-lg text-slate-600 leading-relaxed">
               <p>
-                At The Physio Hub, we believe that effective rehabilitation goes beyond treating the immediate symptoms. We look at the body as a whole to uncover the root cause of your discomfort and movement limitations.
+                At <strong>Aatral360</strong>, we see movement as the foundation of health, independence, and performance. Every individual has different goals, lifestyles, and physical demands, which is why no two rehabilitation journeys are the same.
               </p>
               <p>
-                Our team of dedicated professionals utilizes modern, evidence-based practices to create highly personalized treatment plans. Whether you are an elite athlete aiming to return to sport, an office worker suffering from chronic back pain, or recovering from surgery, we are committed to helping you regain your quality of life.
+                Our approach combines evidence-based physiotherapy, functional rehabilitation, movement science, strength & conditioning, and multidisciplinary collaboration to deliver care that goes beyond symptom relief. We focus on restoring movement quality, building physical capacity, preventing future injuries, and empowering people to perform at their best—whether in everyday life, at work, or in sport.
               </p>
             </div>
 

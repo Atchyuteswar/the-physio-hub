@@ -15,8 +15,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "The Physio Hub — Evidence-Based Physiotherapy & Rehabilitation",
-    template: "%s | The Physio Hub",
+    default: "Aatral360 — Evidence-Based Physiotherapy & Rehabilitation",
+    template: "%s | Aatral360",
   },
   description:
     "Professional physiotherapy and rehabilitation services. Personalized treatment plans for pain management, sports injuries, post-surgical recovery, and functional rehabilitation.",
@@ -26,19 +26,19 @@ export const metadata: Metadata = {
     "pain management",
     "sports injury",
     "physical therapy",
-    "The Physio Hub",
+    "Aatral360",
   ],
   openGraph: {
-    title: "The Physio Hub — Evidence-Based Physiotherapy & Rehabilitation",
+    title: "Aatral360 — Evidence-Based Physiotherapy & Rehabilitation",
     description:
       "Professional physiotherapy and rehabilitation services focused on recovery, mobility, and long-term wellness.",
-    url: "https://thephysiohub.com",
-    siteName: "The Physio Hub",
+    url: "https://aatral360.com",
+    siteName: "Aatral360",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Physio Hub — Evidence-Based Physiotherapy & Rehabilitation",
+    title: "Aatral360 — Evidence-Based Physiotherapy & Rehabilitation",
     description: "Professional physiotherapy and rehabilitation services.",
   },
 };
@@ -51,9 +51,9 @@ export default function RootLayout({
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "The Physio Hub",
-    image: "https://thephysiohub.com/og-image.jpg",
-    url: "https://thephysiohub.com",
+    name: "Aatral360",
+    image: "https://aatral360.com/og-image.jpg",
+    url: "https://aatral360.com",
     telephone: "+15551234567",
     address: {
       "@type": "PostalAddress",
