@@ -22,16 +22,10 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold text-slate-900 leading-[1.1] tracking-tight animate-fade-in-up">
-              Reduce Pain.
+              Movement freedom through 
               <br />
-              <span className="text-green-600">Rebuild Confidence.</span>
-              <br />
-              Restore Performance.
+              <span className="text-green-600">Active Recovery.</span>
             </h1>
-
-            <p className="mt-4 text-base md:text-lg text-slate-500 font-medium tracking-wide animate-fade-in-up delay-50">
-              Movement freedom through active recovery.
-            </p>
 
             <p className="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed animate-fade-in-up delay-100 max-w-xl">
               <strong>Personalized evidence-based care that restores movement, builds resilience, and empowers you to perform at your best</strong>.
