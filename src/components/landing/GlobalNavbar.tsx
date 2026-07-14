@@ -40,6 +40,9 @@ export default function GlobalNavbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6">
+            <Link href="/about" className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">
+              About Us
+            </Link>
             <Link href="/#pillars" className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">
               Our Pillars
             </Link>

@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Core static routes
   const staticRoutes = [
     "",
+    "/about",
     "/physiotherapy",
     "/physiotherapy/about",
     "/physiotherapy/services",
