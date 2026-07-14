@@ -44,7 +44,7 @@ export default function LandingHero() {
                 Book Consultation
               </Link>
               <Link
-                href="/services"
+                href="#pillars"
                 className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 font-bold px-8 py-4 rounded-xl transition-all shadow-sm group"
               >
                 Explore Our Services
