@@ -8,13 +8,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Core static routes
   const staticRoutes = [
     "",
-    "/about",
-    "/services",
-    "/videos",
-    "/gallery",
-    "/testimonials",
+    "/physiotherapy",
+    "/physiotherapy/about",
+    "/physiotherapy/services",
+    "/physiotherapy/videos",
+    "/physiotherapy/gallery",
+    "/physiotherapy/testimonials",
     "/contact",
-    "/appointment",
+    "/physiotherapy/appointment",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -24,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Dynamic service routes
   const serviceRoutes = services.map((service) => ({
-    url: `${baseUrl}/services/${service.slug}`,
+    url: `${baseUrl}/physiotherapy/services/${service.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.9,

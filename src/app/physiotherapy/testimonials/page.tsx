@@ -115,7 +115,7 @@ export default async function TestimonialsPage({ searchParams }: Props) {
                 <div className="mt-16 flex items-center justify-center gap-2">
                   {currentPage > 1 && (
                     <Link
-                      href={`/testimonials?page=${currentPage - 1}`}
+                      href={`/physiotherapy/testimonials?page=${currentPage - 1}`}
                       className="btn-outline bg-white"
                     >
                       Previous
@@ -126,7 +126,7 @@ export default async function TestimonialsPage({ searchParams }: Props) {
                   </span>
                   {currentPage < totalPages && (
                     <Link
-                      href={`/testimonials?page=${currentPage + 1}`}
+                      href={`/physiotherapy/testimonials?page=${currentPage + 1}`}
                       className="btn-outline bg-white"
                     >
                       Next

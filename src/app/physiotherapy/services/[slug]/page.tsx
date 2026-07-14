@@ -80,7 +80,7 @@ export default async function ServicePage({ params }: Props) {
             </Link>
             <ChevronRight className="w-3 h-3" />
             <Link
-              href="/services"
+              href="/physiotherapy/services"
               className="hover:text-green-600 transition"
             >
               Services
@@ -318,7 +318,7 @@ export default async function ServicePage({ params }: Props) {
                 </p>
 
                 <Link
-                  href="/appointment"
+                  href="/physiotherapy/appointment"
                   className="btn-primary w-full mt-5 text-sm!"
                 >
                   Book Appointment
@@ -338,7 +338,7 @@ export default async function ServicePage({ params }: Props) {
                     return (
                       <Link
                         key={s.slug}
-                        href={`/services/${s.slug}`}
+                        href={`/physiotherapy/services/${s.slug}`}
                         className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-50 transition group"
                       >
                         <div className="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
@@ -358,7 +358,7 @@ export default async function ServicePage({ params }: Props) {
           {/* Back Link */}
           <div className="mt-12">
             <Link
-              href="/services"
+              href="/physiotherapy/services"
               className="inline-flex items-center gap-2 text-slate-500 hover:text-green-600 transition text-sm"
             >
               <ArrowLeft className="w-4 h-4" />

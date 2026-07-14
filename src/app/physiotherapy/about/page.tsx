@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "About Aatral360 | Dr. Sarath Kumar N, PT",
     description:
       "Premium, evidence-based physiotherapy clinic specializing in sports injuries, musculoskeletal pain, and long-term functional recovery.",
-    url: "https://aatral360.com/about",
+    url: "https://aatral360.com/physiotherapy/about",
     siteName: "Aatral360",
     locale: "en_US",
     type: "website",
@@ -349,7 +349,7 @@ export default function AboutPage() {
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link 
-                  href="/appointment" 
+                  href="/physiotherapy/appointment" 
                   className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl transition-colors shadow-lg shadow-green-600/20"
                 >
                   <Calendar className="w-5 h-5" />

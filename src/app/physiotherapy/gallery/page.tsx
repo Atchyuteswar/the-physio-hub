@@ -98,7 +98,7 @@ export default async function GalleryPage({ searchParams }: Props) {
                 <div className="mt-16 flex items-center justify-center gap-2">
                   {currentPage > 1 && (
                     <Link
-                      href={`/gallery?page=${currentPage - 1}`}
+                      href={`/physiotherapy/gallery?page=${currentPage - 1}`}
                       className="btn-outline bg-white"
                     >
                       Previous
@@ -109,7 +109,7 @@ export default async function GalleryPage({ searchParams }: Props) {
                   </span>
                   {currentPage < totalPages && (
                     <Link
-                      href={`/gallery?page=${currentPage + 1}`}
+                      href={`/physiotherapy/gallery?page=${currentPage + 1}`}
                       className="btn-outline bg-white"
                     >
                       Next

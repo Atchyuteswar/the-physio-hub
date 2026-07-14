@@ -27,7 +27,7 @@ export default function AppointmentCtaSection() {
                 (555) 123-4567
               </a>
               <Link 
-                href="/appointment" 
+                href="/physiotherapy/appointment" 
                 className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white! font-bold px-8 py-4 rounded-xl transition-colors shadow-lg shadow-green-600/20"
               >
                 <Calendar className="w-5 h-5" />

@@ -50,7 +50,7 @@ export default function StrengthPerformance() {
             </ul>
 
             <Link
-              href="/appointment"
+              href="/physiotherapy/appointment"
               className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-green-900/20 group"
             >
               Start Training

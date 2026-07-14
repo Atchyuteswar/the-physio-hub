@@ -27,7 +27,7 @@ export default function VideosSection({ videos }: { videos: Video[] }) {
               Explore our library of guided exercises, posture tips, and rehabilitation insights.
             </p>
           </div>
-          <Link href="/videos" className="btn-outline shrink-0 hidden md:inline-flex">
+          <Link href="/physiotherapy/videos" className="btn-outline shrink-0 hidden md:inline-flex">
             View All Videos
           </Link>
         </div>
@@ -79,7 +79,7 @@ export default function VideosSection({ videos }: { videos: Video[] }) {
         </div>
 
         <div className="mt-10 text-center md:hidden">
-          <Link href="/videos" className="btn-outline w-full justify-center">
+          <Link href="/physiotherapy/videos" className="btn-outline w-full justify-center">
             View All Videos
           </Link>
         </div>

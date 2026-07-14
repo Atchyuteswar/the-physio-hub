@@ -45,7 +45,7 @@ export default function ServicesPreview() {
             return (
               <Link
                 key={service.slug}
-                href={`/services/${service.slug}`}
+                href={`/physiotherapy/services/${service.slug}`}
                 className="card group p-7"
               >
                 <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mb-4 group-hover:bg-green-100 transition">
@@ -71,7 +71,7 @@ export default function ServicesPreview() {
 
         <div className="text-center mt-12">
           <Link
-            href="/services"
+            href="/physiotherapy/services"
             className="btn-outline inline-flex items-center gap-2"
           >
             View All Services

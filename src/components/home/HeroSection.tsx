@@ -33,11 +33,11 @@ export default function HeroSection() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-200 w-full sm:w-auto">
-              <Link href="/appointment" className="btn-primary py-3.5 px-5 sm:px-8 text-base shadow-lg shadow-green-600/20 hover:shadow-green-600/30 w-full sm:w-auto">
+              <Link href="/physiotherapy/appointment" className="btn-primary py-3.5 px-5 sm:px-8 text-base shadow-lg shadow-green-600/20 hover:shadow-green-600/30 w-full sm:w-auto">
                 Book Appointment
                 <ChevronRight className="w-5 h-5 shrink-0" />
               </Link>
-              <Link href="/services" className="btn-outline py-3.5 px-5 sm:px-8 text-base bg-white border-slate-300 hover:bg-slate-50 w-full sm:w-auto">
+              <Link href="/physiotherapy/services" className="btn-outline py-3.5 px-5 sm:px-8 text-base bg-white border-slate-300 hover:bg-slate-50 w-full sm:w-auto">
                 Explore Services
               </Link>
             </div>

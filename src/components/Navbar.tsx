@@ -26,12 +26,12 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Videos", href: "/videos" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Testimonials", href: "/testimonials" },
+  { label: "Home", href: "/physiotherapy" },
+  { label: "About", href: "/physiotherapy/about" },
+  { label: "Services", href: "/physiotherapy/services" },
+  { label: "Videos", href: "/physiotherapy/videos" },
+  { label: "Gallery", href: "/physiotherapy/gallery" },
+  { label: "Testimonials", href: "/physiotherapy/testimonials" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -87,8 +87,8 @@ export default function Navbar() {
             <nav className="hidden lg:flex items-center gap-1">
               {navItems.map((item) => {
                 const isActive =
-                  item.href === "/"
-                    ? pathname === "/"
+                  item.href === "/physiotherapy"
+                    ? pathname === "/physiotherapy"
                     : pathname.startsWith(item.href);
 
                 if (item.label === "Services") {
@@ -117,7 +117,7 @@ export default function Navbar() {
                             return (
                               <Link
                                 key={service.slug}
-                                href={`/services/${service.slug}`}
+                                href={`/physiotherapy/services/${service.slug}`}
                                 className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors group/link"
                               >
                                 <div className="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center shrink-0 group-hover/link:bg-green-100 transition-colors">
@@ -162,7 +162,7 @@ export default function Navbar() {
             {/* Desktop CTA */}
             <div className="hidden lg:block">
               <Link
-                href="/appointment"
+                href="/physiotherapy/appointment"
                 className="btn-primary py-2.5! px-5! text-sm! shrink-0"
               >
                 Book Appointment
@@ -217,8 +217,8 @@ export default function Navbar() {
           <nav className="p-4 space-y-1 flex-1 overflow-y-auto">
             {navItems.map((item) => {
               const isActive =
-                item.href === "/"
-                  ? pathname === "/"
+                item.href === "/physiotherapy"
+                  ? pathname === "/physiotherapy"
                   : pathname.startsWith(item.href);
 
               return (
@@ -244,7 +244,7 @@ export default function Navbar() {
           {/* Drawer Footer CTA */}
           <div className="p-5 border-t border-slate-100 shrink-0 bg-slate-50">
             <Link
-              href="/appointment"
+              href="/physiotherapy/appointment"
               className="btn-primary w-full text-center py-3! text-base!"
             >
               Book Appointment

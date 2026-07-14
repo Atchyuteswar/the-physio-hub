@@ -55,7 +55,7 @@ export default async function VideosPage({ searchParams }: Props) {
             movement through our educational content.
           </p>
 
-          <form method="GET" action="/videos" className="relative max-w-xl mx-auto mt-8">
+          <form method="GET" action="/physiotherapy/videos" className="relative max-w-xl mx-auto mt-8">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
             <input
               type="text"
@@ -83,7 +83,7 @@ export default async function VideosPage({ searchParams }: Props) {
                 {q ? "Try adjusting your search terms." : "Educational videos will appear here once they are published."}
               </p>
               {q && (
-                <Link href="/videos" className="btn-primary mt-6">
+                <Link href="/physiotherapy/videos" className="btn-primary mt-6">
                   Clear Search
                 </Link>
               )}
@@ -149,7 +149,7 @@ export default async function VideosPage({ searchParams }: Props) {
                 <div className="mt-12 flex items-center justify-center gap-2">
                   {currentPage > 1 && (
                     <Link
-                      href={`/videos?page=${currentPage - 1}${q ? `&q=${q}` : ""}`}
+                      href={`/physiotherapy/videos?page=${currentPage - 1}${q ? `&q=${q}` : ""}`}
                       className="btn-outline"
                     >
                       Previous
@@ -160,7 +160,7 @@ export default async function VideosPage({ searchParams }: Props) {
                   </span>
                   {currentPage < totalPages && (
                     <Link
-                      href={`/videos?page=${currentPage + 1}${q ? `&q=${q}` : ""}`}
+                      href={`/physiotherapy/videos?page=${currentPage + 1}${q ? `&q=${q}` : ""}`}
                       className="btn-outline"
                     >
                       Next

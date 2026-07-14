@@ -31,12 +31,19 @@ export default function LayoutWrapper({
     );
   }
 
-  // Use the Physiotherapy-specific Header/Footer for everything else (since all other routes belong to the physio silo)
-  return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <main className="flex-1">{children}</main>
-      <Footer />
-    </div>
-  );
+  const isPhysioRoute = pathname.startsWith("/physiotherapy");
+
+  // Use the Physiotherapy-specific Header/Footer for physiotherapy routes
+  if (isPhysioRoute) {
+    return (
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </div>
+    );
+  }
+
+  // Fallback for any other root pages
+  return <>{children}</>;
 }

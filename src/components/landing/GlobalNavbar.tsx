@@ -57,7 +57,7 @@ export default function GlobalNavbar() {
           {/* CTA */}
           <div className="flex items-center">
             <Link
-              href="/appointment"
+              href="/physiotherapy/appointment"
               className="btn-primary py-2.5! px-5! text-sm! shrink-0 flex items-center gap-1"
             >
               Book Consultation

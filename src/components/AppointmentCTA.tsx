@@ -23,7 +23,7 @@ export default function AppointmentCTA() {
         </p>
 
         <Link
-          href="/appointment"
+          href="/physiotherapy/appointment"
           className="
             mt-8 inline-flex items-center gap-2
             bg-white text-green-700 font-semibold

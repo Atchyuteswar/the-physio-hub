@@ -232,7 +232,7 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              href="/appointment"
+              href="/physiotherapy/appointment"
               className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-green-600/20"
             >
               <Calendar className="w-5 h-5" />
@@ -308,7 +308,7 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((service) => (
               <Link
-                href={`/services/${service.id}`}
+                href={`/physiotherapy/services/${service.id}`}
                 key={service.id}
                 className="group bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-green-200 transition-all duration-300 flex items-start gap-5 relative overflow-hidden"
               >
@@ -348,7 +348,7 @@ export default function ServicesPage() {
                 of physical conditions using advanced clinical protocols.
               </p>
               <Link
-                href="/appointment"
+                href="/physiotherapy/appointment"
                 className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-green-600/20"
               >
                 Get Assessed Today
@@ -504,7 +504,7 @@ export default function ServicesPage() {
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
-                  href="/appointment"
+                  href="/physiotherapy/appointment"
                   className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-green-600/20"
                 >
                   <Calendar className="w-5 h-5" />

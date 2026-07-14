@@ -36,7 +36,7 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
   const Icon = iconMap[service.icon] || Activity;
   return (
     <Link
-      href={`/services/${service.slug}`}
+      href={`/physiotherapy/services/${service.slug}`}
       className="shrink-0 w-[85vw] sm:w-[380px] group/card relative bg-white p-8 rounded-3xl border border-slate-100 hover:border-green-200 shadow-sm hover:shadow-2xl hover:shadow-green-900/5 transition-all duration-300 flex flex-col min-h-[380px] overflow-hidden z-10"
     >
       <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 group-hover/card:bg-green-600 transition-colors duration-300 shrink-0">
@@ -91,7 +91,7 @@ export default function ServicesSection() {
         </div>
 
         <div className="mt-16 text-center">
-          <Link href="/services" className="btn-primary">
+          <Link href="/physiotherapy/services" className="btn-primary">
             View Full Service Details
           </Link>
         </div>

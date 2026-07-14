@@ -37,7 +37,7 @@ export default function LandingHero() {
             
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
-                href="/appointment"
+                href="/physiotherapy/appointment"
                 className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-green-600/20"
               >
                 <Calendar className="w-5 h-5" />

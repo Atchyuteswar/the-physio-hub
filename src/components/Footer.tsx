@@ -10,21 +10,21 @@ import {
 } from "lucide-react";
 
 const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Book Appointment", href: "/appointment" },
-  { label: "Patient Testimonials", href: "/testimonials" },
-  { label: "Our Team", href: "/team" },
-  { label: "Gallery", href: "/gallery" },
+  { label: "Home", href: "/physiotherapy" },
+  { label: "About Us", href: "/physiotherapy/about" },
+  { label: "Book Appointment", href: "/physiotherapy/appointment" },
+  { label: "Patient Testimonials", href: "/physiotherapy/testimonials" },
+  { label: "Our Team", href: "/physiotherapy/team" },
+  { label: "Gallery", href: "/physiotherapy/gallery" },
 ];
 
 const serviceLinks = [
   { label: "Physiotherapy", href: "/physiotherapy" },
   { label: "Strength & Conditioning", href: "#" },
   { label: "Nutrition & Wellness", href: "#" },
-  { label: "Musculoskeletal Rehab", href: "/services/musculoskeletal-rehabilitation" },
-  { label: "Sports Injury Rehab", href: "/services/sports-injury-rehabilitation" },
-  { label: "Post-Operative Rehab", href: "/services/post-operative-rehabilitation" },
+  { label: "Musculoskeletal Rehab", href: "/physiotherapy/services/musculoskeletal-rehabilitation" },
+  { label: "Sports Injury Rehab", href: "/physiotherapy/services/sports-injury-rehabilitation" },
+  { label: "Post-Operative Rehab", href: "/physiotherapy/services/post-operative-rehabilitation" },
 ];
 
 const researchLinks = [
