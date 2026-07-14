@@ -1,71 +1,39 @@
-import { prisma } from "@/lib/prisma";
-import type { Testimonial, Video } from "@prisma/client";
+// New Landing Components
+import LandingHero from "@/components/landing/LandingHero";
+import WhoWeAre from "@/components/landing/WhoWeAre";
+import ThreePillars from "@/components/landing/ThreePillars";
+import OurPhilosophy from "@/components/landing/OurPhilosophy";
+import WhyAatral360 from "@/components/landing/WhyAatral360";
+import StrengthPerformance from "@/components/landing/StrengthPerformance";
+import ResearchEducation from "@/components/landing/ResearchEducation";
 
-import HeroSection from "@/components/home/HeroSection";
-import TrustBar from "@/components/home/TrustBar";
-import AboutSection from "@/components/home/AboutSection";
-import ServicesSection from "@/components/home/ServicesSection";
-import WhyChooseUsSection from "@/components/home/WhyChooseUsSection";
-import RecoveryJourneySection from "@/components/home/RecoveryJourneySection";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
-import VideosSection from "@/components/home/VideosSection";
-import AppointmentCtaSection from "@/components/home/AppointmentCtaSection";
-import FaqSection from "@/components/home/FaqSection";
+// No old components imported here anymore
 
 export const revalidate = 3600;
 
 export default async function HomePage() {
-  let testimonials: Testimonial[] = [];
-  let videos: Video[] = [];
-
-  try {
-    const data = await Promise.all([
-      prisma.testimonial.findMany({
-        orderBy: { createdAt: "desc" },
-        take: 6, // Fetch a few more for the slider
-      }),
-      prisma.video.findMany({
-        orderBy: { createdAt: "desc" },
-        take: 3,
-      })
-    ]);
-    testimonials = data[0];
-    videos = data[1];
-  } catch (error) {
-    console.error("Database connection failed on home page:", error);
-  }
-
   return (
     <main>
       {/* 1. Hero */}
-      <HeroSection />
+      <LandingHero />
 
-      {/* 2. Trust Bar */}
-      <TrustBar />
+      {/* 2. Who We Are */}
+      <WhoWeAre />
 
-      {/* 3. About The Clinic */}
-      <AboutSection />
+      {/* 3. Three Pillars */}
+      <ThreePillars />
 
-      {/* 4. Services */}
-      <ServicesSection />
+      {/* 4. Our Philosophy */}
+      <OurPhilosophy />
 
-      {/* 5. Why Choose Us */}
-      <WhyChooseUsSection />
+      {/* 5. Why Aatral360 */}
+      <WhyAatral360 />
 
-      {/* 6. Recovery Journey */}
-      <RecoveryJourneySection />
+      {/* 6. Strength & Performance */}
+      <StrengthPerformance />
 
-      {/* 7. Patient Testimonials */}
-      <TestimonialsSection testimonials={testimonials} />
-
-      {/* 8. Educational Videos */}
-      <VideosSection videos={videos} />
-
-      {/* 9. Appointment CTA */}
-      <AppointmentCtaSection />
-
-      {/* 10. FAQ */}
-      <FaqSection />
+      {/* 7. Research & Education */}
+      <ResearchEducation />
     </main>
   );
 }
