@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { ArrowRight, Activity, Dumbbell, Apple } from "lucide-react";
 
-const pillars = [
-  {
+const pillars = [{
     title: "Physiotherapy",
+    subtitle: "The Good Physio Hub",
     description: "Movement freedom through active recovery.",
     icon: Activity,
     link: "/physiotherapy",
@@ -71,8 +71,11 @@ export default function ThreePillars() {
                 <pillar.icon className="w-8 h-8" />
               </div>
 
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">{pillar.title}</h3>
-              <p className="text-slate-600 leading-relaxed mb-8 flex-1">
+              <h3 className="text-2xl font-bold text-slate-900 mb-1">{pillar.title}</h3>
+              {pillar.subtitle && (
+                <p className="text-sm font-semibold text-green-600 mb-4">{pillar.subtitle}</p>
+              )}
+              <p className={`text-slate-600 leading-relaxed flex-1 ${!pillar.subtitle ? 'mt-3 mb-8' : 'mb-8'}`}>
                 {pillar.description}
               </p>
 

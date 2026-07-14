@@ -49,8 +49,8 @@ export default function ContactSection() {
             Contact Us
           </h2>
           <p className="text-lg text-slate-600">
-            Have a question or need to get in touch? We're here to help. Send us
-            a message and we'll respond as soon as possible.
+            Have a question or need to get in touch? We&apos;re here to help. Send us
+            a message and we&apos;ll respond as soon as possible.
           </p>
         </div>
 
