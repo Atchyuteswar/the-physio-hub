@@ -18,8 +18,10 @@ export default function LayoutWrapper({
     return <>{children}</>;
   }
 
-  // Use Global Header/Footer for the main landing page
-  if (pathname === "/") {
+  // Use Global Header/Footer for the main landing pages
+  const isGlobalRoute = pathname === "/" || pathname === "/contact";
+
+  if (isGlobalRoute) {
     return (
       <div className="flex flex-col min-h-screen">
         <GlobalNavbar />

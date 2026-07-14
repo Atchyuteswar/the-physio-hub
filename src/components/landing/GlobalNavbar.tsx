@@ -40,14 +40,17 @@ export default function GlobalNavbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6">
-            <Link href="#pillars" className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">
+            <Link href="/#pillars" className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">
               Our Pillars
             </Link>
-            <Link href="#philosophy" className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">
+            <Link href="/#philosophy" className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">
               Philosophy
             </Link>
-            <Link href="#strength" className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">
+            <Link href="/#strength" className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">
               Strength & Performance
+            </Link>
+            <Link href="/contact" className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">
+              Contact Us
             </Link>
           </nav>
 
