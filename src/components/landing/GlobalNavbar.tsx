@@ -33,8 +33,8 @@ export default function GlobalNavbar() {
             <div className="w-9 h-9 rounded-lg bg-green-600 flex items-center justify-center shrink-0">
               <span className="text-white font-bold text-lg">A</span>
             </div>
-            <span className="text-xl font-bold text-slate-900 tracking-tight">
-              Aatral360
+            <span className="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
+              Aatral360 <span className="text-slate-300 font-normal">|</span> <span>The Good Physio Hub</span>
             </span>
           </Link>
 

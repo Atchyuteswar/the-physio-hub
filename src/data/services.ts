@@ -698,108 +698,84 @@ export const services: Service[] = [
     ]
   },
   {
-    slug: "strength-performance-training",
-    title: "Strength & Performance Training",
-    subtitle: "Build Strength. Enhance Performance. Reduce Injury Risk.",
+    slug: "oncology-rehabilitation",
+    title: "Oncology Rehabilitation",
+    subtitle: "Restoring Function. Supporting Recovery. Improving Quality of Life.",
     description:
-      "Scientifically designed training programs to improve strength, movement quality, resilience, and physical performance.",
-    icon: "Dumbbell",
+      "Specialized rehabilitation to help individuals safely recover from the physical challenges associated with cancer treatment.",
+    icon: "HeartPulse",
     longDescription: [
-      "At Aatral360, Strength & Conditioning is more than lifting weights—it's a scientifically designed training system that improves strength, movement quality, resilience, and physical performance.",
-      "Our programs are tailored for athletes, recreational sports participants, and active individuals who want to perform better, reduce injury risk, and build long-term physical capacity. Whether you're preparing for competition, returning after an injury, or simply looking to move and perform better in everyday life, every program is designed around your goals and physical demands."
+      "Cancer treatment can affect movement, strength, mobility, and overall quality of life. At Aatral360, our Oncology Rehabilitation programs are designed to help individuals safely recover from the physical challenges associated with cancer treatment through personalized, evidence-based physiotherapy.",
+      "Our goal is to reduce treatment-related complications, restore functional independence, improve physical capacity, and support every stage of recovery with compassionate, multidisciplinary care."
     ],
     approachSections: [
       {
-        title: "Comprehensive Performance Assessment",
-        description: "Every program begins with a detailed assessment of:",
+        title: "Comprehensive Assessment",
+        description: "Every rehabilitation program begins with a detailed evaluation of:",
         items: [
-          "Movement quality",
-          "Mobility and flexibility",
-          "Strength and muscular endurance",
-          "Balance and coordination",
-          "Power and explosiveness",
-          "Speed and agility",
-          "Sport-specific movement demands",
-          "Previous injury history",
-          "Training experience and goals"
+          "Medical and surgical history",
+          "Functional mobility",
+          "Shoulder and upper limb movement",
+          "Pain and soft tissue restrictions",
+          "Lymphedema assessment",
+          "Functional limitations",
+          "Activities of daily living",
+          "Quality of life measures"
         ]
       },
       {
-        title: "Evidence-Based Performance Training",
+        title: "Evidence-Based Rehabilitation",
         description: "Our programs may include:",
         items: [
-          "Strength Training",
-          "Power Development",
-          "Plyometric Training",
-          "Speed Development",
-          "Acceleration & Deceleration Training",
-          "Agility & Change-of-Direction Training",
-          "Balance & Coordination Training",
-          "Mobility & Flexibility Programs",
-          "Core Stability Training",
-          "Injury Prevention Programs",
-          "Return-to-Sport Conditioning",
-          "Sport-Specific Performance Training"
+          "Manual Lymphatic Drainage (MLD)",
+          "Complete Decongestive Therapy (CDT)",
+          "Multi-Layer Compression Bandaging",
+          "Compression Garment Education",
+          "Scar Tissue Management",
+          "Shoulder Mobility Restoration",
+          "Postural Rehabilitation",
+          "Therapeutic Exercise",
+          "Progressive Strengthening",
+          "Functional Rehabilitation",
+          "Breathing Exercises",
+          "Fatigue Management",
+          "Home Exercise Programs"
+        ]
+      },
+      {
+        title: "Specialized Rehabilitation",
+        description: "Our specialized services include:",
+        items: [
+          "Post-Mastectomy Rehabilitation",
+          "Breast Cancer Rehabilitation",
+          "Lymphedema Management",
+          "Upper Limb Mobility Restoration",
+          "Post-Surgical Shoulder Stiffness",
+          "Temporomandibular Joint (TMJ) Rehabilitation following head and neck cancer treatment",
+          "Functional Recovery Programs"
         ]
       }
     ],
     targetAudience: [
-      "Competitive athletes",
-      "Recreational athletes",
-      "School and college athletes",
-      "Runners and endurance athletes",
-      "Racquet sport players (Badminton, Tennis, Pickleball)",
-      "Cricket players",
-      "Football players",
-      "Volleyball and Basketball players",
-      "Fitness enthusiasts",
-      "Working professionals with active lifestyles",
-      "Individuals returning to sport after injury"
-    ],
-    conditionsTreated: [
-      "General strength development",
-      "Injury prevention",
-      "Performance enhancement",
-      "Return-to-sport conditioning",
-      "Elite performance development"
+      "Breast cancer surgery recovery",
+      "Mastectomy",
+      "Axillary lymph node dissection",
+      "Lymphedema",
+      "Shoulder stiffness following surgery",
+      "Radiation-related movement restrictions",
+      "Cancer-related fatigue",
+      "Reduced upper limb function",
+      "Functional limitations after cancer treatment"
     ],
     recoveryTimeline: [
-      { condition: "General Strength Development", duration: "8–12 weeks" },
-      { condition: "Injury Prevention", duration: "Ongoing" },
-      { condition: "Performance Enhancement", duration: "12–24 weeks" },
-      { condition: "Return-to-Sport Conditioning", duration: "8–16 weeks" },
-      { condition: "Elite Performance Development", duration: "Individualized Long-Term Program" }
+      { condition: "Post-Mastectomy Rehabilitation", duration: "6–12 weeks" },
+      { condition: "Lymphedema Management", duration: "Individualized, ongoing as required" },
+      { condition: "Shoulder Mobility Restoration", duration: "6–12 weeks" },
+      { condition: "Post-Surgical Functional Rehabilitation", duration: "8–16 weeks" },
+      { condition: "Cancer Rehabilitation", duration: "Individualized" }
     ],
-    timelineNote: "Performance is developed progressively through structured training rather than quick fixes.",
-    differenceText: "At Aatral360, Strength & Conditioning is fully integrated with physiotherapy and rehabilitation. Our programs combine movement science, evidence-based exercise prescription, progressive overload, and sport-specific training to improve performance while minimizing injury risk. Whether your goal is returning to competition, excelling in your sport, or maintaining an active lifestyle, we help you build the strength, capacity, and confidence to perform at your best.",
-    process: [
-      {
-        title: "Comprehensive Performance Assessment",
-        description: "We assess movement quality, strength, mobility, balance, power, speed, and sport-specific demands."
-      },
-      {
-        title: "Individualized Training Program",
-        description: "Evidence-based strength, power, speed, and conditioning programs tailored to your goals and capacity."
-      },
-      {
-        title: "Progressive Development & Monitoring",
-        description: "Training loads are progressively adjusted according to your goals, recovery, and performance demands."
-      }
-    ],
-    faqs: [
-      {
-        question: "Is this suitable for non-athletes?",
-        answer: "Yes. Our programs are designed for everyone from competitive athletes to working professionals and fitness enthusiasts."
-      },
-      {
-        question: "How is this different from gym training?",
-        answer: "Our programs are fully integrated with physiotherapy and rehabilitation, combining movement science with evidence-based exercise prescription."
-      },
-      {
-        question: "How long does a performance program last?",
-        answer: "Programs range from 8–12 weeks for general strength to individualized long-term programs for elite performance development."
-      }
-    ]
+    timelineNote: "Regular reassessment ensures that rehabilitation progresses safely according to recovery and functional improvements.",
+    differenceText: "At Aatral360, oncology rehabilitation focuses on restoring movement, managing lymphedema, improving upper limb function, and enhancing quality of life after cancer treatment. Our evidence-based programs combine specialized physiotherapy techniques, therapeutic exercise, and personalized rehabilitation to help individuals regain confidence, independence, and physical well-being throughout their recovery journey. Specialized services include Manual Lymphatic Drainage (MLD), Complete Decongestive Therapy (CDT), and Multi-Layer Compression Bandaging provided by a Certified Lymphedema Physiotherapist."
   },
   {
     slug: "corporate-health-wellness",

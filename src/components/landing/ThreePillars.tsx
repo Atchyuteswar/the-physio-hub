@@ -1,36 +1,39 @@
 import Link from "next/link";
-import { ArrowRight, Activity, Dumbbell, Apple } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const pillars = [{
     title: "Physiotherapy",
     subtitle: "The Good Physio Hub",
     description: "Movement freedom through active recovery.",
-    icon: Activity,
+    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&q=80&w=400",
     link: "/physiotherapy",
     linkText: "Explore",
     comingSoon: false,
-    color: "bg-blue-50 text-blue-600",
-    hoverColor: "hover:bg-blue-600 hover:text-white",
   },
   {
     title: "Strength & Conditioning",
     description: "Build strength, resilience, and athletic performance.",
-    icon: Dumbbell,
-    link: "#",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=400",
+    link: "/strength-and-conditioning",
     linkText: "Explore",
-    comingSoon: true,
-    color: "bg-slate-100 text-slate-700",
-    hoverColor: "hover:bg-slate-800 hover:text-white",
+    comingSoon: false,
   },
   {
     title: "Nutrition & Wellness",
     description: "Fuel recovery. Support lifelong health.",
-    icon: Apple,
-    link: "#",
-    linkText: "Learn More",
-    comingSoon: true,
-    color: "bg-green-50 text-green-600",
-    hoverColor: "hover:bg-green-600 hover:text-white",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=400",
+    link: "/nutrition-services",
+    linkText: "Explore",
+    comingSoon: false,
+  },
+  {
+    title: "Yoga & Pilates",
+    description: "Move Better. Feel Stronger. Live Healthier.",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400",
+    link: "/yoga-and-pilates",
+    linkText: "Explore",
+    comingSoon: false,
   },
 ];
 
@@ -47,14 +50,14 @@ export default function ThreePillars() {
             ))}
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
-            Our Three Pillars
+            Our Pillars
           </h2>
           <p className="text-lg text-slate-600">
             A comprehensive approach to your health, integrating key disciplines to ensure you achieve your best possible outcomes.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {pillars.map((pillar, index) => (
             <div
               key={index}
@@ -67,8 +70,8 @@ export default function ThreePillars() {
                 </div>
               )}
 
-              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-colors duration-300 ${pillar.color} ${pillar.hoverColor}`}>
-                <pillar.icon className="w-8 h-8" />
+              <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 relative">
+                <Image src={pillar.image} alt={pillar.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
 
               <h3 className="text-2xl font-bold text-slate-900 mb-1">{pillar.title}</h3>
@@ -82,7 +85,7 @@ export default function ThreePillars() {
               <Link
                 href={pillar.link}
                 className={`inline-flex items-center gap-2 font-bold transition-colors ${
-                  pillar.comingSoon ? "text-slate-400 cursor-not-allowed pointer-events-none" : "text-green-600 hover:text-green-700"
+                  pillar.comingSoon ? "text-slate-500 hover:text-slate-700" : "text-green-600 hover:text-green-700"
                 }`}
               >
                 {pillar.linkText}

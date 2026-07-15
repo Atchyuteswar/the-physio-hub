@@ -12,24 +12,30 @@ const highlights = [
 export default function LandingHero() {
   return (
     <section className="relative min-h-[calc(100vh-80px)] py-12 lg:py-16 overflow-hidden bg-slate-50 border-b border-slate-100 flex items-center">
-      {/* Background Decor */}
-      <div className="absolute inset-0 z-0 opacity-50">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-green-100/60 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-slate-200/50 rounded-full blur-[120px] pointer-events-none" />
+      {/* Background Image & Overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?q=80&w=2000&auto=format&fit=crop"
+          alt="Aatral360 Facility"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-slate-900/80 mix-blend-multiply" />
       </div>
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Left Content */}
           <div className="max-w-2xl">
-            <span className="inline-block py-1.5 px-3 rounded-full bg-green-100/80 text-green-700 font-semibold text-sm tracking-wider uppercase mb-6 border border-green-200">
+            <span className="inline-block py-1.5 px-3 rounded-full bg-green-900/50 text-green-300 font-semibold text-sm tracking-wider uppercase mb-6 border border-green-500/30 backdrop-blur-sm">
               Complete Movement Health
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6 text-slate-900">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6 text-white">
               Restore Movement. Build Resilience.{" "}
-              <span className="text-green-600">Empower Lifelong Performance.</span>
+              <span className="text-green-400">Empower Lifelong Performance.</span>
             </h1>
-            <p className="text-lg sm:text-xl text-slate-600 mb-10 leading-relaxed font-medium">
+            <p className="text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed font-medium">
               Personalized, evidence-based care integrating physiotherapy,
               rehabilitation, strength & conditioning, nutrition, and wellness to
               help you move better, recover stronger, and perform at your best.
@@ -54,8 +60,8 @@ export default function LandingHero() {
 
             <div className="grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:gap-6">
               {highlights.map((item, index) => (
-                <div key={index} className="flex items-center gap-2 text-slate-700 font-medium text-sm">
-                  <Star className="w-4 h-4 fill-green-500 text-green-500" />
+                <div key={index} className="flex items-center gap-2 text-slate-200 font-medium text-sm">
+                  <Star className="w-4 h-4 fill-green-400 text-green-400" />
                   {item}
                 </div>
               ))}

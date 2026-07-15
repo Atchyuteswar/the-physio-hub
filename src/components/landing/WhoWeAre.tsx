@@ -45,7 +45,7 @@ export default function WhoWeAre() {
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
               Beyond Recovery. <br />
               <span className="text-green-600 relative inline-block">
-                Built for Better Movement.
+                Built for Better Performance.
                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-green-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" strokeLinecap="round" />
                 </svg>
