@@ -20,8 +20,9 @@ const quickLinks = [
 
 const serviceLinks = [
   { label: "Physiotherapy", href: "/physiotherapy" },
-  { label: "Strength & Conditioning", href: "#" },
-  { label: "Nutrition & Wellness", href: "#" },
+  { label: "Strength & Conditioning", href: "/strength-and-conditioning" },
+  { label: "Nutrition & Wellness", href: "/nutrition-services" },
+  { label: "Yoga & Pilates", href: "/yoga-and-pilates" },
   { label: "Musculoskeletal Rehab", href: "/physiotherapy/services/musculoskeletal-rehabilitation" },
   { label: "Sports Injury Rehab", href: "/physiotherapy/services/sports-injury-rehabilitation" },
   { label: "Post-Operative Rehab", href: "/physiotherapy/services/post-operative-rehabilitation" },
@@ -54,8 +55,8 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-xl bg-green-600 flex items-center justify-center group-hover:bg-green-500 transition-colors shadow-lg shadow-green-600/20">
                 <Activity className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold text-white tracking-tight">
-                Aatral360
+              <span className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
+                Aatral360 <span className="text-slate-700 font-normal">|</span> <span>The Good Physio Hub</span>
               </span>
             </Link>
 

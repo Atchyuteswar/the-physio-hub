@@ -13,8 +13,8 @@ export default function GlobalFooter() {
               <span className="text-white font-bold text-xl">A</span>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-white tracking-tight">
-                Aatral360
+              <h3 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                Aatral360 <span className="text-slate-700 font-normal">|</span> <span>The Good Physio Hub</span>
               </h3>
               <p className="text-slate-400 text-sm">Movement Health & Performance</p>
             </div>
@@ -25,11 +25,14 @@ export default function GlobalFooter() {
             <Link href="/physiotherapy" className="hover:text-green-500 transition-colors">
               Physiotherapy
             </Link>
-            <Link href="#" className="hover:text-green-500 transition-colors cursor-not-allowed">
+            <Link href="/strength-and-conditioning" className="hover:text-green-500 transition-colors">
+              Strength & Conditioning
+            </Link>
+            <Link href="/nutrition-services" className="hover:text-green-500 transition-colors">
               Nutrition & Wellness
             </Link>
-            <Link href="#" className="hover:text-green-500 transition-colors cursor-not-allowed">
-              Strength & Conditioning
+            <Link href="/yoga-and-pilates" className="hover:text-green-500 transition-colors">
+              Yoga & Pilates
             </Link>
           </div>
         </div>
