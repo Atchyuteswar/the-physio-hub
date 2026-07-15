@@ -57,11 +57,11 @@ export default function ThreePillars() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible md:snap-none md:pb-0 max-w-7xl mx-auto scrollbar-hide">
           {pillars.map((pillar, index) => (
             <div
               key={index}
-              className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden group flex flex-col"
+              className="w-[85vw] sm:w-[350px] shrink-0 md:w-auto md:shrink bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden group flex flex-col snap-center"
             >
               {/* Coming Soon Badge */}
               {pillar.comingSoon && (

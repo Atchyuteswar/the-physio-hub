@@ -33,9 +33,11 @@ export default function GlobalNavbar() {
             <div className="w-9 h-9 rounded-lg bg-green-600 flex items-center justify-center shrink-0">
               <span className="text-white font-bold text-lg">A</span>
             </div>
-            <span className="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-              Aatral360 <span className="text-slate-300 font-normal">|</span> <span>The Good Physio Hub</span>
-            </span>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+              <span className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">Aatral360</span>
+              <span className="hidden sm:inline text-slate-300 font-normal">|</span>
+              <span className="text-xs sm:text-xl font-semibold sm:font-bold text-slate-500 sm:text-slate-900 tracking-tight">The Good Physio Hub</span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
@@ -63,7 +65,8 @@ export default function GlobalNavbar() {
               href="/physiotherapy/appointment"
               className="btn-primary py-2.5! px-5! text-sm! shrink-0 flex items-center gap-1"
             >
-              Book Consultation
+              <span className="hidden sm:inline">Book Consultation</span>
+              <span className="sm:hidden">Book</span>
               <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
