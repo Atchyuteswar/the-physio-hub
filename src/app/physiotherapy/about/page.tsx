@@ -229,7 +229,7 @@ export default function AboutPage() {
               <Target className="w-12 h-12 text-green-600 mb-8 relative z-10" />
               <h3 className="text-3xl font-bold text-slate-900 mb-6 relative z-10">Our Mission</h3>
               <p className="text-lg text-slate-600 leading-relaxed relative z-10">
-                To provide personalized physiotherapy and rehabilitation programs that help people recover faster, move better, and improve their long-term quality of life. We are dedicated to clinical excellence and genuine patient care.
+                To transform lives by integrating rehabilitation, movement, performance, and wellness into one personalized, evidence-based approach that helps every individual achieve lifelong health and confidence.
               </p>
             </div>
 
@@ -238,7 +238,7 @@ export default function AboutPage() {
               <SparklesIcon className="w-12 h-12 text-green-600 mb-8 relative z-10" />
               <h3 className="text-3xl font-bold text-slate-900 mb-6 relative z-10">Our Vision</h3>
               <p className="text-lg text-slate-600 leading-relaxed mb-8 relative z-10">
-                To become a trusted physiotherapy hub recognized globally for clinical excellence, ethical practice, and superior long-term recovery outcomes.
+                To redefine healthcare by becoming the world's most trusted destination for movement, rehabilitation, and human performance—where science, compassion, and innovation empower people to live without limitations.
               </p>
               <ul className="space-y-3 relative z-10">
                 {["Ethical Practice", "Evidence-Based Rehabilitation", "Patient Education", "Long-Term Outcomes"].map((item) => (

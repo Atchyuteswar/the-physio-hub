@@ -887,4 +887,111 @@ export const services: Service[] = [
       }
     ]
   },
+  {
+    slug: "vertigo-physiotherapy",
+    title: "Vertigo & Vestibular Rehabilitation",
+    subtitle: "Regain Your Balance. Reduce Dizziness. Restore Confidence.",
+    description:
+      "Specialized rehabilitation for vertigo, dizziness, and balance disorders to help you move safely and confidently.",
+    icon: "Activity",
+    longDescription: [
+      "Vertigo and dizziness can significantly impact your daily life, causing unsteadiness, nausea, and an increased risk of falls. Our Vestibular Rehabilitation Therapy (VRT) is designed to address these symptoms by retraining your central nervous system to compensate for inner ear deficits.",
+      "We use evidence-based assessment techniques to identify the specific cause of your symptoms, whether it's BPPV, vestibular neuritis, or other balance disorders, and create a targeted treatment plan to resolve them."
+    ],
+    approachSections: [
+      {
+        title: "Comprehensive Vestibular Assessment",
+        description: "A thorough evaluation of your balance and vestibular system, including:",
+        items: [
+          "Detailed symptom history",
+          "Oculomotor (eye movement) testing",
+          "Positional testing (e.g., Dix-Hallpike test)",
+          "Balance and gait assessment",
+          "Motion sensitivity evaluation"
+        ]
+      },
+      {
+        title: "Targeted Treatment Strategies",
+        description: "Depending on your diagnosis, treatment may include:",
+        items: [
+          "Canalith Repositioning Maneuvers (e.g., Epley maneuver for BPPV)",
+          "Gaze stabilization exercises",
+          "Habituation exercises to decrease motion sensitivity",
+          "Balance and gait training",
+          "Fall prevention education"
+        ]
+      }
+    ],
+    conditionsTreated: [
+      "Benign Paroxysmal Positional Vertigo (BPPV)",
+      "Vestibular Neuritis / Labyrinthitis",
+      "Meniere's Disease (rehabilitation phase)",
+      "Vestibular Migraine",
+      "Age-related balance disorders",
+      "Post-concussion dizziness"
+    ],
+    differenceText: "At Aatral360, we understand how debilitating vertigo can be. Our specialized vestibular rehabilitation focuses on identifying the root cause of your dizziness and providing immediate, effective interventions (like repositioning maneuvers) alongside progressive exercises to restore your equilibrium.",
+    faqs: [
+      {
+        question: "How quickly can BPPV be treated?",
+        answer: "In many cases, BPPV can be resolved in just 1 to 3 sessions using specific repositioning maneuvers like the Epley maneuver."
+      },
+      {
+        question: "Will the exercises make me dizzy?",
+        answer: "Some exercises may temporarily provoke your symptoms; this is a normal part of the habituation process. We will guide you on how to perform them safely."
+      }
+    ]
+  },
+  {
+    slug: "lymphedema-physiotherapy",
+    title: "Lymphedema Management",
+    subtitle: "Reduce Swelling. Improve Comfort. Regain Mobility.",
+    description:
+      "Comprehensive decongestive therapy to effectively manage lymphedema and chronic swelling conditions.",
+    icon: "HeartPulse",
+    longDescription: [
+      "Lymphedema is a chronic condition characterized by localized fluid retention and tissue swelling, often occurring after cancer treatments (like lymph node removal or radiation) or due to vascular issues. Without proper management, it can lead to reduced mobility, discomfort, and an increased risk of infection.",
+      "Our specialized lymphedema physiotherapy focuses on Complete Decongestive Therapy (CDT) to reduce swelling, maintain the reduction, and educate you on long-term self-management strategies."
+    ],
+    approachSections: [
+      {
+        title: "Complete Decongestive Therapy (CDT)",
+        description: "The gold standard for lymphedema management, which includes:",
+        items: [
+          "Manual Lymphatic Drainage (MLD) - specialized massage to move fluid",
+          "Multi-layer compression bandaging",
+          "Exercise therapy tailored for lymphatic flow",
+          "Skin and nail care education to prevent infection"
+        ]
+      },
+      {
+        title: "Long-Term Management",
+        description: "Empowering you to manage the condition independently:",
+        items: [
+          "Fitting and education for compression garments",
+          "Self-MLD instruction",
+          "Home exercise programs",
+          "Lifestyle and risk-reduction strategies"
+        ]
+      }
+    ],
+    conditionsTreated: [
+      "Primary Lymphedema",
+      "Secondary Lymphedema (post-cancer surgery/radiation)",
+      "Chronic Venous Insufficiency",
+      "Post-surgical or post-traumatic edema",
+      "Lipedema"
+    ],
+    differenceText: "Our certified lymphedema therapists provide compassionate, expert care using the full spectrum of Complete Decongestive Therapy. We focus not only on immediate fluid reduction but also on equipping you with the tools and garments needed for successful long-term management.",
+    faqs: [
+      {
+        question: "What is Manual Lymphatic Drainage (MLD)?",
+        answer: "MLD is a gentle, skin-stretching massage that helps redirect lymphatic fluid from swollen areas to healthy lymphatic vessels."
+      },
+      {
+        question: "Do I have to wear compression garments forever?",
+        answer: "Lymphedema is a chronic condition, so lifelong management is typically required. Compression garments are a crucial part of maintaining the fluid reduction achieved during therapy."
+      }
+    ]
+  }
 ];
