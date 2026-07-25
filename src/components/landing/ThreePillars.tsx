@@ -126,10 +126,17 @@ export default function ThreePillars() {
           <div className="overflow-hidden rounded-3xl">
             <div 
               className="flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+              style={{ 
+                width: `${pillars.length * 100}%`,
+                transform: `translateX(-${(activeIndex * 100) / pillars.length}%)` 
+              }}
             >
               {pillars.map((pillar, index) => (
-                <div key={index} className="w-full shrink-0 px-2">
+                <div 
+                  key={index} 
+                  style={{ width: `${100 / pillars.length}%` }} 
+                  className="shrink-0 px-2"
+                >
                   <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 relative overflow-hidden flex flex-col min-h-[460px] group">
                     {/* Coming Soon Badge */}
                     {pillar.comingSoon && (
