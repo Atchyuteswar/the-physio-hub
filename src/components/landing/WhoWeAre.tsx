@@ -15,7 +15,7 @@ export default function WhoWeAre() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <div className="aspect-4/3">
                 <Image
-                  src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1600&auto=format&fit=crop"
+                  src="/images/physio.png"
                   alt="Modern professional clinic"
                   fill
                   className="object-cover transform hover:scale-105 transition-transform duration-700"

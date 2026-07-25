@@ -23,16 +23,16 @@ export default function AboutSection() {
               <div className="space-y-4 pt-8">
                 <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-lg border border-slate-100">
                   <Image 
-                    src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=2070&auto=format&fit=crop" 
-                    alt="Clinic Facility"
+                    src="/images/musculo skeletal.png" 
+                    alt="Musculoskeletal Rehabilitation"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
                   <Image 
-                    src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop" 
-                    alt="Rehabilitation"
+                    src="/images/oncho.png" 
+                    alt="Oncology Rehabilitation"
                     fill
                     className="object-cover"
                   />
@@ -41,8 +41,8 @@ export default function AboutSection() {
               <div className="space-y-4">
                 <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
                   <Image 
-                    src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=2047&auto=format&fit=crop" 
-                    alt="Therapy Session"
+                    src="/images/POST OP.jpg" 
+                    alt="Post Operative Rehabilitation"
                     fill
                     className="object-cover"
                   />

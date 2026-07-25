@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ChevronRight, ArrowLeft, CalendarCheck, Dumbbell } from "lucide-react";
+import { ChevronRight, CalendarCheck, Dumbbell } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Strength & Conditioning",

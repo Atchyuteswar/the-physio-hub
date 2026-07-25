@@ -187,11 +187,13 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-12 max-w-none">
               {/* Photo Side */}
               <div className="lg:col-span-5 relative bg-slate-100 min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <img src="/images/sarath.png" alt="sarath" />
-                  </div>
-                </div>
+                <Image
+                  src="/images/sarath.png"
+                  alt="Dr. Sarath Kumar N"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
 
               {/* Content Side */}
@@ -301,7 +303,7 @@ export default function AboutPage() {
                 Our Vision
               </h3>
               <p className="text-lg text-slate-600 leading-relaxed mb-8 relative z-10">
-                To redefine healthcare by becoming the world's most trusted
+                To redefine healthcare by becoming the world&apos;s most trusted
                 destination for movement, rehabilitation, and human
                 performance—where science, compassion, and innovation empower
                 people to live without limitations.

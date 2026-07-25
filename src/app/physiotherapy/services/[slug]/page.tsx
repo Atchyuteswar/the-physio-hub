@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { services } from "@/data/services";
 import { ChevronRight, ArrowLeft, CalendarCheck } from "lucide-react";
 import {
@@ -364,8 +365,20 @@ export default async function ServicePage({ params }: Props) {
                       </Link>
                     );
                   })}
-                </div>
               </div>
+            </div>
+
+            {/* Service Feature Image */}
+            {service.image && (
+                <div className="relative aspect-9/16 rounded-2xl overflow-hidden shadow-md border border-slate-100">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover animate-[fadeIn_0.5s_ease-out]"
+                  />
+                </div>
+              )}
             </div>
           </div>
 
