@@ -3,12 +3,12 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { ChevronRight, Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navItems = [
   { label: "About Us", href: "/about" },
-  { label: "Our Pillars", href: "/#pillars" },
+  { label: "Our Specialities", href: "/#specialities" },
   { label: "Philosophy", href: "/#philosophy" },
-  { label: "Strength & Performance", href: "/#strength" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -39,8 +39,14 @@ export default function GlobalNavbar() {
           <div className="h-20 flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group shrink-0">
-              <div className="w-9 h-9 rounded-lg bg-green-600 flex items-center justify-center shrink-0">
-                <span className="text-white font-bold text-lg">A</span>
+              <div className="relative w-14 h-14 shrink-0">
+                <Image
+                  src="/images/aatral-360-logo-trans.png"
+                  alt="Aatral360 Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
                 <span className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">Aatral360</span>

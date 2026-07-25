@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   MapPin,
   Phone,
@@ -52,8 +53,13 @@ export default function Footer() {
               href="/"
               className="inline-flex items-center gap-3 mb-6 group"
             >
-              <div className="w-10 h-10 rounded-xl bg-green-600 flex items-center justify-center group-hover:bg-green-500 transition-colors shadow-lg shadow-green-600/20">
-                <Activity className="w-6 h-6 text-white" />
+              <div className="relative w-12 h-12 shrink-0">
+                <Image
+                  src="/images/aatral-360-logo-trans.png"
+                  alt="Aatral360 Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <span className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
                 Aatral360 <span className="text-slate-700 font-normal">|</span> <span>The Good Physio Hub</span>

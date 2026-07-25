@@ -43,7 +43,7 @@ export const services: Service[] = [
     subtitle: "Restore Movement. Rebuild Capacity. Return with Confidence.",
     description:
       "Assessment and treatment of muscles, joints, tendons, ligaments, and connective tissues through personalized, evidence-based rehabilitation.",
-    icon: "Activity",
+    icon: "Bone",
     longDescription: [
       "Our musculoskeletal rehabilitation programs are designed to address conditions affecting the muscles, joints, tendons, ligaments, fascia, and connective tissues through a personalized, evidence-based approach.",
       "Rather than treating imaging findings alone, we combine detailed history taking, movement analysis, pattern recognition, and clinical reasoning to understand how your condition is affecting movement, function, and daily life. This enables us to develop an individualized rehabilitation plan focused on restoring long-term function—not simply reducing symptoms."
@@ -267,7 +267,7 @@ export const services: Service[] = [
     subtitle: "Recover with Confidence. Return with Performance.",
     description:
       "Specialized rehabilitation for athletes — restoring physical qualities, minimizing re-injury risk, and returning to sport with confidence.",
-    icon: "Zap",
+    icon: "PersonStanding",
     longDescription: [
       "At Aatral360, sports rehabilitation goes beyond healing an injury. Our goal is to restore the physical qualities required for your sport, minimize the risk of re-injury, and help you return to competition with confidence and performance readiness.",
       "Every athlete is different. That's why our rehabilitation programs are individually designed based on your injury, sport, playing position, training history, competition level, seasonal demands, and performance goals."
@@ -390,7 +390,7 @@ export const services: Service[] = [
     subtitle: "Guided Recovery. Progressive Rehabilitation. Confident Return to Life.",
     description:
       "Structured post-surgical recovery programs designed to protect healing, restore movement, rebuild strength, and return to daily life.",
-    icon: "Stethoscope",
+    icon: "Accessibility",
     longDescription: [
       "Successful surgery is only the beginning of recovery. At Aatral360, our post-operative rehabilitation programs are designed to protect surgical healing, restore movement, rebuild strength, and help individuals safely return to their daily activities, work, or sport.",
       "Our rehabilitation plans are developed in close collaboration with your orthopedic surgeon, ensuring that every stage of recovery respects surgical precautions, tissue-healing timelines, and your individual goals."
@@ -500,7 +500,7 @@ export const services: Service[] = [
     subtitle: "Restoring Function. Maximizing Independence. Improving Quality of Life.",
     description:
       "Personalized rehabilitation for neurological conditions — maximizing functional abilities, improving mobility, and regaining independence.",
-    icon: "RotateCcw",
+    icon: "Brain",
     longDescription: [
       "Neurological conditions can significantly affect movement, balance, coordination, strength, and independence. At Aatral360, our adult neurological rehabilitation programs are designed to help individuals maximize their functional abilities, improve mobility, and regain confidence in everyday life through personalized, evidence-based rehabilitation.",
       "Recovery following neurological injury is unique for every individual. While the rate and extent of recovery may vary, our goal is to help every patient achieve their highest level of function through structured rehabilitation, continuous reassessment, and goal-oriented care."
@@ -608,7 +608,7 @@ export const services: Service[] = [
     subtitle: "Supporting Women Through Every Stage of Life.",
     description:
       "Safe, evidence-based rehabilitation supporting women during pregnancy, after childbirth, and in managing pelvic health conditions.",
-    icon: "HeartHandshake",
+    icon: "Baby",
     longDescription: [
       "Women's bodies undergo significant physical changes throughout different stages of life. At Aatral360, our Women's Health Physiotherapy programs are designed to support women during pregnancy, after childbirth, and in managing musculoskeletal and pelvic health conditions through safe, evidence-based rehabilitation.",
       "Every rehabilitation program is personalized according to your physical condition, functional limitations, lifestyle, and recovery goals, helping you regain strength, confidence, and independence."
@@ -703,7 +703,7 @@ export const services: Service[] = [
     subtitle: "Restoring Function. Supporting Recovery. Improving Quality of Life.",
     description:
       "Specialized rehabilitation to help individuals safely recover from the physical challenges associated with cancer treatment.",
-    icon: "HeartPulse",
+    icon: "Ribbon",
     longDescription: [
       "Cancer treatment can affect movement, strength, mobility, and overall quality of life. At Aatral360, our Oncology Rehabilitation programs are designed to help individuals safely recover from the physical challenges associated with cancer treatment through personalized, evidence-based physiotherapy.",
       "Our goal is to reduce treatment-related complications, restore functional independence, improve physical capacity, and support every stage of recovery with compassionate, multidisciplinary care."
@@ -893,7 +893,7 @@ export const services: Service[] = [
     subtitle: "Regain Your Balance. Reduce Dizziness. Restore Confidence.",
     description:
       "Specialized rehabilitation for vertigo, dizziness, and balance disorders to help you move safely and confidently.",
-    icon: "Activity",
+    icon: "Ear",
     longDescription: [
       "Vertigo and dizziness can significantly impact your daily life, causing unsteadiness, nausea, and an increased risk of falls. Our Vestibular Rehabilitation Therapy (VRT) is designed to address these symptoms by retraining your central nervous system to compensate for inner ear deficits.",
       "We use evidence-based assessment techniques to identify the specific cause of your symptoms, whether it's BPPV, vestibular neuritis, or other balance disorders, and create a targeted treatment plan to resolve them."
@@ -948,7 +948,7 @@ export const services: Service[] = [
     subtitle: "Reduce Swelling. Improve Comfort. Regain Mobility.",
     description:
       "Comprehensive decongestive therapy to effectively manage lymphedema and chronic swelling conditions.",
-    icon: "HeartPulse",
+    icon: "Hand",
     longDescription: [
       "Lymphedema is a chronic condition characterized by localized fluid retention and tissue swelling, often occurring after cancer treatments (like lymph node removal or radiation) or due to vascular issues. Without proper management, it can lead to reduced mobility, discomfort, and an increased risk of infection.",
       "Our specialized lymphedema physiotherapy focuses on Complete Decongestive Therapy (CDT) to reduce swelling, maintain the reduction, and educate you on long-term self-management strategies."

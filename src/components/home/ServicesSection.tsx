@@ -15,6 +15,13 @@ import {
   HeartHandshake,
   Dumbbell,
   Building2,
+  PersonStanding,
+  Brain,
+  Ribbon,
+  Ear,
+  Hand,
+  Baby,
+  Accessibility,
 } from "lucide-react";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -30,6 +37,13 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   HeartHandshake,
   Dumbbell,
   Building2,
+  PersonStanding,
+  Brain,
+  Ribbon,
+  Ear,
+  Hand,
+  Baby,
+  Accessibility,
 };
 
 import Image from "next/image";

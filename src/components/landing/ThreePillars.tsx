@@ -1,8 +1,12 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+"use client";
 
-const pillars = [{
+import Link from "next/link";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+
+const pillars = [
+  {
     title: "Physiotherapy",
     subtitle: "The Good Physio Hub",
     description: "Movement freedom through active recovery.",
@@ -38,8 +42,26 @@ const pillars = [{
 ];
 
 export default function ThreePillars() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % pillars.length);
+    }, 4000); // Move slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextSlide = () => {
+    setActiveIndex((prev) => (prev + 1) % pillars.length);
+  };
+
+  const prevSlide = () => {
+    setActiveIndex((prev) => (prev - 1 + pillars.length) % pillars.length);
+  };
+
   return (
-    <section className="py-24 bg-slate-50 border-t border-slate-100" id="pillars">
+    <section className="py-24 bg-slate-50 border-t border-slate-100" id="specialities">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-1 mb-4">
@@ -50,18 +72,19 @@ export default function ThreePillars() {
             ))}
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
-            Our Pillars
+            Our Specialities
           </h2>
           <p className="text-lg text-slate-600">
             A comprehensive approach to your health, integrating key disciplines to ensure you achieve your best possible outcomes.
           </p>
         </div>
 
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible md:snap-none md:pb-0 max-w-7xl mx-auto scrollbar-hide">
+        {/* Desktop View: Grid */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {pillars.map((pillar, index) => (
             <div
               key={index}
-              className="w-[85vw] sm:w-[350px] shrink-0 md:w-auto md:shrink bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden group flex flex-col snap-center"
+              className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden group flex flex-col"
             >
               {/* Coming Soon Badge */}
               {pillar.comingSoon && (
@@ -96,6 +119,82 @@ export default function ThreePillars() {
               <div className="absolute inset-0 bg-linear-to-br from-green-50/0 to-green-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </div>
           ))}
+        </div>
+
+        {/* Mobile View: Carousel */}
+        <div className="md:hidden relative max-w-sm mx-auto px-4">
+          <div className="overflow-hidden rounded-3xl">
+            <div 
+              className="flex transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+            >
+              {pillars.map((pillar, index) => (
+                <div key={index} className="w-full shrink-0 px-2">
+                  <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 relative overflow-hidden flex flex-col min-h-[460px] group">
+                    {/* Coming Soon Badge */}
+                    {pillar.comingSoon && (
+                      <div className="absolute top-6 right-6 bg-slate-100 text-slate-500 text-xs font-bold px-3 py-1 rounded-full border border-slate-200 uppercase tracking-wide z-10">
+                        Coming Soon
+                      </div>
+                    )}
+
+                    <div className="w-full h-48 rounded-2xl overflow-hidden mb-6 relative">
+                      <Image src={pillar.image} alt={pillar.title} fill className="object-cover" />
+                    </div>
+
+                    <h3 className="text-2xl font-bold text-slate-900 mb-1">{pillar.title}</h3>
+                    {pillar.subtitle && (
+                      <p className="text-sm font-semibold text-green-600 mb-4">{pillar.subtitle}</p>
+                    )}
+                    <p className={`text-slate-600 leading-relaxed flex-1 ${!pillar.subtitle ? 'mt-3 mb-8' : 'mb-8'}`}>
+                      {pillar.description}
+                    </p>
+
+                    <Link
+                      href={pillar.link}
+                      className={`inline-flex items-center gap-2 font-bold transition-colors ${
+                        pillar.comingSoon ? "text-slate-500 hover:text-slate-700" : "text-green-600 hover:text-green-700"
+                      }`}
+                    >
+                      {pillar.linkText}
+                      <ArrowRight className="w-5 h-5" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation Arrows */}
+          <button 
+            onClick={prevSlide}
+            className="absolute left-[-12px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg border border-slate-100 flex items-center justify-center text-slate-600 hover:text-green-600 z-10 active:scale-95 transition-transform"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          
+          <button 
+            onClick={nextSlide}
+            className="absolute right-[-12px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg border border-slate-100 flex items-center justify-center text-slate-600 hover:text-green-600 z-10 active:scale-95 transition-transform"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Dot Indicators */}
+          <div className="flex justify-center gap-2 mt-6">
+            {pillars.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveIndex(index)}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  activeIndex === index ? "bg-green-600 w-6" : "bg-slate-300"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

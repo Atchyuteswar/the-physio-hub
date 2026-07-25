@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import type { Testimonial, Video } from "@prisma/client";
+import type { Testimonial, Video, Gallery } from "@prisma/client";
 
 // New Landing Components
 import LandingHero from "@/components/landing/LandingHero";
@@ -13,12 +13,14 @@ import ResearchEducation from "@/components/landing/ResearchEducation";
 import AboutSection from "@/components/home/AboutSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import VideosSection from "@/components/home/VideosSection";
+import GalleryPreviewSection from "@/components/home/GalleryPreviewSection";
 
 export const revalidate = 3600;
 
 export default async function HomePage() {
   let testimonials: Testimonial[] = [];
   let videos: Video[] = [];
+  let galleryImages: Gallery[] = [];
 
   try {
     const data = await Promise.all([
@@ -29,10 +31,15 @@ export default async function HomePage() {
       prisma.video.findMany({
         orderBy: { createdAt: "desc" },
         take: 3,
-      })
+      }),
+      prisma.gallery.findMany({
+        orderBy: { createdAt: "desc" },
+        take: 6,
+      }),
     ]);
     testimonials = data[0];
     videos = data[1];
+    galleryImages = data[2];
   } catch (error) {
     console.error("Database connection failed on home page:", error);
   }
@@ -48,7 +55,7 @@ export default async function HomePage() {
       {/* 3. Who We Are */}
       <WhoWeAre />
 
-      {/* 4. Three Pillars */}
+      {/* 4. Our Specialities */}
       <ThreePillars />
 
       {/* 5. Our Philosophy */}
@@ -63,7 +70,10 @@ export default async function HomePage() {
       {/* 8. Patient Testimonials */}
       <TestimonialsSection testimonials={testimonials} />
 
-      {/* 9. Educational Videos */}
+      {/* 9. Clinic Gallery */}
+      <GalleryPreviewSection images={galleryImages} />
+
+      {/* 10. Educational Videos */}
       <VideosSection videos={videos} />
     </main>
   );

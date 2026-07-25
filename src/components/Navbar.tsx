@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { 
   Menu, X, ChevronRight, ChevronDown,
   Activity, HeartPulse, Stethoscope, Zap, RotateCcw, Footprints, Bone, GraduationCap, Video,
-  HeartHandshake, Dumbbell, Building2
+  HeartHandshake, Dumbbell, Building2,
+  PersonStanding, Brain, Ribbon, Ear, Hand, Baby, Accessibility
 } from "lucide-react";
 import { services } from "@/data/services";
 
@@ -23,10 +25,17 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   HeartHandshake,
   Dumbbell,
   Building2,
+  PersonStanding,
+  Brain,
+  Ribbon,
+  Ear,
+  Hand,
+  Baby,
+  Accessibility,
 };
 
 const navItems = [
-  { label: "Home", href: "/physiotherapy" },
+  { label: "Home", href: "/" },
   { label: "About", href: "/physiotherapy/about" },
   { label: "Services", href: "/physiotherapy/services" },
   { label: "Videos", href: "/physiotherapy/videos" },
@@ -72,8 +81,14 @@ export default function Navbar() {
           <div className="h-20 flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group shrink-0">
-              <div className="w-9 h-9 rounded-lg bg-green-600 flex items-center justify-center shrink-0">
-                <span className="text-white font-bold text-lg">A</span>
+              <div className="relative w-14 h-14 shrink-0">
+                <Image
+                  src="/images/aatral-360-logo-trans.png"
+                  alt="Aatral360 Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
               <span className="text-xl font-bold text-slate-900 tracking-tight hidden sm:block">
                 Aatral360

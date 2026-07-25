@@ -11,6 +11,16 @@ import {
   Bone,
   GraduationCap,
   Video,
+  HeartHandshake,
+  Dumbbell,
+  Building2,
+  PersonStanding,
+  Brain,
+  Ribbon,
+  Ear,
+  Hand,
+  Baby,
+  Accessibility,
 } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
@@ -24,6 +34,16 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Bone,
   GraduationCap,
   Video,
+  HeartHandshake,
+  Dumbbell,
+  Building2,
+  PersonStanding,
+  Brain,
+  Ribbon,
+  Ear,
+  Hand,
+  Baby,
+  Accessibility,
 };
 
 export default function ServicesPreview() {

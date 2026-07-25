@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function StrengthAndConditioningPage() {
   const service = {
-    title: "Strength & Conditioning",
+    title: "Strength & Conditioning (Coming Soon)",
     subtitle: "Build Strength. Enhance Performance. Reduce Injury Risk.",
     description: "Scientifically designed training programs to improve strength, movement quality, resilience, and physical performance.",
     icon: Dumbbell,
@@ -208,15 +208,15 @@ export default function StrengthAndConditioningPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="card-static p-7 bg-green-50 border-green-200/50">
+              <div className="card-static p-7 bg-green-50 border-green-200/50 opacity-70">
                 <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center mb-4">
                   <CalendarCheck className="w-6 h-6 text-green-600" />
                 </div>
-                <h3 className="font-bold text-lg text-slate-900">Book This Service</h3>
-                <p className="mt-2 text-sm text-slate-600">Ready to begin? Schedule your consultation and start your recovery journey today.</p>
-                <Link href="/physiotherapy/appointment" className="btn-primary w-full mt-5 text-sm!">
+                <h3 className="font-bold text-lg text-slate-900">Coming Soon</h3>
+                <p className="mt-2 text-sm text-slate-600">Our multidisciplinary nutrition services are currently under development and will soon become an integral part of the Aatral360 ecosystem.</p>
+                <button className="btn-primary w-full mt-5 text-sm! opacity-50 cursor-not-allowed">
                   Book Appointment <ChevronRight className="w-4 h-4" />
-                </Link>
+                </button>
               </div>
             </div>
           </div>
