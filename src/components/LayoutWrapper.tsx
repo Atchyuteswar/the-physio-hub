@@ -19,7 +19,13 @@ export default function LayoutWrapper({
   }
 
   // Use Global Header/Footer for the main landing pages
-  const isGlobalRoute = pathname === "/" || pathname === "/contact" || pathname === "/about";
+  const isGlobalRoute =
+    pathname === "/" ||
+    pathname === "/contact" ||
+    pathname === "/about" ||
+    pathname.startsWith("/gallery") ||
+    pathname.startsWith("/videos") ||
+    pathname.startsWith("/testimonials");
 
   if (isGlobalRoute) {
     return (

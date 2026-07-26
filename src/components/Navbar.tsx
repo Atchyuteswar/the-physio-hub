@@ -38,9 +38,6 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/physiotherapy/about" },
   { label: "Services", href: "/physiotherapy/services" },
-  { label: "Videos", href: "/physiotherapy/videos" },
-  { label: "Gallery", href: "/physiotherapy/gallery" },
-  { label: "Testimonials", href: "/physiotherapy/testimonials" },
   { label: "Contact", href: "/contact" },
 ];
 

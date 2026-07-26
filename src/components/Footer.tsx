@@ -14,9 +14,9 @@ const quickLinks = [
   { label: "Home", href: "/physiotherapy" },
   { label: "About Us", href: "/physiotherapy/about" },
   { label: "Book Appointment", href: "/physiotherapy/appointment" },
-  { label: "Patient Testimonials", href: "/physiotherapy/testimonials" },
+  { label: "Patient Testimonials", href: "/testimonials" },
   { label: "Our Team", href: "/physiotherapy/team" },
-  { label: "Gallery", href: "/physiotherapy/gallery" },
+  { label: "Gallery", href: "/gallery" },
 ];
 
 const serviceLinks = [

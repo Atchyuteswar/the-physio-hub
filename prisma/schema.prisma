@@ -7,19 +7,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum AppointmentStatus {
-  PENDING
-  CONTACTED
-  COMPLETED
-  CANCELLED
-}
-
-enum ContactLeadStatus {
-  NEW
-  REPLIED
-  ARCHIVED
-}
-
 model Admin {
   id        String   @id @default(cuid())
   email     String   @unique
@@ -39,12 +26,9 @@ model Setting {
 
 model Video {
   id          String   @id @default(cuid())
-
   title       String
   description String?
-
   youtubeUrl  String
-
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
@@ -65,29 +49,35 @@ model Testimonial {
 }
 
 model Appointment {
-  id        String   @id @default(cuid())
-
+  id        String            @id @default(cuid())
   name      String
   phone     String
   email     String?
-
   service   String?
   message   String?
-
-  status AppointmentStatus @default(PENDING)
-
-  createdAt DateTime @default(now())
+  createdAt DateTime          @default(now())
+  status    AppointmentStatus @default(PENDING)
 }
 
 model ContactLead {
-  id        String   @id @default(cuid())
-
+  id        String            @id @default(cuid())
   name      String
   email     String
   phone     String?
   message   String
-
   status    ContactLeadStatus @default(NEW)
+  createdAt DateTime          @default(now())
+}
 
-  createdAt DateTime @default(now())
+enum AppointmentStatus {
+  PENDING
+  CONTACTED
+  COMPLETED
+  CANCELLED
+}
+
+enum ContactLeadStatus {
+  NEW
+  REPLIED
+  ARCHIVED
 }

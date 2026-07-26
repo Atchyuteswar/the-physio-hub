@@ -23,16 +23,16 @@ export default function AboutSection() {
               <div className="space-y-4 pt-8">
                 <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-lg border border-slate-100">
                   <Image 
-                    src="/images/musculo skeletal.png" 
-                    alt="Musculoskeletal Rehabilitation"
+                    src="/images/PHYSIO.PNG" 
+                    alt="Physiotherapy"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
                   <Image 
-                    src="/images/oncho.png" 
-                    alt="Oncology Rehabilitation"
+                    src="/images/WOMEN HEALTH.png" 
+                    alt="Women's Health"
                     fill
                     className="object-cover"
                   />
@@ -41,8 +41,8 @@ export default function AboutSection() {
               <div className="space-y-4">
                 <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
                   <Image 
-                    src="/images/POST OP.jpg" 
-                    alt="Post Operative Rehabilitation"
+                    src="/images/STRENGTH & CONDITIONING.PNG" 
+                    alt="Strength & Conditioning"
                     fill
                     className="object-cover"
                   />

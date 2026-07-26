@@ -21,7 +21,7 @@ export default function GalleryPreviewSection({ images }: { images: Gallery[] })
             </h2>
           </div>
           <Link
-            href="/physiotherapy/gallery"
+            href="/gallery"
             className="btn-outline shrink-0 hidden md:inline-flex items-center gap-2"
           >
             View Full Gallery
@@ -60,7 +60,7 @@ export default function GalleryPreviewSection({ images }: { images: Gallery[] })
 
         <div className="mt-10 text-center md:hidden">
           <Link
-            href="/physiotherapy/gallery"
+            href="/gallery"
             className="btn-outline w-full justify-center inline-flex items-center gap-2"
           >
             View Full Gallery

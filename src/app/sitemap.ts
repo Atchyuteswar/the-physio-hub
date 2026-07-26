@@ -12,9 +12,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/physiotherapy",
     "/physiotherapy/about",
     "/physiotherapy/services",
-    "/physiotherapy/videos",
-    "/physiotherapy/gallery",
-    "/physiotherapy/testimonials",
+    "/videos",
+    "/gallery",
+    "/testimonials",
     "/contact",
     "/physiotherapy/appointment",
   ].map((route) => ({

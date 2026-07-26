@@ -15,7 +15,7 @@ export default function LandingHero() {
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?q=80&w=2000&auto=format&fit=crop"
+          src="/images/PT HOME PAGE.png"
           alt="Aatral360 Facility"
           fill
           className="object-cover"
@@ -72,7 +72,7 @@ export default function LandingHero() {
           <div className="relative lg:ml-auto w-full max-w-lg lg:max-w-md xl:max-w-lg mx-auto lg:mx-0">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-4/5 sm:aspect-3/2 lg:aspect-square transform transition-transform hover:scale-[1.02] duration-500">
               <Image
-                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1600&auto=format&fit=crop"
+                src="/images/HOME PAGE POP UP IMAGE REPLACEMENT.png"
                 alt="A real therapist assessing a patient"
                 fill
                 className="object-cover"
