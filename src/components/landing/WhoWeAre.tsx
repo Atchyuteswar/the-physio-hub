@@ -11,18 +11,18 @@ export default function WhoWeAre() {
             {/* Background Blob */}
             <div className="absolute -top-10 -left-10 w-72 h-72 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" />
             <div className="absolute -bottom-10 -right-10 w-72 h-72 bg-emerald-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000" />
-            
+
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <div className="aspect-4/3">
                 <Image
-                  src="/images/physio.png"
+                  src="/images/physio1.png"
                   alt="Modern professional clinic"
                   fill
                   className="object-cover transform hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>
-            
+
             {/* Floating Info Box */}
             <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 max-w-xs hidden sm:block z-10 hover:-translate-y-2 transition-transform duration-300">
               <div className="flex items-center gap-4">
@@ -52,7 +52,7 @@ export default function WhoWeAre() {
               </span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
-              Aatral360 is a comprehensive movement health and performance center that integrates physiotherapy, strength & conditioning, nutrition, and wellness into one personalized system of care. 
+              Aatral360 is a comprehensive movement health and performance center that integrates physiotherapy, strength & conditioning, nutrition, and wellness into one personalized system of care.
             </p>
             <p className="text-lg text-slate-600 leading-relaxed">
               Whether recovering from injury, managing pain, improving fitness, or striving for athletic performance, our approach is designed to help you move confidently and perform for life.

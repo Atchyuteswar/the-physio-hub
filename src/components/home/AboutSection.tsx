@@ -13,25 +13,25 @@ export default function AboutSection() {
     <section className="section bg-white overflow-hidden">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left: Image Grid */}
           <div className="relative">
             {/* Background decorative blob */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-slate-50 rounded-full -z-10" />
-            
+
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4 pt-8">
                 <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-                  <Image 
-                    src="/images/PHYSIO.PNG" 
+                  <Image
+                    src="/images/PHYSIO.PNG"
                     alt="Physiotherapy"
                     fill
                     className="object-cover"
                   />
                 </div>
                 <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-                  <Image 
-                    src="/images/WOMEN HEALTH.png" 
+                  <Image
+                    src="/images/WOMEN HEALTH.png"
                     alt="Women's Health"
                     fill
                     className="object-cover"
@@ -40,8 +40,8 @@ export default function AboutSection() {
               </div>
               <div className="space-y-4">
                 <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-                  <Image 
-                    src="/images/STRENGTH & CONDITIONING.PNG" 
+                  <Image
+                    src="/images/STRENGTH & CONDITIONING.PNG"
                     alt="Strength & Conditioning"
                     fill
                     className="object-cover"
@@ -58,9 +58,9 @@ export default function AboutSection() {
           {/* Right: Content */}
           <div className="lg:pl-8">
             <span className="badge">About The Clinic</span>
-            
+
             <h2 className="mt-6 text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-              Why Patients Choose <br/>
+              Why Patients Choose <br />
               <span className="text-green-600">The Aatral360 Difference</span>
             </h2>
 
