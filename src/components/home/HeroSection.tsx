@@ -74,7 +74,7 @@ export default function HeroSection() {
                 <Users className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <p className="text-2xl font-bold text-slate-900 leading-none">500+</p>
+                <p className="text-2xl font-bold text-slate-900 leading-none">2000+</p>
                 <p className="text-sm font-medium text-slate-500 mt-1">Patients Helped</p>
               </div>
             </div>

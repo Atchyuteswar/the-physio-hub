@@ -1,9 +1,9 @@
 export default function TrustBar() {
   const stats = [
-    { value: "500+", label: "Patients Treated" },
+    { value: "2000+", label: "Patients Treated" },
     { value: "10+", label: "Years Experience" },
     { value: "98%", label: "Success Rate" },
-    { value: "8+", label: "Specialized Programs" },
+    { value: "15+", label: "Specialized Programs" },
   ];
 
   return (

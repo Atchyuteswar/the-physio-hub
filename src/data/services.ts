@@ -42,7 +42,7 @@ export const services: Service[] = [
     slug: "musculoskeletal-rehabilitation",
     title: "Musculoskeletal Rehabilitation",
     subtitle: "Restore Movement. Rebuild Capacity. Return with Confidence.",
-    image: "/images/musculo skeletal.png",
+    image: "/images/our-services/musculoskeletal-rehabilitation.png",
     description:
       "Assessment and treatment of muscles, joints, tendons, ligaments, and connective tissues through personalized, evidence-based rehabilitation.",
     icon: "Bone",
@@ -172,6 +172,7 @@ export const services: Service[] = [
     slug: "chronic-pain-rehabilitation",
     title: "Chronic Pain Rehabilitation",
     subtitle: "Understanding Pain. Restoring Function. Building Resilience.",
+    image: "/images/our-services/chronic-pain-rehabilitation.png",
     description:
       "Evidence-based care for persistent pain using comprehensive assessment, clinical reasoning, rehabilitation, and patient education.",
     icon: "HeartPulse",
@@ -294,7 +295,7 @@ export const services: Service[] = [
     slug: "sports-injury-rehabilitation",
     title: "Sports Injury Rehabilitation",
     subtitle: "Recover with Confidence. Return with Performance.",
-    image: "/images/sports.png",
+    image: "/images/our-services/sports-injury-rehabilitation.png",
     description:
       "Specialized rehabilitation for athletes — restoring physical qualities, minimizing re-injury risk, and returning to sport with confidence.",
     icon: "PersonStanding",
@@ -430,7 +431,7 @@ export const services: Service[] = [
     title: "Post-Operative Rehabilitation",
     subtitle:
       "Guided Recovery. Progressive Rehabilitation. Confident Return to Life.",
-    image: "/images/POST OP.jpg",
+    image: "/images/our-services/post-operative-rehabilitation.jpg",
     description:
       "Structured post-surgical recovery programs designed to protect healing, restore movement, rebuild strength, and return to daily life.",
     icon: "Accessibility",
@@ -551,7 +552,7 @@ export const services: Service[] = [
     title: "Neurological Rehabilitation",
     subtitle:
       "Restoring Function. Maximizing Independence. Improving Quality of Life.",
-    image: "/images/neuro rehab.png",
+    image: "/images/our-services/neurological-rehabilitation.png",
     description:
       "Personalized rehabilitation for neurological conditions — maximizing functional abilities, improving mobility, and regaining independence.",
     icon: "Brain",
@@ -673,7 +674,7 @@ export const services: Service[] = [
     slug: "womens-health-physiotherapy",
     title: "Women's Health Physiotherapy",
     subtitle: "Supporting Women Through Every Stage of Life.",
-    image: "/images/WOMEN HEALTH.png",
+    image: "/images/our-services/womens-health-physiotherapy.png",
     description:
       "Safe, evidence-based rehabilitation supporting women during pregnancy, after childbirth, and in managing pelvic health conditions.",
     icon: "Baby",
@@ -784,7 +785,7 @@ export const services: Service[] = [
     title: "Oncology Rehabilitation",
     subtitle:
       "Restoring Function. Supporting Recovery. Improving Quality of Life.",
-    image: "/images/oncho.png",
+    image: "/images/our-services/oncology-rehabilitation.png",
     description:
       "Specialized rehabilitation to help individuals safely recover from the physical challenges associated with cancer treatment.",
     icon: "Ribbon",
@@ -874,7 +875,7 @@ export const services: Service[] = [
     slug: "corporate-health-wellness",
     title: "Corporate Health & Wellness Programs",
     subtitle: "Healthier Employees. Better Performance. Stronger Workplaces.",
-    image: "/images/corporate.png",
+    image: "/images/our-services/corporate-health-wellness-programs.png",
     description:
       "Evidence-based workplace wellness programs combining ergonomics, movement strategies, and preventive health for healthier workplaces.",
     icon: "Building2",
@@ -1000,7 +1001,7 @@ export const services: Service[] = [
     slug: "vertigo-physiotherapy",
     title: "Vertigo & Vestibular Rehabilitation",
     subtitle: "Regain Your Balance. Reduce Dizziness. Restore Confidence.",
-    image: "/images/vestibular.png",
+    image: "/images/our-services/vertigo-vestibular-rehabilitation.png",
     description:
       "Specialized rehabilitation for vertigo, dizziness, and balance disorders to help you move safely and confidently.",
     icon: "Ear",
@@ -1060,7 +1061,7 @@ export const services: Service[] = [
     slug: "lymphedema-physiotherapy",
     title: "Lymphedema Management",
     subtitle: "Reduce Swelling. Improve Comfort. Regain Mobility.",
-    image: "/images/LYMPHEDEMA.jpg",
+    image: "/images/our-services/lymphedema-management.jpg",
     description:
       "Comprehensive decongestive therapy to effectively manage lymphedema and chronic swelling conditions.",
     icon: "Hand",

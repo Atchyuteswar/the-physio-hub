@@ -49,16 +49,16 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 import Image from "next/image";
 
 const serviceImages: Record<string, string> = {
-  "musculoskeletal-rehabilitation": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
-  "chronic-pain-rehabilitation": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&q=80&w=800",
-  "sports-injury-rehabilitation": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800",
-  "post-operative-rehabilitation": "https://images.unsplash.com/photo-1581594549595-35f6edc7b762?auto=format&fit=crop&q=80&w=800",
-  "neurological-rehabilitation": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800",
-  "womens-health-physiotherapy": "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&q=80&w=800",
-  "oncology-rehabilitation": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800",
-  "corporate-health-wellness": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800",
-  "vertigo-physiotherapy": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=800", // Medical setting or balance
-  "lymphedema-physiotherapy": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800", // Care / massage / physical therapy
+  "musculoskeletal-rehabilitation": "/images/our-services/musculoskeletal-rehabilitation.png",
+  "chronic-pain-rehabilitation": "/images/our-services/chronic-pain-rehabilitation.png",
+  "sports-injury-rehabilitation": "/images/our-services/sports-injury-rehabilitation.png",
+  "post-operative-rehabilitation": "/images/our-services/post-operative-rehabilitation.jpg",
+  "neurological-rehabilitation": "/images/our-services/neurological-rehabilitation.png",
+  "womens-health-physiotherapy": "/images/our-services/womens-health-physiotherapy.png",
+  "oncology-rehabilitation": "/images/our-services/oncology-rehabilitation.png",
+  "corporate-health-wellness": "/images/our-services/corporate-health-wellness-programs.png",
+  "vertigo-physiotherapy": "/images/our-services/vertigo-vestibular-rehabilitation.png",
+  "lymphedema-physiotherapy": "/images/our-services/lymphedema-management.jpg",
 };
 
 const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
