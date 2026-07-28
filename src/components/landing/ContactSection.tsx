@@ -70,13 +70,20 @@ export default function ContactSection() {
                     <h4 className="font-semibold text-slate-900 mb-1">
                       Location
                     </h4>
-                    <p className="text-slate-600 leading-relaxed text-sm">
-                      123 Health Avenue
+                    <a 
+                      href="https://www.google.com/maps/place/Good+Physio+Hub/data=!4m7!3m6!1s0x3bcb936a8dc9b1f7:0xc792c255ec9e1588!8m2!3d17.4889439!4d78.3804162!16s%2Fg%2F11mzg2yvjw!19sChIJ97HJjWqTyzsRiBWe7FXCksc?authuser=0&hl=en&rclk=1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-600 leading-relaxed text-sm hover:text-green-600 transition-colors block"
+                    >
+                      Plot No. 500, Flat no. 502,
                       <br />
-                      Medical District
+                      5th floor, surya arcade 9th phase road,
                       <br />
-                      Cityville, ST 12345
-                    </p>
+                      Venkataramana Colony, Gokul plots,
+                      <br />
+                      K P H B Phase 9, Hyderabad, Telangana 500085
+                    </a>
                   </div>
                 </div>
 
@@ -89,7 +96,7 @@ export default function ContactSection() {
                       Phone
                     </h4>
                     <p className="text-slate-600 leading-relaxed text-sm">
-                      +1 (555) 123-4567
+                      +91 88380 86426
                     </p>
                   </div>
                 </div>
@@ -103,7 +110,7 @@ export default function ContactSection() {
                       Email
                     </h4>
                     <p className="text-slate-600 leading-relaxed text-sm">
-                      hello@thephysiohub.com
+                      goodphysiohub@gmail.com
                     </p>
                   </div>
                 </div>
@@ -117,11 +124,7 @@ export default function ContactSection() {
                       Hours
                     </h4>
                     <p className="text-slate-600 leading-relaxed text-sm">
-                      Mon - Fri: 8:00 AM - 6:00 PM
-                      <br />
-                      Saturday: 9:00 AM - 1:00 PM
-                      <br />
-                      Sunday: Closed
+                      Mon - Sun: 7:00 AM - 10:00 PM
                     </p>
                   </div>
                 </div>

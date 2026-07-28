@@ -64,47 +64,33 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* SECTION 1: Hero Section */}
-      <section className="relative pt-20 pb-20 sm:pt-32 sm:pb-32 lg:pt-48 lg:pb-48 overflow-hidden flex items-center min-h-[50vh] sm:min-h-[70vh]">
-        {/* Background Image Placeholder */}
+      <section className="relative pt-20 pb-20 sm:pt-32 sm:pb-32 lg:pt-48 lg:pb-48 overflow-hidden flex items-center min-h-[50vh] sm:min-h-[70vh] bg-slate-950 text-white">
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 flex items-center justify-center bg-slate-200">
-            <div className="text-center">
-              <Users className="w-16 h-16 md:w-24 md:h-24 text-slate-300 mx-auto mb-4" />
-              <p className="text-slate-400 font-medium text-lg md:text-xl">
-                Large Founder/Clinic Image Placeholder
-              </p>
-            </div>
-          </div>
-          {/* Overlay to ensure text readability */}
-          <div className="absolute inset-0 bg-white/80 md:bg-linear-to-r md:from-white/95 md:to-white/30" />
           <Image
             src="/images/about-ill.jpg"
             alt="Aatral360 Clinic and Founder"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-white/80 md:bg-linear-to-r md:from-white/25 md:to-white/25" />
+          <div className="absolute inset-0 bg-slate-900/80 mix-blend-multiply" />
         </div>
 
         <div className="container relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-100/80 border border-green-200 mb-6 backdrop-blur-sm">
-              <Activity className="w-4 h-4 text-green-600" />
-              <span className="text-sm font-semibold text-green-700 tracking-wide uppercase">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-950/50 border border-green-500/30 mb-6 backdrop-blur-sm">
+              <Activity className="w-4 h-4 text-green-400" />
+              <span className="text-sm font-semibold text-green-300 tracking-wide uppercase">
                 About Our Clinic
               </span>
             </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] mb-6 tracking-tight">
-              Helping People{" "}
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-green-600 to-emerald-500">
-                Move Better
-              </span>
-              , Recover Stronger, and Live Pain-Free.
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
+              Helping People <span className="text-green-400">Move Better</span>, Recover Stronger, and Live Pain-Free.
             </h1>
-            <p className="text-xl text-slate-700 leading-relaxed max-w-2xl font-medium">
-              Evidence-based physiotherapy and rehabilitation designed around
-              long-term recovery and functional outcomes.
+            <p className="text-xl text-slate-300 leading-relaxed max-w-2xl font-medium">
+              Evidence-based physiotherapy and rehabilitation designed around long-term recovery and functional outcomes.
             </p>
           </div>
         </div>
