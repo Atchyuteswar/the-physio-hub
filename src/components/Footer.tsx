@@ -93,7 +93,7 @@ export default function Footer() {
               <li className="flex items-center gap-3 group">
                 <Mail className="w-5 h-5 text-green-500 shrink-0" />
                 <span className="text-slate-400 text-sm">
-                  thegoodphysiohub@gmail.com</span>
+                  goodphysiohub@gmail.com</span>
               </li>
               <li className="flex items-start gap-3 group">
                 <Clock className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
