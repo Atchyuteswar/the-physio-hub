@@ -18,7 +18,7 @@ const pillars = [
   {
     title: "Strength & Conditioning",
     description: "Build strength, resilience, and athletic performance.",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=400",
+    image: "/images/strength and cond square.png",
     link: "/strength-and-conditioning",
     linkText: "Explore",
     comingSoon: false,
@@ -26,7 +26,7 @@ const pillars = [
   {
     title: "Nutrition & Wellness",
     description: "Fuel recovery. Support lifelong health.",
-    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=400",
+    image: "/images/nutrition 1.png",
     link: "/nutrition-services",
     linkText: "Explore",
     comingSoon: false,
@@ -34,7 +34,7 @@ const pillars = [
   {
     title: "Yoga & Pilates",
     description: "Move Better. Feel Stronger. Live Healthier.",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400",
+    image: "/images/pilates 1.png",
     link: "/yoga-and-pilates",
     linkText: "Explore",
     comingSoon: false,
