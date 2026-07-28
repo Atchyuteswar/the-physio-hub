@@ -230,7 +230,7 @@ export default function AboutPage() {
               <SparklesIcon className="w-12 h-12 text-green-600 mb-8 relative z-10" />
               <h3 className="text-3xl font-bold text-slate-900 mb-6 relative z-10">Our Vision</h3>
               <p className="text-lg text-slate-600 leading-relaxed mb-8 relative z-10">
-                To redefine healthcare by becoming the world's most trusted destination for movement, rehabilitation, and human performance—where science, compassion, and innovation empower people to live without limitations.
+                To redefine healthcare by becoming the world&apos;s most trusted destination for movement, rehabilitation, and human performance—where science, compassion, and innovation empower people to live without limitations.
               </p>
               <ul className="space-y-3 relative z-10">
                 {["Ethical Practice", "Evidence-Based Rehabilitation", "Patient Education", "Long-Term Outcomes"].map((item) => (
