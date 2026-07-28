@@ -24,6 +24,7 @@ export default function LayoutWrapper({
     pathname === "/contact" ||
     pathname === "/about" ||
     pathname === "/privacy-policy" ||
+    pathname === "/terms-of-service" ||
     pathname.startsWith("/gallery") ||
     pathname.startsWith("/videos") ||
     pathname.startsWith("/testimonials");

@@ -599,7 +599,7 @@ export default function PrivacyPolicyPage() {
 
                   {/* Email */}
                   <a
-                    href="mailto:GOODPHYSIOHUB@GMAIL.COM"
+                    href="mailto:goodphysiohub@gmail.com"
                     className="bg-slate-50 hover:bg-green-50/50 hover:border-green-500/30 transition-all rounded-2xl p-5 border border-slate-100 flex items-start gap-4 group"
                   >
                     <div className="p-2 bg-green-100 rounded-xl text-green-700 shrink-0 mt-0.5 group-hover:bg-green-600 group-hover:text-white transition-colors">
@@ -608,7 +608,7 @@ export default function PrivacyPolicyPage() {
                     <div className="overflow-hidden">
                       <h4 className="font-bold text-slate-800 text-sm mb-1">Email Address</h4>
                       <p className="text-slate-600 text-sm truncate font-medium group-hover:text-green-700 transition-colors">
-                        GOODPHYSIOHUB@GMAIL.COM
+                        goodphysiohub@gmail.com
                       </p>
                     </div>
                   </a>
@@ -624,7 +624,7 @@ export default function PrivacyPolicyPage() {
                     <div>
                       <h4 className="font-bold text-slate-800 text-sm mb-1">Phone Number</h4>
                       <p className="text-slate-600 text-sm font-medium group-hover:text-green-700 transition-colors">
-                        8838086426
+                        +91 88380 86426
                       </p>
                     </div>
                   </a>

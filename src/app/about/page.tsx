@@ -480,11 +480,11 @@ export default function AboutPage() {
                   Book Appointment
                 </Link>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+918838086426"
                   className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 font-bold px-8 py-4 rounded-xl transition-colors"
                 >
                   <PhoneCall className="w-5 h-5 text-green-600" />
-                  (555) 123-4567
+                  +91 88380 86426
                 </a>
               </div>
             </div>
