@@ -5,10 +5,19 @@ import { ChevronRight, CheckCircle2, Users, Activity } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-slate-50 pt-16 pb-20 lg:pt-16 lg:pb-28 overflow-hidden">
-      {/* Abstract Background Shapes */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-green-50 rounded-full translate-x-1/3 -translate-y-1/4 opacity-70 blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-green-100/50 rounded-full -translate-x-1/3 translate-y-1/3 opacity-50 blur-3xl" />
+    <section className="relative bg-slate-50 pt-20 pb-24 lg:pt-24 lg:pb-32 overflow-hidden flex items-center">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/images/bhuvi treating patient.png"
+          alt="Physiotherapy Treatment Background"
+          fill
+          className="object-cover object-right md:object-center opacity-25"
+          priority
+        />
+        {/* Soft overlay gradient to ensure high readability of text on the left */}
+        <div className="absolute inset-0 bg-slate-50/30" />
+      </div>
 
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -57,19 +66,10 @@ export default function HeroSection() {
           </div>
 
           {/* Right Image / Graphics */}
-          <div className="relative animate-fade-in lg:ml-auto mt-12 lg:mt-0">
-            <div className="relative w-full max-w-lg lg:max-w-xl mx-auto aspect-5/4 rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center">
-              <Image 
-                src="/images/home-ill.jpg"
-                alt="Physiotherapy Treatment"
-                fill
-                className="absolute inset-0 w-full h-full object-cover"
-                priority
-              />
-            </div>
-
+          <div className="relative animate-fade-in lg:ml-auto mt-12 lg:mt-0 w-full max-w-lg lg:max-w-xl mx-auto min-h-[300px] lg:min-h-[400px]">
+            
             {/* Floating Card 1 */}
-            <div className="hidden sm:flex absolute top-4 sm:top-12 -left-2 sm:-left-8 md:-left-12 bg-white p-4 rounded-xl shadow-xl border border-slate-100 items-center gap-4 animate-bounce-slow">
+            <div className="absolute top-4 sm:top-12 left-4 md:-left-4 bg-white p-4 rounded-xl shadow-xl border border-slate-100 items-center gap-4 flex animate-bounce-slow">
               <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center shrink-0">
                 <Users className="w-6 h-6 text-green-600" />
               </div>
@@ -80,7 +80,7 @@ export default function HeroSection() {
             </div>
 
             {/* Floating Card 2 */}
-            <div className="hidden sm:flex absolute bottom-8 sm:bottom-24 -right-2 sm:-right-4 md:-right-8 bg-white p-4 rounded-xl shadow-xl border border-slate-100 items-center gap-4 animate-bounce-slow delay-500">
+            <div className="absolute bottom-8 sm:bottom-20 right-4 md:-right-4 bg-white p-4 rounded-xl shadow-xl border border-slate-100 items-center gap-4 flex animate-bounce-slow delay-500">
               <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center shrink-0">
                 <Activity className="w-6 h-6 text-slate-700" />
               </div>

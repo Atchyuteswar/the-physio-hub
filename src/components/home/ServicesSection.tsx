@@ -68,7 +68,7 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
   return (
     <Link
       href={`/physiotherapy/services/${service.slug}`}
-      className="shrink-0 w-[85vw] sm:w-[380px] group/card relative bg-white rounded-3xl border border-slate-100 hover:border-green-200 shadow-sm hover:shadow-2xl hover:shadow-green-900/5 transition-all duration-300 flex flex-col min-h-[460px] overflow-hidden z-10"
+      className="shrink-0 w-[85vw] sm:w-95 group/card relative bg-white rounded-3xl border border-slate-100 hover:border-green-200 shadow-sm hover:shadow-2xl hover:shadow-green-900/5 transition-all duration-300 flex flex-col min-h-115 overflow-hidden z-10"
     >
       <div className="relative w-full h-48 overflow-hidden">
         <Image
@@ -77,7 +77,7 @@ const ServiceCard = ({ service }: { service: (typeof services)[0] }) => {
           fill
           className="object-cover transition-transform duration-500 group-hover/card:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
         <div className="absolute bottom-4 left-4 w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30">
           <Icon className="w-6 h-6 text-white" />
         </div>

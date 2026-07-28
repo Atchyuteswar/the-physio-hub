@@ -7,7 +7,7 @@ export default function TestimonialsSection({ testimonials }: { testimonials: Te
   return (
     <section className="py-24 bg-white overflow-hidden relative border-y border-slate-100">
       {/* Decorative background blur */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-green-50 rounded-full blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/3 opacity-70" />
+      <div className="absolute top-0 right-0 w-200 h-200 bg-green-50 rounded-full blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/3 opacity-70" />
       
       <div className="container relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -32,7 +32,7 @@ export default function TestimonialsSection({ testimonials }: { testimonials: Te
           {testimonials.map((testimonial) => (
             <div 
               key={testimonial.id} 
-              className="snap-center shrink-0 w-[85vw] md:w-[450px] bg-white p-8 md:p-10 rounded-4xl shadow-sm border border-slate-100 relative group hover:shadow-xl hover:border-green-200 transition-all duration-300 flex flex-col"
+              className="snap-center shrink-0 w-[85vw] md:w-112.5 bg-white p-8 md:p-10 rounded-4xl shadow-sm border border-slate-100 relative group hover:shadow-xl hover:border-green-200 transition-all duration-300 flex flex-col"
             >
               <Quote className="absolute top-8 right-8 w-16 h-16 text-slate-50 group-hover:text-green-50 transition-colors duration-300 z-0" />
               

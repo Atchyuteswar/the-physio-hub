@@ -59,7 +59,7 @@ export default function PrivacyPolicyPage() {
       {/* Header / Hero Section */}
       <section className="relative py-16 md:py-24 bg-slate-900 overflow-hidden">
         {/* Decorative background glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-green-500/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-87.5 bg-green-500/10 rounded-full blur-[120px] pointer-events-none" />
         
         <div className="container max-w-6xl relative z-10 px-4 mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 mb-6">

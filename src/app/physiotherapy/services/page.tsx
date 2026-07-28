@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import { services as servicesData } from "@/data/services";
 import {
   Activity,
   Award,
@@ -21,6 +23,17 @@ import {
   Trophy,
   ClipboardList,
   Zap,
+  ChevronRight,
+  Footprints,
+  GraduationCap,
+  Video,
+  PersonStanding,
+  Ribbon,
+  Ear,
+  Hand,
+  Baby,
+  Accessibility,
+  Bone,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -51,88 +64,28 @@ const jsonLd = {
     "Evidence-based physiotherapy, sports injury rehabilitation, post-operative rehabilitation, neurological rehabilitation, and movement retraining.",
 };
 
-const services = [
-  {
-    id: "musculoskeletal-rehabilitation",
-    title: "Musculoskeletal Rehabilitation",
-    description:
-      "Assessment and treatment of muscles, joints, tendons, ligaments, and connective tissues through personalized, evidence-based rehabilitation.",
-    benefits: ["Pain Reduction", "Restored Mobility", "Functional Recovery"],
-    icon: Dna,
-  },
-  {
-    id: "chronic-pain-rehabilitation",
-    title: "Chronic Pain Rehabilitation",
-    description:
-      "Evidence-based care for persistent pain using comprehensive assessment, clinical reasoning, rehabilitation, and patient education.",
-    benefits: [
-      "Pain Modulation",
-      "Capacity Building",
-      "Movement Confidence",
-    ],
-    icon: HeartPulse,
-  },
-  {
-    id: "sports-injury-rehabilitation",
-    title: "Sports Injury Rehabilitation",
-    description:
-      "Specialized rehabilitation for athletes — restoring physical qualities, minimizing re-injury risk, and returning to sport with confidence.",
-    benefits: [
-      "Performance Recovery",
-      "Injury Prevention",
-      "Sport-Specific Training",
-    ],
-    icon: Zap,
-  },
-  {
-    id: "post-operative-rehabilitation",
-    title: "Post-Operative Rehabilitation",
-    description:
-      "Structured post-surgical recovery programs designed to protect healing, restore movement, rebuild strength, and return to daily life.",
-    benefits: ["Safe Mobilization", "Tissue Healing", "Strength Restoration"],
-    icon: Stethoscope,
-  },
-  {
-    id: "neurological-rehabilitation",
-    title: "Neurological Rehabilitation",
-    description:
-      "Personalized rehabilitation for neurological conditions — maximizing functional abilities, improving mobility, and regaining independence.",
-    benefits: [
-      "Functional Recovery",
-      "Independence",
-      "Balance & Coordination",
-    ],
-    icon: RotateCcw,
-  },
-  {
-    id: "womens-health-physiotherapy",
-    title: "Women's Health Physiotherapy",
-    description:
-      "Safe, evidence-based rehabilitation supporting women during pregnancy, after childbirth, and in managing pelvic health conditions.",
-    benefits: ["Pelvic Health", "Core Recovery", "Pregnancy Support"],
-    icon: HeartHandshake,
-  },
-  {
-    id: "strength-performance-training",
-    title: "Strength & Performance Training",
-    description:
-      "Scientifically designed training programs to improve strength, movement quality, resilience, and physical performance.",
-    benefits: [
-      "Strength Development",
-      "Performance Enhancement",
-      "Injury Prevention",
-    ],
-    icon: Dumbbell,
-  },
-  {
-    id: "corporate-health-wellness",
-    title: "Corporate Health & Wellness",
-    description:
-      "Evidence-based workplace wellness programs combining ergonomics, movement strategies, and preventive health for healthier workplaces.",
-    benefits: ["Ergonomics", "Employee Wellbeing", "Preventive Health"],
-    icon: Building2,
-  },
-];
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Activity,
+  HeartPulse,
+  Stethoscope,
+  Zap,
+  RotateCcw,
+  Footprints,
+  Bone,
+  GraduationCap,
+  Video,
+  HeartHandshake,
+  Dumbbell,
+  Building2,
+  PersonStanding,
+  Brain,
+  Ribbon,
+  Ear,
+  Hand,
+  Baby,
+  Accessibility,
+  Dna,
+};
 
 const conditions = [
   "Neck & Back Pain",
@@ -210,8 +163,8 @@ export default function ServicesPage() {
       <section className="relative pt-20 pb-16 sm:pt-32 sm:pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50 border-b border-slate-100">
         <div className="absolute inset-0 z-0 opacity-50">
           {/* Abstract light background pattern */}
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-green-100/60 rounded-full blur-[120px] pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-slate-200/50 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute top-0 right-0 w-150 h-150 bg-green-100/60 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-150 h-150 bg-slate-200/50 rounded-full blur-[120px] pointer-events-none" />
         </div>
 
         <div className="container relative z-10 text-center max-w-4xl mx-auto">
@@ -301,31 +254,47 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {services.map((service) => (
-              <Link
-                href={`/physiotherapy/services/${service.id}`}
-                key={service.id}
-                className="group bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md hover:border-green-200 transition-all duration-300 flex items-start gap-5 relative overflow-hidden"
-              >
-                {/* Decorative Hover Background */}
-                <div className="absolute inset-0 bg-linear-to-r from-green-50/0 to-green-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((service) => {
+              const IconComponent = iconMap[service.icon] || Activity;
+              return (
+                <Link
+                  href={`/physiotherapy/services/${service.slug}`}
+                  key={service.slug}
+                  className="group bg-white rounded-3xl border border-slate-100 hover:border-green-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden relative"
+                >
+                  {/* Service Photo */}
+                  <div className="relative w-full h-52 overflow-hidden shrink-0 bg-slate-100">
+                    <Image
+                      src={service.image || "/images/our-services/musculoskeletal-rehabilitation.png"}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
+                    
+                    {/* Floating Icon */}
+                    <div className="absolute bottom-4 left-4 w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white group-hover:bg-green-600 group-hover:border-green-600 transition-all duration-300">
+                      <IconComponent className="w-6 h-6" />
+                    </div>
+                  </div>
 
-                <div className="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-green-600 transition-colors duration-300 relative z-10">
-                  <service.icon className="w-7 h-7 text-green-600 group-hover:text-white transition-colors duration-300" />
-                </div>
-                
-                <div className="relative z-10 flex-1">
-                  <h3 className="text-lg font-bold text-slate-900 mb-1.5 group-hover:text-green-700 transition-colors">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-slate-600 text-sm leading-relaxed line-clamp-2">
-                    {service.description}
-                  </p>
-                </div>
-              </Link>
-            ))}
+                  {/* Card Body */}
+                  <div className="p-6 flex flex-col grow">
+                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-green-700 transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-slate-600 text-sm leading-relaxed line-clamp-3 mb-6">
+                      {service.description}
+                    </p>
+                    <div className="mt-auto flex items-center gap-2 text-green-600 font-semibold text-sm">
+                      <span>Learn More</span>
+                      <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

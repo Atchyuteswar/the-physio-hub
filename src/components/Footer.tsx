@@ -6,7 +6,6 @@ import {
   Mail,
   Clock,
   ChevronRight,
-  Activity,
   Send
 } from "lucide-react";
 
@@ -41,7 +40,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-300 relative overflow-hidden">
       {/* Premium Decorative Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-green-900/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 bg-green-900/20 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Main Footer */}
       <div className="container py-20 relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
