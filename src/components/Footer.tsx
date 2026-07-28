@@ -63,7 +63,7 @@ export default function Footer() {
               </div>
               <span className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
                 Aatral360 <span className="text-slate-700 font-normal">|</span>{" "}
-                <span>The Good Physio Hub</span>
+                <span>Good Physio Hub</span>
               </span>
             </Link>
 

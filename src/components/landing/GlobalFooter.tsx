@@ -20,7 +20,7 @@ export default function GlobalFooter() {
             </div>
             <div>
               <h3 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
-                Aatral360 <span className="text-slate-700 font-normal">|</span> <span>The Good Physio Hub</span>
+                Aatral360 <span className="text-slate-700 font-normal">|</span> <span>Good Physio Hub</span>
               </h3>
               <p className="text-slate-400 text-sm">Movement Health & Performance</p>
             </div>

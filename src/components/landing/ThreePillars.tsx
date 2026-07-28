@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 const pillars = [
   {
     title: "Physiotherapy",
-    subtitle: "The Good Physio Hub",
+    subtitle: "Good Physio Hub",
     description: "Movement freedom through active recovery.",
     image: "/images/PHYSIO-square.PNG",
     link: "/physiotherapy",

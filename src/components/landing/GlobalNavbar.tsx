@@ -52,16 +52,26 @@ export default function GlobalNavbar() {
                 />
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-                <span className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">Aatral360</span>
-                <span className="hidden sm:inline text-slate-300 font-normal">|</span>
-                <span className="text-xs sm:text-xl font-semibold sm:font-bold text-slate-500 sm:text-slate-900 tracking-tight">The Good Physio Hub</span>
+                <span className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
+                  Aatral360
+                </span>
+                <span className="hidden sm:inline text-slate-300 font-normal">
+                  |
+                </span>
+                <span className="text-xs sm:text-xl font-semibold sm:font-bold text-slate-500 sm:text-slate-900 tracking-tight">
+                  Good Physio Hub
+                </span>
               </div>
             </Link>
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-6">
               {navItems.map((item) => (
-                <Link key={item.label} href={item.href} className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors">
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors"
+                >
                   {item.label}
                 </Link>
               ))}
@@ -96,20 +106,23 @@ export default function GlobalNavbar() {
       {/* PURE CSS MOBILE MENU MAGIC */}
       <div className="lg:hidden">
         {/* The hidden checkbox that holds the Open/Close state natively in the browser */}
-        <input type="checkbox" id="global-mobile-menu" className="hidden peer" />
+        <input
+          type="checkbox"
+          id="global-mobile-menu"
+          className="hidden peer"
+        />
 
         {/* Mobile Overlay (fades in when checkbox is checked) */}
         <div className="fixed inset-0 z-90 bg-slate-900/40 backdrop-blur-sm opacity-0 pointer-events-none peer-checked:opacity-100 peer-checked:pointer-events-auto transition-opacity duration-300">
-          <label 
-            htmlFor="global-mobile-menu" 
-            className="absolute inset-0 w-full h-full cursor-pointer block" 
+          <label
+            htmlFor="global-mobile-menu"
+            className="absolute inset-0 w-full h-full cursor-pointer block"
             aria-label="Close menu overlay"
           ></label>
         </div>
 
         {/* Mobile Drawer (slides in from right when checkbox is checked) */}
         <div className="fixed top-0 -right-full peer-checked:right-0 z-100 h-dvh w-[85vw] max-w-[320px] bg-white shadow-2xl flex flex-col transition-all duration-300 ease-out overflow-y-auto">
-          
           {/* Drawer Header */}
           <div className="flex items-center justify-between p-5 border-b border-slate-100 shrink-0">
             <span className="text-lg font-bold text-slate-900">Menu</span>
