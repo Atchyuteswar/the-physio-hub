@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/testimonials",
     "/contact",
     "/physiotherapy/appointment",
+    "/privacy-policy",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

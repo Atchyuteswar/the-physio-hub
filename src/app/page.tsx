@@ -52,11 +52,11 @@ export default async function HomePage() {
       {/* 2. About The Clinic */}
       <AboutSection />
 
-      {/* 3. Who We Are */}
-      <WhoWeAre />
-
-      {/* 4. Our Specialities */}
+      {/* 3. Our Specialities */}
       <ThreePillars />
+
+      {/* 4. Who We Are */}
+      <WhoWeAre />
 
       {/* 5. Our Philosophy */}
       <OurPhilosophy />

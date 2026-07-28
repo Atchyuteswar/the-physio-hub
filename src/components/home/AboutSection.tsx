@@ -31,8 +31,8 @@ export default function AboutSection() {
                 </div>
                 <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-lg border border-slate-100">
                   <Image
-                    src="/images/WOMEN HEALTH.png"
-                    alt="Women's Health"
+                    src="/images/nutrition 1.png"
+                    alt="Nutrition"
                     fill
                     className="object-cover"
                   />
