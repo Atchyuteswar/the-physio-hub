@@ -24,7 +24,7 @@ export default function AppointmentCtaSection() {
                 className="inline-flex items-center justify-center gap-2 bg-slate-700 hover:bg-slate-600 text-white! font-bold px-6 py-4 rounded-xl transition-colors"
               >
                 <PhoneCall className="w-5 h-5" />
-                (555) 123-4567
+                +91 88380 86426
               </a>
               <Link 
                 href="/physiotherapy/appointment" 
