@@ -269,6 +269,7 @@ export default function ServicesPage() {
                       src={service.image || "/images/our-services/musculoskeletal-rehabilitation.png"}
                       alt={service.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-slate-950/70 via-slate-950/20 to-transparent" />

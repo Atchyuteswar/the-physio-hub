@@ -28,9 +28,6 @@ export default function LandingHero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Left Content */}
           <div className="max-w-2xl">
-            <span className="inline-block py-1.5 px-3 rounded-full bg-green-900/50 text-green-300 font-semibold text-sm tracking-wider uppercase mb-6 border border-green-500/30 backdrop-blur-sm">
-              Complete Movement Health
-            </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6 text-white">
               Restore Movement. Build Resilience.{" "}
               <span className="text-green-400">Empower Lifelong Performance.</span>

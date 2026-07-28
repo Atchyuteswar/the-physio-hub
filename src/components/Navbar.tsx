@@ -83,6 +83,7 @@ export default function Navbar() {
                   src="/images/aatral-360-logo-trans.png"
                   alt="Aatral360 Logo"
                   fill
+                  sizes="56px"
                   className="object-contain"
                   priority
                 />
@@ -122,7 +123,7 @@ export default function Navbar() {
                       </Link>
 
                       {/* Dropdown Menu */}
-                      <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 w-[600px] z-50">
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 w-150 z-50">
                         <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-4 grid grid-cols-2 gap-2 relative before:absolute before:-top-2 before:left-1/2 before:-translate-x-1/2 before:border-8 before:border-transparent before:border-b-white">
                           {services.map((service) => {
                             const Icon = iconMap[service.icon] || Activity;
