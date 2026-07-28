@@ -10,7 +10,7 @@ const pillars = [
     title: "Physiotherapy",
     subtitle: "The Good Physio Hub",
     description: "Movement freedom through active recovery.",
-    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&q=80&w=400",
+    image: "/images/PHYSIO-square.PNG",
     link: "/physiotherapy",
     linkText: "Explore",
     comingSoon: false,
