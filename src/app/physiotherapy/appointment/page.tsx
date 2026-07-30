@@ -221,9 +221,12 @@ export default function AppointmentPage() {
                       <p className="text-sm font-medium text-slate-900">
                         Phone
                       </p>
-                      <p className="text-sm text-slate-500">
-                        Contact via form
-                      </p>
+                      <a
+                        href="tel:+918838086426"
+                        className="text-sm text-slate-500 hover:text-green-600 transition-colors block"
+                      >
+                        +91 88380 86426
+                      </a>
                     </div>
                   </div>
 
@@ -235,9 +238,12 @@ export default function AppointmentPage() {
                       <p className="text-sm font-medium text-slate-900">
                         Email
                       </p>
-                      <p className="text-sm text-slate-500">
-                        info@thephysiohub.com
-                      </p>
+                      <a
+                        href="mailto:goodphysiohub@gmail.com"
+                        className="text-sm text-slate-500 hover:text-green-600 transition-colors block break-all"
+                      >
+                        goodphysiohub@gmail.com
+                      </a>
                     </div>
                   </div>
 
@@ -250,22 +256,33 @@ export default function AppointmentPage() {
                         Working Hours
                       </p>
                       <p className="text-sm text-slate-500">
-                        Mon – Sat: 9 AM – 7 PM
+                        Mon – Sun: 7:00 AM – 10:00 PM
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center shrink-0 mt-0.5">
                       <MapPin className="w-5 h-5 text-green-600" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-slate-900">
+                      <p className="text-sm font-medium text-slate-900 mb-1">
                         Location
                       </p>
-                      <p className="text-sm text-slate-500">
-                        Aatral360 Clinic
-                      </p>
+                      <a
+                        href="https://www.google.com/maps/place/Good+Physio+Hub/data=!4m7!3m6!1s0x3bcb936a8dc9b1f7:0xc792c255ec9e1588!8m2!3d17.4889439!4d78.3804162!16s%2Fg%2F11mzg2yvjw!19sChIJ97HJjWqTyzsRiBWe7FXCksc?authuser=0&hl=en&rclk=1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-slate-500 hover:text-green-600 transition-colors leading-relaxed block"
+                      >
+                        Plot No. 500, Flat no. 502,
+                        <br />
+                        5th floor, surya arcade 9th phase road,
+                        <br />
+                        Venkataramana Colony, Gokul plots,
+                        <br />
+                        K P H B Phase 9, Hyderabad, Telangana 500085
+                      </a>
                     </div>
                   </div>
                 </div>
