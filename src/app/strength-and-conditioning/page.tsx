@@ -4,7 +4,26 @@ import { ChevronRight, CalendarCheck, Dumbbell } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Strength & Conditioning",
-  description: "Scientifically designed training programs to improve strength, movement quality, resilience, and physical performance.",
+  description:
+    "Scientifically designed strength and conditioning programs at Aatral360. Improve strength, movement quality, resilience, and physical performance in Hyderabad.",
+  keywords: [
+    "strength and conditioning Hyderabad",
+    "sports performance training",
+    "injury prevention training",
+    "athletic conditioning",
+    "functional training Hyderabad",
+  ],
+  openGraph: {
+    title: "Strength & Conditioning | Aatral360",
+    description:
+      "Scientifically designed training programs to improve strength, movement quality, resilience, and physical performance.",
+    url: "https://aatral360.com/strength-and-conditioning",
+    siteName: "Aatral360",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/strength-and-conditioning",
+  },
 };
 
 export default function StrengthAndConditioningPage() {

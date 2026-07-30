@@ -4,7 +4,26 @@ import { ChevronRight, CalendarCheck, Apple } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Nutrition Services",
-  description: "Evidence-based nutrition services, delivered by qualified dietitians and sports nutrition professionals.",
+  description:
+    "Evidence-based nutrition services at Aatral360, delivered by qualified dietitians and sports nutrition professionals. Personalized diet plans for recovery, performance, and health.",
+  keywords: [
+    "nutrition services Hyderabad",
+    "sports nutrition",
+    "dietitian Hyderabad",
+    "clinical nutrition",
+    "recovery nutrition",
+  ],
+  openGraph: {
+    title: "Nutrition Services | Aatral360",
+    description:
+      "Evidence-based nutrition services delivered by qualified dietitians and sports nutrition professionals.",
+    url: "https://aatral360.com/nutrition-services",
+    siteName: "Aatral360",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/nutrition-services",
+  },
 };
 
 export default function NutritionServicesPage() {

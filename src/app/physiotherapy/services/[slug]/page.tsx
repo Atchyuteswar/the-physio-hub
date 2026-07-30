@@ -63,7 +63,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: service.title,
     description: service.description,
+    keywords: [
+      service.title.toLowerCase(),
+      `${service.title.toLowerCase()} Hyderabad`,
+      "physiotherapy",
+      "rehabilitation",
+      "Aatral360",
+    ],
+    openGraph: {
+      title: `${service.title} | Aatral360`,
+      description: service.description,
+      url: `https://aatral360.com/physiotherapy/services/${service.slug}`,
+      siteName: "Aatral360",
+      type: "website",
+    },
+    alternates: {
+      canonical: `/physiotherapy/services/${service.slug}`,
+    },
   };
+}
+
+export async function generateStaticParams() {
+  return services.map((service) => ({
+    slug: service.slug,
+  }));
 }
 
 export default async function ServicePage({ params }: Props) {
@@ -79,9 +102,54 @@ export default async function ServicePage({ params }: Props) {
   const relatedServices = services
     .filter((s) => s.slug !== slug)
     .slice(0, 3);
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalSpecialty",
+    name: service.title,
+    description: service.description,
+    url: `https://aatral360.com/physiotherapy/services/${service.slug}`,
+    provider: {
+      "@type": "MedicalBusiness",
+      name: "Aatral360",
+      url: "https://aatral360.com",
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://aatral360.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Physiotherapy Services",
+        item: "https://aatral360.com/physiotherapy/services",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: service.title,
+        item: `https://aatral360.com/physiotherapy/services/${service.slug}`,
+      },
+    ],
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Header */}
       <section className="bg-white border-b border-slate-100">
         <div className="container py-8">

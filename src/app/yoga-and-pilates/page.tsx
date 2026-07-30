@@ -4,7 +4,27 @@ import { ChevronRight, CalendarCheck, HeartHandshake } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Yoga & Pilates",
-  description: "Evidence-based programs tailored to improve movement quality, flexibility, strength, posture, balance, and overall well-being.",
+  description:
+    "Evidence-based yoga and pilates programs at Aatral360. Improve movement quality, flexibility, strength, posture, balance, and overall well-being in Hyderabad.",
+  keywords: [
+    "yoga classes Hyderabad",
+    "pilates Hyderabad",
+    "therapeutic yoga",
+    "clinical pilates",
+    "flexibility training",
+    "posture correction",
+  ],
+  openGraph: {
+    title: "Yoga & Pilates | Aatral360",
+    description:
+      "Evidence-based yoga and pilates programs to improve movement quality, flexibility, strength, posture, and balance.",
+    url: "https://aatral360.com/yoga-and-pilates",
+    siteName: "Aatral360",
+    type: "website",
+  },
+  alternates: {
+    canonical: "/yoga-and-pilates",
+  },
 };
 
 export default function YogaAndPilatesPage() {

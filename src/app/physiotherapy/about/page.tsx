@@ -22,14 +22,24 @@ export const metadata: Metadata = {
   title: "About Aatral360 | Dr. Sarath Kumar N, PT",
   description:
     "Learn about Aatral360, founded by Dr. Sarath Kumar N, PT. We offer premium, evidence-based physiotherapy specializing in sports injuries and musculoskeletal pain.",
+  keywords: [
+    "about Aatral360",
+    "Dr Sarath Kumar physiotherapist",
+    "physiotherapy clinic Hyderabad",
+    "evidence based physiotherapy",
+    "sports physiotherapy specialist",
+  ],
   openGraph: {
     title: "About Aatral360 | Dr. Sarath Kumar N, PT",
     description:
       "Premium, evidence-based physiotherapy clinic specializing in sports injuries, musculoskeletal pain, and long-term functional recovery.",
     url: "https://aatral360.com/physiotherapy/about",
     siteName: "Aatral360",
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
+  },
+  alternates: {
+    canonical: "/physiotherapy/about",
   },
 };
 

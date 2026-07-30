@@ -26,13 +26,20 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Aatral360",
   description:
     "Privacy Policy for Aatral360. Learn how we collect, use, store, and protect your personal and health information.",
+  robots: {
+    index: false,
+    follow: true,
+  },
   openGraph: {
     title: "Privacy Policy | Aatral360",
     description:
       "Privacy Policy for Aatral360. Learn how we collect, use, store, and protect your personal and health information.",
-    url: "https://aatral360.vercel.app/privacy-policy",
+    url: "https://aatral360.com/privacy-policy",
     siteName: "Aatral360",
     type: "website",
+  },
+  alternates: {
+    canonical: "/privacy-policy",
   },
 };
 

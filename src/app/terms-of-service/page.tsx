@@ -27,13 +27,20 @@ export const metadata: Metadata = {
   title: "Terms of Service | Aatral360",
   description:
     "Terms of Service for Aatral360. Learn about our terms, rules, and guidelines for accessing and using our clinic's website and services.",
+  robots: {
+    index: false,
+    follow: true,
+  },
   openGraph: {
     title: "Terms of Service | Aatral360",
     description:
       "Terms of Service for Aatral360. Learn about our terms, rules, and guidelines.",
-    url: "https://aatral360.vercel.app/terms-of-service",
+    url: "https://aatral360.com/terms-of-service",
     siteName: "Aatral360",
     type: "website",
+  },
+  alternates: {
+    canonical: "/terms-of-service",
   },
 };
 
