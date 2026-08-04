@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -16,6 +16,15 @@ import {
   Clock,
 } from "lucide-react";
 import { toast } from "sonner";
+
+const emptySubscribe = () => () => {};
+function useIsMounted() {
+  return useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
+}
 
 // Custom WhatsApp SVG for authentic icon look
 function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
@@ -35,7 +44,7 @@ export default function FloatingContactBar() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const mounted = useIsMounted();
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -43,17 +52,13 @@ export default function FloatingContactBar() {
     message: "",
   });
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   const contactItems = [
     {
       id: "call",
       label: "Call Us Now",
       subLabel: "+91 88380 86426",
       icon: Phone,
-      gradient: "from-lime-500 to-green-600",
+      gradient: "bg-linear-to-br from-lime-500 to-green-600",
       glowColor: "shadow-lime-500/30",
       badgeColor: "bg-lime-500",
       href: "tel:+918838086426",
@@ -65,7 +70,7 @@ export default function FloatingContactBar() {
       label: "WhatsApp Chat",
       subLabel: "Instant Support 24/7",
       icon: WhatsAppIcon,
-      gradient: "from-teal-500 to-emerald-600",
+      gradient: "bg-linear-to-br from-teal-500 to-emerald-600",
       glowColor: "shadow-teal-500/30",
       badgeColor: "bg-teal-500",
       href: "https://wa.me/918838086426?text=Hi%20Aatral360%20Good%20Physio%20Hub,%20I%20would%20like%20to%20inquire%20about%20your%20services.",
@@ -77,7 +82,7 @@ export default function FloatingContactBar() {
       label: "Book Appointment",
       subLabel: "Schedule Clinic Visit",
       icon: Calendar,
-      gradient: "from-purple-600 to-indigo-600",
+      gradient: "bg-linear-to-br from-purple-600 to-indigo-600",
       glowColor: "shadow-purple-500/30",
       badgeColor: "bg-purple-500",
       href: "/physiotherapy/appointment",
@@ -88,7 +93,7 @@ export default function FloatingContactBar() {
       label: "Get Directions",
       subLabel: "KPHB Phase 9, Hyd",
       icon: MapPin,
-      gradient: "from-slate-700 to-slate-900",
+      gradient: "bg-linear-to-br from-slate-700 to-slate-900",
       glowColor: "shadow-slate-500/30",
       badgeColor: "bg-slate-700",
       href: "https://www.google.com/maps/place/Good+Physio+Hub/data=!4m7!3m6!1s0x3bcb936a8dc9b1f7:0xc792c255ec9e1588!8m2!3d17.4889439!4d78.3804162!16s%2Fg%2F11mzg2yvjw!19sChIJ97HJjWqTyzsRiBWe7FXCksc?authuser=0&hl=en&rclk=1",
@@ -99,7 +104,7 @@ export default function FloatingContactBar() {
       label: "Email Us",
       subLabel: "goodphysiohub@gmail.com",
       icon: Mail,
-      gradient: "from-amber-500 to-orange-600",
+      gradient: "bg-linear-to-br from-amber-500 to-orange-600",
       glowColor: "shadow-orange-500/30",
       badgeColor: "bg-orange-500",
       href: "mailto:goodphysiohub@gmail.com",
@@ -110,7 +115,7 @@ export default function FloatingContactBar() {
       label: "Quick Enquiry",
       subLabel: "Request Callback",
       icon: HelpCircle,
-      gradient: "from-rose-500 to-pink-600",
+      gradient: "bg-linear-to-br from-rose-500 to-pink-600",
       glowColor: "shadow-rose-500/30",
       badgeColor: "bg-rose-500",
       onClick: () => setIsModalOpen(true),
@@ -152,7 +157,7 @@ export default function FloatingContactBar() {
 
   return (
     <>
-      {/* Floating Side Dock Container (Clean Floating Icons directly attached on left edge) */}
+      {/* Floating Side Dock Container */}
       <aside
         aria-label="Quick Contact Bar"
         className="fixed left-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-1.5 select-none"
@@ -167,7 +172,7 @@ export default function FloatingContactBar() {
               onHoverEnd={() => setHoveredId(null)}
               whileHover={{ scale: 1.08, x: 6 }}
               whileTap={{ scale: 0.94 }}
-              className={`relative flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-r-xl bg-gradient-to-br ${item.gradient} text-white shadow-lg ${item.glowColor} border-t border-r border-b border-white/20 transition-all duration-200 cursor-pointer group`}
+              className={`relative flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-r-xl ${item.gradient} text-white shadow-lg ${item.glowColor} border-t border-r border-b border-white/20 transition-all duration-200 cursor-pointer group`}
             >
               {/* Pulse effect for Call button */}
               {item.pulse && (
@@ -250,7 +255,7 @@ export default function FloatingContactBar() {
       {/* Quick Callback Modal */}
       <AnimatePresence>
         {isModalOpen && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md">
+          <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md">
             <motion.div
               initial={{ opacity: 0, scale: 0.92, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -261,7 +266,7 @@ export default function FloatingContactBar() {
               aria-modal="true"
             >
               {/* Modal Banner */}
-              <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-green-950 text-white p-6 relative overflow-hidden border-b border-slate-800">
+              <div className="bg-linear-to-br from-slate-950 via-slate-900 to-green-950 text-white p-6 relative overflow-hidden border-b border-slate-800">
                 <button
                   onClick={() => setIsModalOpen(false)}
                   className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors p-1.5 rounded-full hover:bg-slate-800/80 focus:outline-none"
@@ -354,7 +359,7 @@ export default function FloatingContactBar() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-3.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-xl shadow-lg shadow-green-600/25 hover:shadow-green-600/40 transition-all flex items-center justify-center gap-2 text-sm disabled:opacity-50"
+                    className="w-full py-3.5 bg-linear-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-xl shadow-lg shadow-green-600/25 hover:shadow-green-600/40 transition-all flex items-center justify-center gap-2 text-sm disabled:opacity-50"
                   >
                     {loading ? (
                       <>
