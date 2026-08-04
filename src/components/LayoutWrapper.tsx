@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GlobalNavbar from "@/components/landing/GlobalNavbar";
 import GlobalFooter from "@/components/landing/GlobalFooter";
+import FloatingContactBar from "@/components/FloatingContactBar";
 
 export default function LayoutWrapper({
   children,
@@ -35,6 +36,7 @@ export default function LayoutWrapper({
         <GlobalNavbar />
         <main className="flex-1">{children}</main>
         <GlobalFooter />
+        <FloatingContactBar />
       </div>
     );
   }
@@ -48,10 +50,16 @@ export default function LayoutWrapper({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <FloatingContactBar />
       </div>
     );
   }
 
   // Fallback for any other root pages
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      <FloatingContactBar />
+    </>
+  );
 }
