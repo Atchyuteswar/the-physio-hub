@@ -107,16 +107,16 @@ export default function LandingHero() {
     <div className="relative bg-slate-950 text-white overflow-hidden">
       {/* HERO MAIN SECTION */}
       <section className="relative pt-10 pb-16 lg:pt-14 lg:pb-24">
-        {/* Background Image & Dark Overlay */}
+        {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/PT HOME PAGE.png"
             alt="Aatral360 Facility Background"
             fill
-            className="object-cover object-center opacity-25"
+            className="object-cover object-center opacity-65"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/95 to-slate-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/80 to-slate-950/60" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12">
@@ -202,7 +202,7 @@ export default function LandingHero() {
                   src="/images/HOME PAGE POP UP IMAGE REPLACEMENT.png"
                   alt="Physiotherapy treatment at Aatral360 Good Physio Hub"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
