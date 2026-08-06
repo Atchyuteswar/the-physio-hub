@@ -145,7 +145,7 @@ export default function FloatingContactBar() {
       {/* Floating Side Dock Container */}
       <aside
         aria-label="Quick Contact Bar"
-        className="fixed left-1 sm:left-2 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-1.5 sm:gap-2 select-none"
+        className="fixed bottom-4 right-3 top-auto translate-y-0 md:top-1/2 md:-translate-y-1/2 md:bottom-auto md:right-auto md:left-2 z-50 flex flex-col gap-2 select-none"
       >
         {contactItems.map((item) => {
           const Icon = item.icon;
@@ -161,8 +161,8 @@ export default function FloatingContactBar() {
                 <span className="absolute inset-0 rounded-2xl bg-lime-400/30 animate-ping pointer-events-none" />
               )}
 
-              <Icon className="w-5 h-5 sm:w-5 sm:h-5 drop-shadow-sm mb-0.5 transition-transform duration-200 group-hover:scale-110" />
-              <span className="text-[9px] sm:text-[10px] font-semibold tracking-tight text-white leading-tight text-center">
+              <Icon className="w-5 h-5 sm:w-5 sm:h-5 drop-shadow-sm transition-transform duration-200 group-hover:scale-110" />
+              <span className="hidden sm:block text-[10px] font-semibold tracking-tight text-white leading-tight text-center mt-0.5">
                 {item.label}
               </span>
             </motion.div>

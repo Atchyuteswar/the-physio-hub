@@ -119,7 +119,7 @@ export default function LandingHero() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/80 to-slate-950/60" />
         </div>
 
-        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12 pl-16 sm:pl-16 lg:pl-12">
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-8 items-center">
             
             {/* Left Content */}
