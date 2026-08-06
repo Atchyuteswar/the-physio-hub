@@ -40,9 +40,9 @@ export default function GlobalNavbar() {
       >
         <div className="container mx-auto px-4 sm:px-6">
           <div className="h-20 flex items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group shrink-0">
-              <div className="relative w-14 h-14 shrink-0">
+            {/* Logo & Brand Name */}
+            <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
+              <Link href="/" className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0 block">
                 <Image
                   src="/images/aatral-360-logo-trans.png"
                   alt="Aatral360 Logo"
@@ -50,27 +50,34 @@ export default function GlobalNavbar() {
                   className="object-contain"
                   priority
                 />
-              </div>
+              </Link>
               <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-                <span className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
-                  Aatral360
-                </span>
+                <Link href="/" className="flex items-center gap-2 group shrink-0">
+                  <span className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
+                    Aatral360
+                  </span>
+                </Link>
                 <span className="hidden sm:inline text-slate-300 font-normal">
                   |
                 </span>
-                <span className="text-xs sm:text-xl font-semibold sm:font-bold text-slate-500 sm:text-slate-900 tracking-tight">
-                  Good Physio Hub
-                </span>
+                <Link
+                  href="/physiotherapy"
+                  className="flex items-center gap-2 group shrink-0"
+                >
+                  <span className="text-xs sm:text-xl font-semibold sm:font-bold text-slate-500 sm:text-slate-900 tracking-tight">
+                    Good Physio Hub
+                  </span>
+                </Link>
               </div>
-            </Link>
+            </div>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-6">
+            <nav className="hidden lg:flex items-center gap-3 xl:gap-5">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-sm font-medium text-slate-600 hover:text-green-600 transition-colors"
+                  className="text-xs xl:text-sm font-semibold text-slate-600 hover:text-green-600 transition-colors whitespace-nowrap"
                 >
                   {item.label}
                 </Link>
@@ -81,10 +88,9 @@ export default function GlobalNavbar() {
             <div className="flex items-center gap-2 sm:gap-4">
               <Link
                 href="/physiotherapy/appointment"
-                className="btn-primary py-2.5! px-4! sm:px-5! text-sm! shrink-0 flex items-center gap-1"
+                className="bg-[#00A859] hover:bg-[#00924d] text-white font-bold px-5 py-2.5 rounded-lg text-sm shrink-0 flex items-center gap-1.5 shadow-sm shadow-emerald-600/20 transition-all hover:scale-[1.02]"
               >
-                <span className="hidden sm:inline">Book Consultation</span>
-                <span className="sm:hidden">Book</span>
+                <span>Book Consultation</span>
                 <ChevronRight className="w-4 h-4" />
               </Link>
 

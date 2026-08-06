@@ -55,47 +55,43 @@ export default function FloatingContactBar() {
   const contactItems = [
     {
       id: "call",
-      label: "Call Us Now",
+      label: "Call Now",
       subLabel: "+91 88380 86426",
       icon: Phone,
-      gradient: "bg-linear-to-br from-lime-500 to-green-600",
-      glowColor: "shadow-lime-500/30",
-      badgeColor: "bg-lime-500",
+      gradient: "bg-gradient-to-b from-lime-500 to-green-600",
+      glowColor: "shadow-lime-500/20",
       href: "tel:+918838086426",
       isExternal: true,
       pulse: true,
     },
     {
       id: "whatsapp",
-      label: "WhatsApp Chat",
+      label: "WhatsApp",
       subLabel: "Instant Support 24/7",
       icon: WhatsAppIcon,
-      gradient: "bg-linear-to-br from-teal-500 to-emerald-600",
-      glowColor: "shadow-teal-500/30",
-      badgeColor: "bg-teal-500",
+      gradient: "bg-gradient-to-b from-emerald-500 to-teal-600",
+      glowColor: "shadow-teal-500/20",
       href: "https://wa.me/918838086426?text=Hi%20Aatral360%20Good%20Physio%20Hub,%20I%20would%20like%20to%20inquire%20about%20your%20services.",
       isExternal: true,
       pulse: false,
     },
     {
       id: "appointment",
-      label: "Book Appointment",
+      label: "Book Now",
       subLabel: "Schedule Clinic Visit",
       icon: Calendar,
-      gradient: "bg-linear-to-br from-purple-600 to-indigo-600",
-      glowColor: "shadow-purple-500/30",
-      badgeColor: "bg-purple-500",
+      gradient: "bg-gradient-to-b from-purple-600 to-indigo-600",
+      glowColor: "shadow-purple-500/20",
       href: "/physiotherapy/appointment",
       isExternal: false,
     },
     {
       id: "directions",
-      label: "Get Directions",
+      label: "Directions",
       subLabel: "KPHB Phase 9, Hyd",
       icon: MapPin,
-      gradient: "bg-linear-to-br from-slate-700 to-slate-900",
-      glowColor: "shadow-slate-500/30",
-      badgeColor: "bg-slate-700",
+      gradient: "bg-gradient-to-b from-slate-700 to-slate-900",
+      glowColor: "shadow-slate-500/20",
       href: "https://www.google.com/maps/place/Good+Physio+Hub/data=!4m7!3m6!1s0x3bcb936a8dc9b1f7:0xc792c255ec9e1588!8m2!3d17.4889439!4d78.3804162!16s%2Fg%2F11mzg2yvjw!19sChIJ97HJjWqTyzsRiBWe7FXCksc?authuser=0&hl=en&rclk=1",
       isExternal: true,
     },
@@ -104,21 +100,10 @@ export default function FloatingContactBar() {
       label: "Email Us",
       subLabel: "goodphysiohub@gmail.com",
       icon: Mail,
-      gradient: "bg-linear-to-br from-amber-500 to-orange-600",
-      glowColor: "shadow-orange-500/30",
-      badgeColor: "bg-orange-500",
+      gradient: "bg-gradient-to-b from-amber-500 to-orange-600",
+      glowColor: "shadow-orange-500/20",
       href: "mailto:goodphysiohub@gmail.com",
       isExternal: true,
-    },
-    {
-      id: "enquiry",
-      label: "Quick Enquiry",
-      subLabel: "Request Callback",
-      icon: HelpCircle,
-      gradient: "bg-linear-to-br from-rose-500 to-pink-600",
-      glowColor: "shadow-rose-500/30",
-      badgeColor: "bg-rose-500",
-      onClick: () => setIsModalOpen(true),
     },
   ];
 
@@ -160,69 +145,28 @@ export default function FloatingContactBar() {
       {/* Floating Side Dock Container */}
       <aside
         aria-label="Quick Contact Bar"
-        className="fixed left-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-1.5 select-none"
+        className="hidden md:flex fixed left-2 top-1/2 -translate-y-1/2 z-50 flex-col gap-2 select-none"
       >
         {contactItems.map((item) => {
           const Icon = item.icon;
-          const isHovered = hoveredId === item.id;
 
           const buttonBody = (
             <motion.div
-              onHoverStart={() => setHoveredId(item.id)}
-              onHoverEnd={() => setHoveredId(null)}
-              whileHover={{ scale: 1.08, x: 6 }}
-              whileTap={{ scale: 0.94 }}
-              className={`relative flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-r-xl ${item.gradient} text-white shadow-lg ${item.glowColor} border-t border-r border-b border-white/20 transition-all duration-200 cursor-pointer group`}
+              whileHover={{ scale: 1.06, x: 4 }}
+              whileTap={{ scale: 0.95 }}
+              className={`relative flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl ${item.gradient} text-white shadow-xl ${item.glowColor} border border-white/30 transition-all duration-200 cursor-pointer group p-1`}
             >
               {/* Pulse effect for Call button */}
               {item.pulse && (
-                <span className="absolute inset-0 rounded-r-xl bg-lime-400/30 animate-ping pointer-events-none" />
+                <span className="absolute inset-0 rounded-2xl bg-lime-400/30 animate-ping pointer-events-none" />
               )}
 
-              <Icon className="w-5 h-5 sm:w-5 sm:h-5 drop-shadow-sm transition-transform duration-200 group-hover:scale-110" />
-
-              {/* Tooltip Flyout Badge */}
-              <AnimatePresence>
-                {isHovered && (
-                  <motion.div
-                    initial={{ opacity: 0, x: -8, scale: 0.95 }}
-                    animate={{ opacity: 1, x: 0, scale: 1 }}
-                    exit={{ opacity: 0, x: -8, scale: 0.95 }}
-                    transition={{ duration: 0.15, ease: "easeOut" }}
-                    className="absolute left-full top-1/2 -translate-y-1/2 ml-2 pointer-events-none z-50"
-                  >
-                    <div className="flex items-center gap-2.5 bg-slate-900/95 backdrop-blur-xl text-white px-3 py-1.5 rounded-xl shadow-2xl border border-slate-700/70 whitespace-nowrap">
-                      <div className={`w-2 h-2 rounded-full ${item.badgeColor}`} />
-                      <div className="flex flex-col text-left">
-                        <span className="text-xs font-semibold tracking-tight text-white">
-                          {item.label}
-                        </span>
-                        {item.subLabel && (
-                          <span className="text-[10px] font-medium text-slate-400">
-                            {item.subLabel}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              <Icon className="w-5 h-5 sm:w-5 sm:h-5 drop-shadow-sm mb-0.5 transition-transform duration-200 group-hover:scale-110" />
+              <span className="text-[9px] sm:text-[10px] font-semibold tracking-tight text-white leading-tight text-center">
+                {item.label}
+              </span>
             </motion.div>
           );
-
-          if (item.onClick) {
-            return (
-              <button
-                key={item.id}
-                onClick={item.onClick}
-                aria-label={item.label}
-                type="button"
-                className="focus:outline-none"
-              >
-                {buttonBody}
-              </button>
-            );
-          }
 
           if (item.isExternal) {
             return (
