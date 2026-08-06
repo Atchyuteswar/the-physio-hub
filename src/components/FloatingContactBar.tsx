@@ -145,7 +145,7 @@ export default function FloatingContactBar() {
       {/* Floating Side Dock Container */}
       <aside
         aria-label="Quick Contact Bar"
-        className="hidden md:flex fixed left-2 top-1/2 -translate-y-1/2 z-50 flex-col gap-2 select-none"
+        className="fixed left-1 sm:left-2 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-1.5 sm:gap-2 select-none"
       >
         {contactItems.map((item) => {
           const Icon = item.icon;
@@ -154,7 +154,7 @@ export default function FloatingContactBar() {
             <motion.div
               whileHover={{ scale: 1.06, x: 4 }}
               whileTap={{ scale: 0.95 }}
-              className={`relative flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl ${item.gradient} text-white shadow-xl ${item.glowColor} border border-white/30 transition-all duration-200 cursor-pointer group p-1`}
+              className={`relative flex flex-col items-center justify-center w-11 h-11 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl ${item.gradient} text-white shadow-xl ${item.glowColor} border border-white/30 transition-all duration-200 cursor-pointer group p-0.5 sm:p-1`}
             >
               {/* Pulse effect for Call button */}
               {item.pulse && (

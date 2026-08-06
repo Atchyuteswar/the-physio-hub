@@ -119,8 +119,8 @@ export default function LandingHero() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/80 to-slate-950/60" />
         </div>
 
-        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12 pl-16 sm:pl-16 lg:pl-12">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-8 items-center">
             
             {/* Left Content */}
             <div className="lg:col-span-7 max-w-2xl">
@@ -131,7 +131,7 @@ export default function LandingHero() {
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight mb-6 text-white">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight mb-6 text-white">
                 Restore Movement.
                 <br />
                 Build Resilience.
@@ -166,15 +166,8 @@ export default function LandingHero() {
                 </div>
               </div>
 
-              {/* Subtitle Description */}
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed mb-8 font-normal max-w-xl">
-                Personalized, evidence-based care integrating physiotherapy, rehabilitation,
-                strength & conditioning, nutrition, and wellness to help you move better,
-                recover stronger, and perform at your best.
-              </p>
-
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-8 lg:mb-0">
                 <Link
                   href="/physiotherapy/appointment"
                   className="inline-flex items-center justify-center gap-2 bg-[#00A859] hover:bg-[#00924d] text-white font-bold px-7 py-3.5 rounded-xl transition-all shadow-lg shadow-emerald-600/25 group text-sm sm:text-base"
@@ -196,13 +189,13 @@ export default function LandingHero() {
             </div>
 
             {/* Right Side Image Frame */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-[32px] overflow-hidden border-2 border-amber-500/40 shadow-2xl bg-slate-900 aspect-4/3 sm:aspect-4/3 lg:aspect-4/5 max-w-md mx-auto lg:max-w-none">
+            <div className="lg:col-span-5 relative mt-4 lg:mt-0 block">
+              <div className="relative rounded-[24px] sm:rounded-[32px] overflow-hidden border-2 border-amber-500/40 shadow-2xl bg-slate-900 aspect-4/3 sm:aspect-4/3 lg:aspect-4/5 max-w-md mx-auto lg:max-w-none">
                 <Image
                   src="/images/HOME PAGE POP UP IMAGE REPLACEMENT.png"
                   alt="Physiotherapy treatment at Aatral360 Good Physio Hub"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-top sm:object-center"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
