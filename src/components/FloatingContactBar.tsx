@@ -8,7 +8,6 @@ import {
   Calendar,
   MapPin,
   Mail,
-  HelpCircle,
   X,
   Send,
   Loader2,
@@ -41,7 +40,6 @@ function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
 }
 
 export default function FloatingContactBar() {
-  const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const mounted = useIsMounted();
@@ -154,14 +152,14 @@ export default function FloatingContactBar() {
             <motion.div
               whileHover={{ scale: 1.06, x: 4 }}
               whileTap={{ scale: 0.95 }}
-              className={`relative flex flex-col items-center justify-center w-11 h-11 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl ${item.gradient} text-white shadow-xl ${item.glowColor} border border-white/30 transition-all duration-200 cursor-pointer group p-0.5 sm:p-1`}
+              className={`relative flex flex-col items-center justify-center w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full sm:rounded-2xl ${item.gradient} text-white shadow-xl ${item.glowColor} border border-white/30 transition-all duration-200 cursor-pointer group p-0.5 sm:p-1`}
             >
               {/* Pulse effect for Call button */}
               {item.pulse && (
-                <span className="absolute inset-0 rounded-2xl bg-lime-400/30 animate-ping pointer-events-none" />
+                <span className="absolute inset-0 rounded-full sm:rounded-2xl bg-lime-400/30 animate-ping pointer-events-none" />
               )}
 
-              <Icon className="w-5 h-5 sm:w-5 sm:h-5 drop-shadow-sm transition-transform duration-200 group-hover:scale-110" />
+              <Icon className="w-4.5 h-4.5 sm:w-5 sm:h-5 drop-shadow-sm transition-transform duration-200 group-hover:scale-110" />
               <span className="hidden sm:block text-[10px] font-semibold tracking-tight text-white leading-tight text-center mt-0.5">
                 {item.label}
               </span>

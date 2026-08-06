@@ -38,11 +38,11 @@ export default function GlobalNavbar() {
           }
         `}
       >
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="h-20 flex items-center justify-between">
+        <div className="container mx-auto px-3 sm:px-6">
+          <div className="h-16 sm:h-20 flex items-center justify-between gap-2">
             {/* Logo & Brand Name */}
-            <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
-              <Link href="/" className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0 block">
+            <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+              <Link href="/" className="relative w-10 h-10 sm:w-14 sm:h-14 shrink-0 block">
                 <Image
                   src="/images/aatral-360-logo-trans.png"
                   alt="Aatral360 Logo"
@@ -51,9 +51,9 @@ export default function GlobalNavbar() {
                   priority
                 />
               </Link>
-              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2 leading-tight">
                 <Link href="/" className="flex items-center gap-2 group shrink-0">
-                  <span className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
+                  <span className="text-base sm:text-xl font-extrabold text-slate-900 tracking-tight">
                     Aatral360
                   </span>
                 </Link>
@@ -64,7 +64,7 @@ export default function GlobalNavbar() {
                   href="/physiotherapy"
                   className="flex items-center gap-2 group shrink-0"
                 >
-                  <span className="text-xs sm:text-xl font-semibold sm:font-bold text-slate-500 sm:text-slate-900 tracking-tight">
+                  <span className="text-[11px] sm:text-xl font-semibold sm:font-bold text-slate-500 sm:text-slate-900 tracking-tight">
                     Good Physio Hub
                   </span>
                 </Link>
@@ -85,13 +85,14 @@ export default function GlobalNavbar() {
             </nav>
 
             {/* CTA & Mobile Menu Toggle */}
-            <div className="flex items-center gap-2 sm:gap-4">
+            <div className="flex items-center gap-1.5 sm:gap-4 shrink-0">
               <Link
                 href="/physiotherapy/appointment"
-                className="bg-[#00A859] hover:bg-[#00924d] text-white font-bold px-5 py-2.5 rounded-lg text-sm shrink-0 flex items-center gap-1.5 shadow-sm shadow-emerald-600/20 transition-all hover:scale-[1.02]"
+                className="bg-[#00A859] hover:bg-[#00924d] text-white font-bold px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm shrink-0 flex items-center gap-1 shadow-sm shadow-emerald-600/20 transition-all hover:scale-[1.02]"
               >
-                <span>Book Consultation</span>
-                <ChevronRight className="w-4 h-4" />
+                <span className="hidden sm:inline">Book Consultation</span>
+                <span className="sm:hidden">Book</span>
+                <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </Link>
 
               {/* Mobile Menu Trigger (Pure CSS Approach) */}

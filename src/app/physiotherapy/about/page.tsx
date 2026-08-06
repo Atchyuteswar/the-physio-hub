@@ -158,7 +158,7 @@ export default function AboutPage() {
           <div className="bg-white rounded-4xl shadow-xl border border-slate-200 overflow-hidden">
             <div className="grid lg:grid-cols-12 max-w-none">
               {/* Photo Side */}
-              <div className="lg:col-span-5 relative bg-slate-100 min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]">
+              <div className="lg:col-span-5 relative bg-slate-100 min-h-75 sm:min-h-100 lg:min-h-125">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
                     <Users className="w-16 h-16 text-slate-300 mx-auto mb-4" />

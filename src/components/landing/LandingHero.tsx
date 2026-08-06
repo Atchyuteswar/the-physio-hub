@@ -23,20 +23,6 @@ function GoogleGIcon({ className = "w-5 h-5" }: { className?: string }) {
   );
 }
 
-// Practo Wordmark SVG Logo
-function PractoLogo({ className = "w-16 h-5" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 18V6H13.5C15.9853 6 18 8.01472 18 10.5C18 12.9853 15.9853 15 13.5 15H9.5V18H6ZM9.5 12H13.2C14.0284 12 14.7 11.3284 14.7 10.5C14.7 9.67157 14.0284 9 13.2 9H9.5V12Z" fill="#184292" />
-      <path d="M22 18V9H25V10.4C25.7 9.5 26.8 9 28 9C30.2 9 31.5 10.8 31.5 13.5V18H28.5V13.8C28.5 12.3 27.6 11.5 26.5 11.5C25.3 11.5 24.5 12.4 24.5 13.8V18H22Z" fill="#184292" />
-      <path d="M34 14C34 11.2 35.8 9 38.5 9C40.5 9 41.7 10 42.3 11.2L39.8 12.5C39.4 11.8 38.9 11.4 38.2 11.4C37.1 11.4 36.3 12.4 36.3 14C36.3 15.6 37.1 16.6 38.2 16.6C39 16.6 39.5 16.1 40 15.4L42.5 16.6C41.7 18 40.3 19 38.5 19C35.8 19 34 16.8 34 14Z" fill="#184292" />
-      <path d="M46 15.2V11.5H44V9H46V6.5H49V9H52V11.5H49V14.8C49 15.6 49.4 16 50.2 16C50.8 16 51.4 15.8 51.8 15.5L52.5 17.8C51.8 18.3 50.7 18.6 49.5 18.6C47.2 18.6 46 17.3 46 15.2Z" fill="#184292" />
-      <path d="M54 14C54 11.2 56 9 59 9C62 9 64 11.2 64 14C64 16.8 62 19 59 19C56 19 54 16.8 54 14ZM61.2 14C61.2 12.4 60.3 11.4 59 11.4C57.7 11.4 56.8 12.4 56.8 14C56.8 15.6 57.7 16.6 59 16.6C60.3 16.6 61.2 15.6 61.2 14Z" fill="#184292" />
-      <circle cx="68" cy="16.5" r="2.5" fill="#28A745" />
-    </svg>
-  );
-}
-
 // Specialty Icons (Green Line Art)
 function BackPainIcon({ className = "w-6 h-6" }: { className?: string }) {
   return (
@@ -116,7 +102,7 @@ export default function LandingHero() {
             className="object-cover object-center opacity-65"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/80 to-slate-950/60" />
+          <div className="absolute inset-0 bg-linear-to-r from-slate-950/90 via-slate-950/80 to-slate-950/60" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-12">
@@ -190,7 +176,7 @@ export default function LandingHero() {
 
             {/* Right Side Image Frame */}
             <div className="lg:col-span-5 relative mt-4 lg:mt-0 block">
-              <div className="relative rounded-[24px] sm:rounded-[32px] overflow-hidden border-2 border-amber-500/40 shadow-2xl bg-slate-900 aspect-4/3 sm:aspect-4/3 lg:aspect-4/5 max-w-md mx-auto lg:max-w-none">
+              <div className="relative rounded-3xl sm:rounded-4xl overflow-hidden border-2 border-amber-500/40 shadow-2xl bg-slate-900 aspect-4/3 sm:aspect-4/3 lg:aspect-4/5 max-w-md mx-auto lg:max-w-none">
                 <Image
                   src="/images/HOME PAGE POP UP IMAGE REPLACEMENT.png"
                   alt="Physiotherapy treatment at Aatral360 Good Physio Hub"
@@ -198,7 +184,7 @@ export default function LandingHero() {
                   className="object-cover object-top sm:object-center"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-linear-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
               </div>
             </div>
 
@@ -207,16 +193,16 @@ export default function LandingHero() {
       </section>
 
       {/* FLOATING TRUST & SOCIAL PROOF CARD */}
-      <div className="container relative z-20 mx-auto px-4 sm:px-6 lg:px-12 -mt-8 sm:-mt-12 mb-10">
-        <div className="bg-white rounded-3xl p-6 shadow-2xl border border-slate-100 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-slate-100 text-slate-900">
+      <div className="container relative z-20 mx-auto px-4 sm:px-6 lg:px-12 -mt-6 sm:-mt-12 mb-8 sm:mb-10">
+        <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-2xl border border-slate-100 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 divide-y md:divide-y-0 md:divide-x divide-slate-100 text-slate-900">
           
           {/* Item 1: Practo Reviews */}
-          <div className="flex items-center gap-4 pt-2 md:pt-0 md:px-4">
-            <div className="w-14 h-14 rounded-2xl bg-emerald-100/80 text-emerald-700 flex items-center justify-center shrink-0">
-              <Users className="w-7 h-7" />
+          <div className="flex items-center gap-3.5 pt-1 md:pt-0 md:px-4">
+            <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-emerald-100/80 text-emerald-700 flex items-center justify-center shrink-0">
+              <Users className="w-5 h-5 sm:w-7 sm:h-7" />
             </div>
             <div>
-              <div className="text-2xl font-black text-slate-900 leading-none mb-1">
+              <div className="text-xl sm:text-2xl font-black text-slate-900 leading-none mb-1">
                 236
               </div>
               <div className="text-xs font-semibold text-slate-600 leading-tight">
@@ -229,23 +215,23 @@ export default function LandingHero() {
                   alt="Practo Logo"
                   width={60}
                   height={20}
-                  className="h-4 w-auto object-contain inline-block ml-1"
+                  className="h-3.5 sm:h-4 w-auto object-contain inline-block ml-1"
                 />
               </div>
             </div>
           </div>
 
           {/* Item 2: Google Reviews */}
-          <div className="flex items-center gap-4 pt-4 md:pt-0 md:px-6">
-            <div className="w-14 h-14 rounded-2xl bg-emerald-700 text-white flex items-center justify-center shrink-0 shadow-md">
-              <Star className="w-7 h-7 fill-white" />
+          <div className="flex items-center gap-3.5 pt-3 md:pt-0 md:px-6">
+            <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-emerald-700 text-white flex items-center justify-center shrink-0 shadow-md">
+              <Star className="w-5 h-5 sm:w-7 sm:h-7 fill-white" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-black text-slate-900 leading-none">5.0</span>
+                <span className="text-xl sm:text-2xl font-black text-slate-900 leading-none">5.0</span>
                 <div className="flex items-center text-amber-400">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    <Star key={i} className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
               </div>
@@ -254,23 +240,23 @@ export default function LandingHero() {
               </div>
               <div className="flex items-center gap-1.5 mt-1 text-xs text-slate-500 font-medium">
                 <span>Rated 5.0</span>
-                <GoogleGIcon className="w-4 h-4" />
+                <GoogleGIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
             </div>
           </div>
 
           {/* Item 3: Expert Care & Trusted Results */}
-          <div className="flex items-center gap-4 pt-4 md:pt-0 md:px-6">
-            <div className="w-14 h-14 rounded-2xl bg-emerald-100/80 text-emerald-700 flex items-center justify-center shrink-0">
-              <ShieldCheck className="w-7 h-7" />
+          <div className="flex items-center gap-3.5 pt-3 md:pt-0 md:px-6">
+            <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-emerald-100/80 text-emerald-700 flex items-center justify-center shrink-0">
+              <ShieldCheck className="w-5 h-5 sm:w-7 sm:h-7" />
             </div>
             <div>
-              <div className="text-base font-bold text-slate-900 leading-snug">
+              <div className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
                 Expert Care.
-                <br />
-                Trusted Results.
+                <br className="hidden sm:block" />
+                {" "}Trusted Results.
               </div>
-              <div className="text-xs text-slate-500 font-medium mt-1">
+              <div className="text-xs text-slate-500 font-medium mt-0.5 sm:mt-1">
                 Your Health is Our Priority.
               </div>
             </div>

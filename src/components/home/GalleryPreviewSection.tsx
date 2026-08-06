@@ -22,7 +22,7 @@ export default function GalleryPreviewSection({ images }: { images: Gallery[] })
           </div>
           <Link
             href="/gallery"
-            className="btn-outline shrink-0 hidden md:inline-flex items-center gap-2"
+            className="btn-outline shrink-0 inline-flex items-center gap-2"
           >
             View Full Gallery
             <ArrowRight className="w-4 h-4" />
@@ -50,22 +50,12 @@ export default function GalleryPreviewSection({ images }: { images: Gallery[] })
               </div>
 
               {image.caption && (
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white text-sm font-medium">{image.caption}</p>
                 </div>
               )}
             </div>
           ))}
-        </div>
-
-        <div className="mt-10 text-center md:hidden">
-          <Link
-            href="/gallery"
-            className="btn-outline w-full justify-center inline-flex items-center gap-2"
-          >
-            View Full Gallery
-            <ArrowRight className="w-4 h-4" />
-          </Link>
         </div>
       </div>
     </section>

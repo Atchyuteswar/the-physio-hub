@@ -199,7 +199,7 @@ export default function ContactSection() {
                     id="message"
                     required
                     placeholder="How can we help you today?"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-colors min-h-[160px] resize-y"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-colors min-h-40 resize-y"
                     value={form.message}
                     onChange={(e) =>
                       setForm({ ...form, message: e.target.value })

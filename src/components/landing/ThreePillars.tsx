@@ -137,7 +137,7 @@ export default function ThreePillars() {
                   style={{ width: `${100 / pillars.length}%` }} 
                   className="shrink-0 px-2"
                 >
-                  <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 relative overflow-hidden flex flex-col min-h-[460px] group">
+                  <div className="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 relative overflow-hidden flex flex-col min-h-115 group">
                     {/* Coming Soon Badge */}
                     {pillar.comingSoon && (
                       <div className="absolute top-6 right-6 bg-slate-100 text-slate-500 text-xs font-bold px-3 py-1 rounded-full border border-slate-200 uppercase tracking-wide z-10">
@@ -175,7 +175,7 @@ export default function ThreePillars() {
           {/* Navigation Arrows */}
           <button 
             onClick={prevSlide}
-            className="absolute left-[-12px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg border border-slate-100 flex items-center justify-center text-slate-600 hover:text-green-600 z-10 active:scale-95 transition-transform"
+            className="absolute -left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg border border-slate-100 flex items-center justify-center text-slate-600 hover:text-green-600 z-10 active:scale-95 transition-transform"
             aria-label="Previous slide"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -183,7 +183,7 @@ export default function ThreePillars() {
           
           <button 
             onClick={nextSlide}
-            className="absolute right-[-12px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg border border-slate-100 flex items-center justify-center text-slate-600 hover:text-green-600 z-10 active:scale-95 transition-transform"
+            className="absolute -right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg border border-slate-100 flex items-center justify-center text-slate-600 hover:text-green-600 z-10 active:scale-95 transition-transform"
             aria-label="Next slide"
           >
             <ChevronRight className="w-6 h-6" />
